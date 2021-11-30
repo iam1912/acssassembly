@@ -11,16 +11,18 @@ import UIKit
 class MainController: UITabBarController {
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        self.navigationController?.navigationBar.isHidden = false
-        self.tabBar.barTintColor =  UIColor(hex: 0xFF86B2, alpha: 0.5)
-
+        super.viewDidLoad()        
         var vcs :[UIViewController] = []
         
         let homeStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let homeNav = homeStoryboard.instantiateViewController(withIdentifier: "HomeController")
-        homeNav.tabBarItem.title = "主页"
+        homeNav.tabBarItem.title = "拍照"
         vcs.append(homeNav)
+        
+        let photoStoryboard = UIStoryboard(name: "Photo", bundle: nil)
+        let photoNav = photoStoryboard.instantiateViewController(withIdentifier: "PhotoController")
+        photoNav.tabBarItem.title = "相册"
+        vcs.append(photoNav)
         
         self.viewControllers = vcs
     }

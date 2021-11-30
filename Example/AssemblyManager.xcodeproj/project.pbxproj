@@ -11,6 +11,8 @@
 		188E26CE27561EAE00AE7EC9 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E26CD27561EAE00AE7EC9 /* Extension.swift */; };
 		188E26D027561ECE00AE7EC9 /* H.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E26CF27561ECE00AE7EC9 /* H.swift */; };
 		188E26D427561F2B00AE7EC9 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E26D327561F2B00AE7EC9 /* MainController.swift */; };
+		188E26DD275661AA00AE7EC9 /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E26DC275661AA00AE7EC9 /* PhotoController.swift */; };
+		188E26E0275661F700AE7EC9 /* Photo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188E26DF275661F700AE7EC9 /* Photo.storyboard */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* HomeController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
@@ -24,6 +26,8 @@
 		188E26CD27561EAE00AE7EC9 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		188E26CF27561ECE00AE7EC9 /* H.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H.swift; sourceTree = "<group>"; };
 		188E26D327561F2B00AE7EC9 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		188E26DC275661AA00AE7EC9 /* PhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
+		188E26DF275661F700AE7EC9 /* Photo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Photo.storyboard; sourceTree = "<group>"; };
 		1AFEB2719D94A6E4ED4AB9E9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		1F3CC35F267327E5E7D26ADD /* Pods-AssemblyManager_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AssemblyManager_Tests.release.xcconfig"; path = "Target Support Files/Pods-AssemblyManager_Tests/Pods-AssemblyManager_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		34DD768D1457FF1B21A05E86 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
@@ -59,6 +63,7 @@
 		188E26C627561E6300AE7EC9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				188E26D7275654F600AE7EC9 /* Photo */,
 				188E26CA27561E7F00AE7EC9 /* Home */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				188E26D327561F2B00AE7EC9 /* MainController.swift */,
@@ -76,6 +81,7 @@
 		188E26C827561E6D00AE7EC9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				188E26DE275661B100AE7EC9 /* Photo */,
 				188E26D127561EF200AE7EC9 /* Home */,
 			);
 			name = Views;
@@ -105,6 +111,22 @@
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 			);
 			name = Home;
+			sourceTree = "<group>";
+		};
+		188E26D7275654F600AE7EC9 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				188E26DC275661AA00AE7EC9 /* PhotoController.swift */,
+			);
+			name = Photo;
+			sourceTree = "<group>";
+		};
+		188E26DE275661B100AE7EC9 /* Photo */ = {
+			isa = PBXGroup;
+			children = (
+				188E26DF275661F700AE7EC9 /* Photo.storyboard */,
+			);
+			name = Photo;
 			sourceTree = "<group>";
 		};
 		607FACC71AFB9204008FA782 = {
@@ -261,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				188E26E0275661F700AE7EC9 /* Photo.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
 			);
@@ -319,6 +342,7 @@
 				607FACD81AFB9204008FA782 /* HomeController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				188E26CC27561E9800AE7EC9 /* SectionInterface.swift in Sources */,
+				188E26DD275661AA00AE7EC9 /* PhotoController.swift in Sources */,
 				188E26D027561ECE00AE7EC9 /* H.swift in Sources */,
 				188E26D427561F2B00AE7EC9 /* MainController.swift in Sources */,
 				188E26CE27561EAE00AE7EC9 /* Extension.swift in Sources */,

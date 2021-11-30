@@ -7,30 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0942B8DEDEE3874C4E7D1D0953AA1FF4 /* Pods-AssemblyManager_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DC0CFA3020EB91B38F84441D6799B90E /* Pods-AssemblyManager_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0D191BDF1EED8A81CAB370D526560F0C /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1AB337BA6B2BBADC608802E27CD3D7D /* Enum.swift */; };
-		188E26D6275622C600AE7EC9 /* AssemblyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E26D5275622C600AE7EC9 /* AssemblyManager.swift */; };
+		08DC84521B5A910A52DCDA3FA1B30549 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB7E49D9073DD21F93335ED1B2916AD /* Extension.swift */; };
+		5705B00A7BB0259B5A3614A29F84C333 /* AssemblyManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 293B65B3708DC5E470228A4F0063AE2E /* AssemblyManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A00A765D355EFA116FF74EDEF451A9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		6272C5FDC2803D27923442F060DE03BA /* Pods-AssemblyManager_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0ED319F83C1DEF0436273DA2A7243F8D /* Pods-AssemblyManager_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6AE0BC2C5883BC551D9576C6672F4DA6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		8792BB5DFF37C1E1E7FC62F1851F018E /* AssemblyManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B0AD0FBF12AF529350DDF4E587B1995 /* AssemblyManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8A054D0090BB0FA654203DBFEE68D669 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC24F222333C969435DE8A6C086E65F /* Extension.swift */; };
-		A72B1657E7E66A33A0256C480F0A92E3 /* Pods-AssemblyManager_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F40F0A8B9CBC8A2DF1EE169DD75EE8F4 /* Pods-AssemblyManager_Example-dummy.m */; };
-		CD13DB2754F77E679C474365CF6871E2 /* AssemblyManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A85FFE4F86A09C200BF40B65E576ECF9 /* AssemblyManager-dummy.m */; };
-		E3FB512770C0694ADF63F9CEEFC4507D /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A3C2A9A91564FCCC51B52AE2C2FA3D /* CameraManager.swift */; };
-		E9050A95ABF811C0342943FBD33D1E90 /* Pods-AssemblyManager_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BBD2066B9254AB79A48A369DB0AB6C5 /* Pods-AssemblyManager_Tests-dummy.m */; };
-		FD7301E811705CC88490BE6F0BBF9B8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		6272C5FDC2803D27923442F060DE03BA /* Pods-AssemblyManager_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0526D45529A264DF1BD7D2F0CC0E32 /* Pods-AssemblyManager_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		667B70CE7E4E664C2115F35A37BEDDE1 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A5A8D4299599BB05D1937C03804B5B /* CameraManager.swift */; };
+		67F44E5F05CF65022EF56E8913208780 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		75F19DC5193D184472553FC69CBFEFB3 /* AssemblyManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A6ED89058DFC9A5B24019804B117A2 /* AssemblyManager-dummy.m */; };
+		A72B1657E7E66A33A0256C480F0A92E3 /* Pods-AssemblyManager_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 706C26B180EC321F63EF2CB0DC6BE2C2 /* Pods-AssemblyManager_Example-dummy.m */; };
+		AC38B0CC080DB2B8C4563039C3E0E0C3 /* AssemblyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEC1E353CDC6C09ED79582C774AD107 /* AssemblyManager.swift */; };
+		DBF733857EDEFD5AEA47E5BE1FD9D382 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BCB00A7840652277EB0945F3A35F12 /* Enum.swift */; };
+		E8A5DB1D175C157227D9CD8FA463F158 /* PhotosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301AB0CFDD036F71E336313191A169C7 /* PhotosManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		6D7E8FD55285FFCB5EE1EEC570F96BD8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 835EE1B2393AEC820D6BC78A812DFE34;
-			remoteInfo = "Pods-AssemblyManager_Example";
-		};
-		725538FDBD4EC7FFA6AAC4C052862C85 /* PBXContainerItemProxy */ = {
+		C418DA2BE2BFC21F2183AA908E7B7A2F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -40,41 +31,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0B0AD0FBF12AF529350DDF4E587B1995 /* AssemblyManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AssemblyManager-umbrella.h"; sourceTree = "<group>"; };
-		0ED319F83C1DEF0436273DA2A7243F8D /* Pods-AssemblyManager_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AssemblyManager_Example-umbrella.h"; sourceTree = "<group>"; };
-		188E26D5275622C600AE7EC9 /* AssemblyManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AssemblyManager.swift; path = AssemblyManager/Classes/AssemblyManager.swift; sourceTree = "<group>"; };
-		1BA0281E8ABBC53C734EAF4C71519770 /* Pods-AssemblyManager_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AssemblyManager_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		2666FF568AE7C9E406857E7D98D063D2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		28C9CF04ADAAD634BD67009B32839417 /* AssemblyManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = AssemblyManager.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		28FA31F85D22E8C364E72EA9825274AB /* Pods-AssemblyManager_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AssemblyManager_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		2BBD2066B9254AB79A48A369DB0AB6C5 /* Pods-AssemblyManager_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AssemblyManager_Tests-dummy.m"; sourceTree = "<group>"; };
-		2DA01935F5DCE0F2807E1E29B302E7A1 /* Pods-AssemblyManager_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AssemblyManager_Example.modulemap"; sourceTree = "<group>"; };
-		2DB83EC40DD297E4A66E700344D3ED91 /* Pods-AssemblyManager_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AssemblyManager_Example-frameworks.sh"; sourceTree = "<group>"; };
-		3EE361852A09C3F3E03428CD48732560 /* Pods-AssemblyManager_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AssemblyManager_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		43A10639E710CD26AE7F0FD39C1815EF /* Pods-AssemblyManager_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AssemblyManager_Example.debug.xcconfig"; sourceTree = "<group>"; };
-		55FEFE945B77DE4BD42F924CEA96E2FD /* Pods-AssemblyManager_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AssemblyManager_Tests.modulemap"; sourceTree = "<group>"; };
-		6060423CE4633A799637FD2F51E40C29 /* AssemblyManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AssemblyManager.debug.xcconfig; sourceTree = "<group>"; };
-		6BB43C3F1C179AA656C8A0D227C71A78 /* Pods-AssemblyManager_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AssemblyManager_Tests-Info.plist"; sourceTree = "<group>"; };
-		6D00FB7EFBCF7214FF17120AC3683253 /* Pods-AssemblyManager_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AssemblyManager_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		0EE47A6FFF2241857EAB27FFDCA23AEA /* Pods-AssemblyManager_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AssemblyManager_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		167D1E056E623C74C3D1FCFC8C60AE43 /* Pods-AssemblyManager_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AssemblyManager_Example.modulemap"; sourceTree = "<group>"; };
+		293B65B3708DC5E470228A4F0063AE2E /* AssemblyManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AssemblyManager-umbrella.h"; sourceTree = "<group>"; };
+		301AB0CFDD036F71E336313191A169C7 /* PhotosManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PhotosManager.swift; sourceTree = "<group>"; };
+		59FE8FB5091E5F6D354A06FE2CC09D46 /* AssemblyManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = AssemblyManager.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		6FEC1E353CDC6C09ED79582C774AD107 /* AssemblyManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssemblyManager.swift; path = AssemblyManager/Classes/AssemblyManager.swift; sourceTree = "<group>"; };
+		706C26B180EC321F63EF2CB0DC6BE2C2 /* Pods-AssemblyManager_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AssemblyManager_Example-dummy.m"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		78A3C2A9A91564FCCC51B52AE2C2FA3D /* CameraManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
-		8997E37314DB0655BDB7FF86B1AE689B /* Pods-AssemblyManager_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AssemblyManager_Example.release.xcconfig"; sourceTree = "<group>"; };
-		8D542494FD19BC1A0820D9C476F0A79B /* Pods-AssemblyManager_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AssemblyManager_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		73D56CA070CBED7954274A232C56A17B /* Pods-AssemblyManager_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AssemblyManager_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8539E1A9AEE7E356FE236F400A7D56E8 /* Pods-AssemblyManager_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AssemblyManager_Example.release.xcconfig"; sourceTree = "<group>"; };
+		8715ED27FE63AC36DAF812F19DA0C9CA /* AssemblyManager-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AssemblyManager-Info.plist"; sourceTree = "<group>"; };
+		8E655A34836F980CCF37AFFE1AD86BF6 /* AssemblyManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AssemblyManager.release.xcconfig; sourceTree = "<group>"; };
+		90A5A8D4299599BB05D1937C03804B5B /* CameraManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9DB8F34750D1ED461C37A1677DA6C2BA /* AssemblyManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AssemblyManager-prefix.pch"; sourceTree = "<group>"; };
-		9F26629B2C252C75FCD65622EC94B325 /* AssemblyManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AssemblyManager.modulemap; sourceTree = "<group>"; };
-		A85FFE4F86A09C200BF40B65E576ECF9 /* AssemblyManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AssemblyManager-dummy.m"; sourceTree = "<group>"; };
+		9EF078082AE1CAFD2BBABADADBD32A47 /* AssemblyManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AssemblyManager.debug.xcconfig; sourceTree = "<group>"; };
+		AC10FF1753A272100701EA9675338C8E /* Pods-AssemblyManager_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AssemblyManager_Example-Info.plist"; sourceTree = "<group>"; };
+		AF7C5AB255F774DD5F920419A92D1605 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B366493A55D6108CBE32EB6A5E1FDDC2 /* AssemblyManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AssemblyManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BEC24F222333C969435DE8A6C086E65F /* Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		BFF608BC9584862076846F0AE2E81564 /* Pods_AssemblyManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AssemblyManager_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1969025EE77637C6B07D8CD946766A5 /* Pods-AssemblyManager_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AssemblyManager_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
-		C63C3F477520C211E39E81A6AA420072 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		CD8C7CCFEE15F1FD7A88F07F13AB7AA2 /* AssemblyManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AssemblyManager.release.xcconfig; sourceTree = "<group>"; };
-		D0BCA831DE9258FFBDEABDF406CC5901 /* AssemblyManager-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AssemblyManager-Info.plist"; sourceTree = "<group>"; };
-		DC0CFA3020EB91B38F84441D6799B90E /* Pods-AssemblyManager_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AssemblyManager_Tests-umbrella.h"; sourceTree = "<group>"; };
-		DEB09306D003B75E9AF0BA1E4EA54BBE /* Pods-AssemblyManager_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AssemblyManager_Example-Info.plist"; sourceTree = "<group>"; };
-		E1AB337BA6B2BBADC608802E27CD3D7D /* Enum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
-		F40F0A8B9CBC8A2DF1EE169DD75EE8F4 /* Pods-AssemblyManager_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AssemblyManager_Example-dummy.m"; sourceTree = "<group>"; };
+		B88916622644457067CA286DDAB09254 /* AssemblyManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AssemblyManager-prefix.pch"; sourceTree = "<group>"; };
+		CB0526D45529A264DF1BD7D2F0CC0E32 /* Pods-AssemblyManager_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AssemblyManager_Example-umbrella.h"; sourceTree = "<group>"; };
+		D29F86EDC461E2F292BBBCD937EFBC01 /* Pods-AssemblyManager_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AssemblyManager_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		D2A6ED89058DFC9A5B24019804B117A2 /* AssemblyManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AssemblyManager-dummy.m"; sourceTree = "<group>"; };
+		D4282F972912A0F3F48BC851965CE6A4 /* AssemblyManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AssemblyManager.modulemap; sourceTree = "<group>"; };
+		D4BCB00A7840652277EB0945F3A35F12 /* Enum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
+		DF575F0594AAC40A1AC9BA84E4DA74AE /* Pods-AssemblyManager_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AssemblyManager_Example-frameworks.sh"; sourceTree = "<group>"; };
+		EDB7E49D9073DD21F93335ED1B2916AD /* Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		EF9F8D0CDA0C2D4A3298B7F48C2CA9ED /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		FDDA43A53FE54CB65F4BD3DDC7A956BF /* Pods_AssemblyManager_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AssemblyManager_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -87,61 +70,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		93B3F3E7AB069290288858F2956AE9B5 /* Frameworks */ = {
+		A1411B2888D7ADB28D7D2BBF763A4D6A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6AE0BC2C5883BC551D9576C6672F4DA6 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D14E5D715F47BD655937FC822BFD0B05 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FD7301E811705CC88490BE6F0BBF9B8D /* Foundation.framework in Frameworks */,
+				67F44E5F05CF65022EF56E8913208780 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		23C460F1BA5CCF4E700ED45D97D9DC1E /* AssemblyManager */ = {
+		099B2B63D4B4F1F5B776FBD3DBD57D8D /* CameraManager */ = {
 			isa = PBXGroup;
 			children = (
-				188E26D5275622C600AE7EC9 /* AssemblyManager.swift */,
-				90C3552FF76CFDB9ACF866A5A71D0922 /* CameraManager */,
-				44FB9FDAC342077B7C4B81EF0A2132C8 /* Libs */,
-				927297DFB2680EF48D4B8B6FD4594C2C /* Pod */,
-				4E8D5C7A588E8DECAC7FBD8FF1D1B782 /* Support Files */,
+				90A5A8D4299599BB05D1937C03804B5B /* CameraManager.swift */,
 			);
-			name = AssemblyManager;
-			path = ../..;
+			name = CameraManager;
+			path = AssemblyManager/Classes/CameraManager;
 			sourceTree = "<group>";
 		};
-		44FB9FDAC342077B7C4B81EF0A2132C8 /* Libs */ = {
+		1D9F4C706550D2FD197328DB2A0598DE /* Pods-AssemblyManager_Example */ = {
 			isa = PBXGroup;
 			children = (
-				E1AB337BA6B2BBADC608802E27CD3D7D /* Enum.swift */,
-				BEC24F222333C969435DE8A6C086E65F /* Extension.swift */,
+				167D1E056E623C74C3D1FCFC8C60AE43 /* Pods-AssemblyManager_Example.modulemap */,
+				73D56CA070CBED7954274A232C56A17B /* Pods-AssemblyManager_Example-acknowledgements.markdown */,
+				D29F86EDC461E2F292BBBCD937EFBC01 /* Pods-AssemblyManager_Example-acknowledgements.plist */,
+				706C26B180EC321F63EF2CB0DC6BE2C2 /* Pods-AssemblyManager_Example-dummy.m */,
+				DF575F0594AAC40A1AC9BA84E4DA74AE /* Pods-AssemblyManager_Example-frameworks.sh */,
+				AC10FF1753A272100701EA9675338C8E /* Pods-AssemblyManager_Example-Info.plist */,
+				CB0526D45529A264DF1BD7D2F0CC0E32 /* Pods-AssemblyManager_Example-umbrella.h */,
+				0EE47A6FFF2241857EAB27FFDCA23AEA /* Pods-AssemblyManager_Example.debug.xcconfig */,
+				8539E1A9AEE7E356FE236F400A7D56E8 /* Pods-AssemblyManager_Example.release.xcconfig */,
 			);
-			name = Libs;
-			path = AssemblyManager/Classes/Libs;
-			sourceTree = "<group>";
-		};
-		4E8D5C7A588E8DECAC7FBD8FF1D1B782 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				9F26629B2C252C75FCD65622EC94B325 /* AssemblyManager.modulemap */,
-				A85FFE4F86A09C200BF40B65E576ECF9 /* AssemblyManager-dummy.m */,
-				D0BCA831DE9258FFBDEABDF406CC5901 /* AssemblyManager-Info.plist */,
-				9DB8F34750D1ED461C37A1677DA6C2BA /* AssemblyManager-prefix.pch */,
-				0B0AD0FBF12AF529350DDF4E587B1995 /* AssemblyManager-umbrella.h */,
-				6060423CE4633A799637FD2F51E40C29 /* AssemblyManager.debug.xcconfig */,
-				CD8C7CCFEE15F1FD7A88F07F13AB7AA2 /* AssemblyManager.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/AssemblyManager";
+			name = "Pods-AssemblyManager_Example";
+			path = "Target Support Files/Pods-AssemblyManager_Example";
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -152,81 +115,70 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		6E8C4041803CB31F242F50A14AE99D5E /* Development Pods */ = {
+		67FB948C3951EB2081460FCB4CFE1526 /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				23C460F1BA5CCF4E700ED45D97D9DC1E /* AssemblyManager */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		787341D73D353253A7EBB826392EC10C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B366493A55D6108CBE32EB6A5E1FDDC2 /* AssemblyManager.framework */,
-				FDDA43A53FE54CB65F4BD3DDC7A956BF /* Pods_AssemblyManager_Example.framework */,
-				BFF608BC9584862076846F0AE2E81564 /* Pods_AssemblyManager_Tests.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		7B2B46182CF6C9946B6E65DBB0FCC486 /* Pods-AssemblyManager_Tests */ = {
-			isa = PBXGroup;
-			children = (
-				55FEFE945B77DE4BD42F924CEA96E2FD /* Pods-AssemblyManager_Tests.modulemap */,
-				28FA31F85D22E8C364E72EA9825274AB /* Pods-AssemblyManager_Tests-acknowledgements.markdown */,
-				C1969025EE77637C6B07D8CD946766A5 /* Pods-AssemblyManager_Tests-acknowledgements.plist */,
-				2BBD2066B9254AB79A48A369DB0AB6C5 /* Pods-AssemblyManager_Tests-dummy.m */,
-				6BB43C3F1C179AA656C8A0D227C71A78 /* Pods-AssemblyManager_Tests-Info.plist */,
-				DC0CFA3020EB91B38F84441D6799B90E /* Pods-AssemblyManager_Tests-umbrella.h */,
-				1BA0281E8ABBC53C734EAF4C71519770 /* Pods-AssemblyManager_Tests.debug.xcconfig */,
-				6D00FB7EFBCF7214FF17120AC3683253 /* Pods-AssemblyManager_Tests.release.xcconfig */,
-			);
-			name = "Pods-AssemblyManager_Tests";
-			path = "Target Support Files/Pods-AssemblyManager_Tests";
-			sourceTree = "<group>";
-		};
-		90C3552FF76CFDB9ACF866A5A71D0922 /* CameraManager */ = {
-			isa = PBXGroup;
-			children = (
-				78A3C2A9A91564FCCC51B52AE2C2FA3D /* CameraManager.swift */,
-			);
-			name = CameraManager;
-			path = AssemblyManager/Classes/CameraManager;
-			sourceTree = "<group>";
-		};
-		927297DFB2680EF48D4B8B6FD4594C2C /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				28C9CF04ADAAD634BD67009B32839417 /* AssemblyManager.podspec */,
-				C63C3F477520C211E39E81A6AA420072 /* LICENSE */,
-				2666FF568AE7C9E406857E7D98D063D2 /* README.md */,
+				59FE8FB5091E5F6D354A06FE2CC09D46 /* AssemblyManager.podspec */,
+				EF9F8D0CDA0C2D4A3298B7F48C2CA9ED /* LICENSE */,
+				AF7C5AB255F774DD5F920419A92D1605 /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
 		};
-		ACAC11CAAB57A5060C7C7F920C21357E /* Pods-AssemblyManager_Example */ = {
+		6C24912CCEF8AAF33336967B018A7D23 /* PhotosManager */ = {
 			isa = PBXGroup;
 			children = (
-				2DA01935F5DCE0F2807E1E29B302E7A1 /* Pods-AssemblyManager_Example.modulemap */,
-				8D542494FD19BC1A0820D9C476F0A79B /* Pods-AssemblyManager_Example-acknowledgements.markdown */,
-				3EE361852A09C3F3E03428CD48732560 /* Pods-AssemblyManager_Example-acknowledgements.plist */,
-				F40F0A8B9CBC8A2DF1EE169DD75EE8F4 /* Pods-AssemblyManager_Example-dummy.m */,
-				2DB83EC40DD297E4A66E700344D3ED91 /* Pods-AssemblyManager_Example-frameworks.sh */,
-				DEB09306D003B75E9AF0BA1E4EA54BBE /* Pods-AssemblyManager_Example-Info.plist */,
-				0ED319F83C1DEF0436273DA2A7243F8D /* Pods-AssemblyManager_Example-umbrella.h */,
-				43A10639E710CD26AE7F0FD39C1815EF /* Pods-AssemblyManager_Example.debug.xcconfig */,
-				8997E37314DB0655BDB7FF86B1AE689B /* Pods-AssemblyManager_Example.release.xcconfig */,
+				301AB0CFDD036F71E336313191A169C7 /* PhotosManager.swift */,
 			);
-			name = "Pods-AssemblyManager_Example";
-			path = "Target Support Files/Pods-AssemblyManager_Example";
+			name = PhotosManager;
+			path = AssemblyManager/Classes/PhotosManager;
 			sourceTree = "<group>";
 		};
-		B8D2AAD62C5B36504F2A2A52B0713890 /* Targets Support Files */ = {
+		831D904432F1F7B6CF059FA406FF0C2D /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				ACAC11CAAB57A5060C7C7F920C21357E /* Pods-AssemblyManager_Example */,
-				7B2B46182CF6C9946B6E65DBB0FCC486 /* Pods-AssemblyManager_Tests */,
+				8A3DD303ED8B75EC67825E43877A2363 /* AssemblyManager */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		8A3DD303ED8B75EC67825E43877A2363 /* AssemblyManager */ = {
+			isa = PBXGroup;
+			children = (
+				6FEC1E353CDC6C09ED79582C774AD107 /* AssemblyManager.swift */,
+				099B2B63D4B4F1F5B776FBD3DBD57D8D /* CameraManager */,
+				6C24912CCEF8AAF33336967B018A7D23 /* PhotosManager */,
+				8C5D356D15E44CAE9AA0E8AF57DADB78 /* Libs */,
+				67FB948C3951EB2081460FCB4CFE1526 /* Pod */,
+				D645E0384B2644372EDC3E27C19A2DC5 /* Support Files */,
+			);
+			name = AssemblyManager;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		8C5D356D15E44CAE9AA0E8AF57DADB78 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				D4BCB00A7840652277EB0945F3A35F12 /* Enum.swift */,
+				EDB7E49D9073DD21F93335ED1B2916AD /* Extension.swift */,
+			);
+			name = Libs;
+			path = AssemblyManager/Classes/Libs;
+			sourceTree = "<group>";
+		};
+		A7C9F77084CC6E617DD1BA12DBA87332 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B366493A55D6108CBE32EB6A5E1FDDC2 /* AssemblyManager.framework */,
+				FDDA43A53FE54CB65F4BD3DDC7A956BF /* Pods_AssemblyManager_Example.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC144A730E3D9F448E4649845EE3D97E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1D9F4C706550D2FD197328DB2A0598DE /* Pods-AssemblyManager_Example */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -235,10 +187,10 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				6E8C4041803CB31F242F50A14AE99D5E /* Development Pods */,
+				831D904432F1F7B6CF059FA406FF0C2D /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				787341D73D353253A7EBB826392EC10C /* Products */,
-				B8D2AAD62C5B36504F2A2A52B0713890 /* Targets Support Files */,
+				A7C9F77084CC6E617DD1BA12DBA87332 /* Products */,
+				AC144A730E3D9F448E4649845EE3D97E /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -250,22 +202,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D645E0384B2644372EDC3E27C19A2DC5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D4282F972912A0F3F48BC851965CE6A4 /* AssemblyManager.modulemap */,
+				D2A6ED89058DFC9A5B24019804B117A2 /* AssemblyManager-dummy.m */,
+				8715ED27FE63AC36DAF812F19DA0C9CA /* AssemblyManager-Info.plist */,
+				B88916622644457067CA286DDAB09254 /* AssemblyManager-prefix.pch */,
+				293B65B3708DC5E470228A4F0063AE2E /* AssemblyManager-umbrella.h */,
+				9EF078082AE1CAFD2BBABADADBD32A47 /* AssemblyManager.debug.xcconfig */,
+				8E655A34836F980CCF37AFFE1AD86BF6 /* AssemblyManager.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/AssemblyManager";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		3C0FD27664F8D0F9BDBF70D76047A166 /* Headers */ = {
+		830AE495642A87C6ED540F3203ECD04C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8792BB5DFF37C1E1E7FC62F1851F018E /* AssemblyManager-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		6FF76CB060865EC47529813B720988B9 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0942B8DEDEE3874C4E7D1D0953AA1FF4 /* Pods-AssemblyManager_Tests-umbrella.h in Headers */,
+				5705B00A7BB0259B5A3614A29F84C333 /* AssemblyManager-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,33 +239,14 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		3EA9E20FF7F73E6215094467157BC023 /* Pods-AssemblyManager_Tests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D4F06A505DD2D1F4EF71628DF6F4C416 /* Build configuration list for PBXNativeTarget "Pods-AssemblyManager_Tests" */;
-			buildPhases = (
-				6FF76CB060865EC47529813B720988B9 /* Headers */,
-				BEC12C348F39348DA5B4CFA69529DC47 /* Sources */,
-				93B3F3E7AB069290288858F2956AE9B5 /* Frameworks */,
-				D896704B05235FD1DD3B19551077D9A1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6125B808DC2D613C00D9FDAD6942B3F8 /* PBXTargetDependency */,
-			);
-			name = "Pods-AssemblyManager_Tests";
-			productName = "Pods-AssemblyManager_Tests";
-			productReference = BFF608BC9584862076846F0AE2E81564 /* Pods_AssemblyManager_Tests.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		4F52DDCF660B2450901331C439EEB7B8 /* AssemblyManager */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 833727828E7D4CECE08BD0E94C4101E5 /* Build configuration list for PBXNativeTarget "AssemblyManager" */;
+			buildConfigurationList = 8E7292562CB30F28155E0630BAF63CDD /* Build configuration list for PBXNativeTarget "AssemblyManager" */;
 			buildPhases = (
-				3C0FD27664F8D0F9BDBF70D76047A166 /* Headers */,
-				716B221A4DF9E573D6773A2947010DA5 /* Sources */,
-				D14E5D715F47BD655937FC822BFD0B05 /* Frameworks */,
-				82AA9A970B0F437EA1B881CF6C15A8CA /* Resources */,
+				830AE495642A87C6ED540F3203ECD04C /* Headers */,
+				07CE3DFF790534C979E4850EACA51FDF /* Sources */,
+				A1411B2888D7ADB28D7D2BBF763A4D6A /* Frameworks */,
+				4BEC61124DD32434E58BB9E9BC69F9F9 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -329,7 +269,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				A0A1A56CA6A8C2F009C4E7CD0182A1C3 /* PBXTargetDependency */,
+				BD24419A09288060CCCFE23988FE5579 /* PBXTargetDependency */,
 			);
 			name = "Pods-AssemblyManager_Example";
 			productName = "Pods-AssemblyManager_Example";
@@ -354,13 +294,12 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 787341D73D353253A7EBB826392EC10C /* Products */;
+			productRefGroup = A7C9F77084CC6E617DD1BA12DBA87332 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				4F52DDCF660B2450901331C439EEB7B8 /* AssemblyManager */,
 				835EE1B2393AEC820D6BC78A812DFE34 /* Pods-AssemblyManager_Example */,
-				3EA9E20FF7F73E6215094467157BC023 /* Pods-AssemblyManager_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -373,14 +312,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		82AA9A970B0F437EA1B881CF6C15A8CA /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D896704B05235FD1DD3B19551077D9A1 /* Resources */ = {
+		4BEC61124DD32434E58BB9E9BC69F9F9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -390,6 +322,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		07CE3DFF790534C979E4850EACA51FDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AC38B0CC080DB2B8C4563039C3E0E0C3 /* AssemblyManager.swift in Sources */,
+				75F19DC5193D184472553FC69CBFEFB3 /* AssemblyManager-dummy.m in Sources */,
+				667B70CE7E4E664C2115F35A37BEDDE1 /* CameraManager.swift in Sources */,
+				DBF733857EDEFD5AEA47E5BE1FD9D382 /* Enum.swift in Sources */,
+				08DC84521B5A910A52DCDA3FA1B30549 /* Extension.swift in Sources */,
+				E8A5DB1D175C157227D9CD8FA463F158 /* PhotosManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1707174D942B3A5CCF8DFAFB77F8D90A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -398,76 +343,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		716B221A4DF9E573D6773A2947010DA5 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				CD13DB2754F77E679C474365CF6871E2 /* AssemblyManager-dummy.m in Sources */,
-				188E26D6275622C600AE7EC9 /* AssemblyManager.swift in Sources */,
-				E3FB512770C0694ADF63F9CEEFC4507D /* CameraManager.swift in Sources */,
-				0D191BDF1EED8A81CAB370D526560F0C /* Enum.swift in Sources */,
-				8A054D0090BB0FA654203DBFEE68D669 /* Extension.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BEC12C348F39348DA5B4CFA69529DC47 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E9050A95ABF811C0342943FBD33D1E90 /* Pods-AssemblyManager_Tests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		6125B808DC2D613C00D9FDAD6942B3F8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "Pods-AssemblyManager_Example";
-			target = 835EE1B2393AEC820D6BC78A812DFE34 /* Pods-AssemblyManager_Example */;
-			targetProxy = 6D7E8FD55285FFCB5EE1EEC570F96BD8 /* PBXContainerItemProxy */;
-		};
-		A0A1A56CA6A8C2F009C4E7CD0182A1C3 /* PBXTargetDependency */ = {
+		BD24419A09288060CCCFE23988FE5579 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AssemblyManager;
 			target = 4F52DDCF660B2450901331C439EEB7B8 /* AssemblyManager */;
-			targetProxy = 725538FDBD4EC7FFA6AAC4C052862C85 /* PBXContainerItemProxy */;
+			targetProxy = C418DA2BE2BFC21F2183AA908E7B7A2F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1956E4DF936A295FE0DC18A549BA96F0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1BA0281E8ABBC53C734EAF4C71519770 /* Pods-AssemblyManager_Tests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-AssemblyManager_Tests/Pods-AssemblyManager_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AssemblyManager_Tests/Pods-AssemblyManager_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		25AD9454612BF454A1E3DC4CD4FA8C6D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -536,7 +423,7 @@
 		};
 		3F7C96789CD61692C1BCF07A52ABDD01 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 43A10639E710CD26AE7F0FD39C1815EF /* Pods-AssemblyManager_Example.debug.xcconfig */;
+			baseConfigurationReference = 0EE47A6FFF2241857EAB27FFDCA23AEA /* Pods-AssemblyManager_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -566,9 +453,9 @@
 			};
 			name = Debug;
 		};
-		5CA04D7918A15C7B92418AD361DE90A2 /* Debug */ = {
+		6B3DF7290E33C8969F0B4C9FBA42ED6E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6060423CE4633A799637FD2F51E40C29 /* AssemblyManager.debug.xcconfig */;
+			baseConfigurationReference = 9EF078082AE1CAFD2BBABADADBD32A47 /* AssemblyManager.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -590,7 +477,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -599,7 +486,7 @@
 		};
 		8C9B012FA1F6548141CF0341A563975B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8997E37314DB0655BDB7FF86B1AE689B /* Pods-AssemblyManager_Example.release.xcconfig */;
+			baseConfigurationReference = 8539E1A9AEE7E356FE236F400A7D56E8 /* Pods-AssemblyManager_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -691,42 +578,9 @@
 			};
 			name = Release;
 		};
-		CAE09D01BA277F04597D2EEC7C666834 /* Release */ = {
+		D974428C56B93DD79C41FC7C9BD64F47 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6D00FB7EFBCF7214FF17120AC3683253 /* Pods-AssemblyManager_Tests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-AssemblyManager_Tests/Pods-AssemblyManager_Tests-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-AssemblyManager_Tests/Pods-AssemblyManager_Tests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E77E2B6BA16FBFD2C9844BF77EC9DA2F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = CD8C7CCFEE15F1FD7A88F07F13AB7AA2 /* AssemblyManager.release.xcconfig */;
+			baseConfigurationReference = 8E655A34836F980CCF37AFFE1AD86BF6 /* AssemblyManager.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -748,7 +602,7 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -777,20 +631,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		833727828E7D4CECE08BD0E94C4101E5 /* Build configuration list for PBXNativeTarget "AssemblyManager" */ = {
+		8E7292562CB30F28155E0630BAF63CDD /* Build configuration list for PBXNativeTarget "AssemblyManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				5CA04D7918A15C7B92418AD361DE90A2 /* Debug */,
-				E77E2B6BA16FBFD2C9844BF77EC9DA2F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D4F06A505DD2D1F4EF71628DF6F4C416 /* Build configuration list for PBXNativeTarget "Pods-AssemblyManager_Tests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1956E4DF936A295FE0DC18A549BA96F0 /* Debug */,
-				CAE09D01BA277F04597D2EEC7C666834 /* Release */,
+				6B3DF7290E33C8969F0B4C9FBA42ED6E /* Debug */,
+				D974428C56B93DD79C41FC7C9BD64F47 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

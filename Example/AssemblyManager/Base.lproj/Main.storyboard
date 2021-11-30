@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="MEv-KA-pBf">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -41,7 +41,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xst-Ns-TPq">
-                                                <rect key="frame" x="30" y="5" width="54" height="54"/>
+                                                <rect key="frame" x="30" y="10" width="54" height="54"/>
                                                 <state key="normal" image="ico_flash_off"/>
                                                 <connections>
                                                     <action selector="camerAFlash:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jIr-0q-ysp"/>
@@ -52,7 +52,7 @@
                                         <constraints>
                                             <constraint firstItem="Xst-Ns-TPq" firstAttribute="leading" secondItem="sPZ-YN-3kL" secondAttribute="leading" constant="30" id="BF6-bX-c0l"/>
                                             <constraint firstAttribute="height" constant="60" id="RXN-wZ-dIK"/>
-                                            <constraint firstItem="Xst-Ns-TPq" firstAttribute="top" secondItem="sPZ-YN-3kL" secondAttribute="top" constant="5" id="bKj-Vd-U7z"/>
+                                            <constraint firstItem="Xst-Ns-TPq" firstAttribute="top" secondItem="sPZ-YN-3kL" secondAttribute="top" constant="10" id="bKj-Vd-U7z"/>
                                         </constraints>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6mA-mg-EgD">
@@ -77,7 +77,7 @@
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JsE-UT-WGp">
-                                        <rect key="frame" x="0.0" y="65" width="375" height="483"/>
+                                        <rect key="frame" x="0.0" y="70" width="375" height="478"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                 </subviews>
@@ -86,7 +86,7 @@
                                     <constraint firstItem="JsE-UT-WGp" firstAttribute="leading" secondItem="urK-AX-a86" secondAttribute="leading" id="A9W-7w-iOK"/>
                                     <constraint firstItem="2gt-K3-URR" firstAttribute="leading" secondItem="urK-AX-a86" secondAttribute="leading" constant="30" id="LJR-up-7dh"/>
                                     <constraint firstItem="sPZ-YN-3kL" firstAttribute="leading" secondItem="urK-AX-a86" secondAttribute="leading" id="Mxf-id-nAJ"/>
-                                    <constraint firstItem="JsE-UT-WGp" firstAttribute="top" secondItem="sPZ-YN-3kL" secondAttribute="bottom" constant="5" id="Oii-AY-KMN"/>
+                                    <constraint firstItem="JsE-UT-WGp" firstAttribute="top" secondItem="sPZ-YN-3kL" secondAttribute="bottom" constant="10" id="Oii-AY-KMN"/>
                                     <constraint firstItem="sPZ-YN-3kL" firstAttribute="top" secondItem="urK-AX-a86" secondAttribute="top" id="U6L-Ke-Ilj"/>
                                     <constraint firstItem="6mA-mg-EgD" firstAttribute="top" secondItem="JsE-UT-WGp" secondAttribute="bottom" constant="5" id="V7H-wg-qqj"/>
                                     <constraint firstItem="6mA-mg-EgD" firstAttribute="centerX" secondItem="urK-AX-a86" secondAttribute="centerX" id="XBV-Y2-6Fy"/>
@@ -103,7 +103,7 @@
                         <constraints>
                             <constraint firstItem="urK-AX-a86" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="7Qf-gE-1wd"/>
                             <constraint firstAttribute="trailing" secondItem="urK-AX-a86" secondAttribute="trailing" id="C0W-Jo-YeO"/>
-                            <constraint firstAttribute="bottom" secondItem="urK-AX-a86" secondAttribute="bottom" id="TjE-XB-iS5"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="urK-AX-a86" secondAttribute="bottom" id="TjE-XB-iS5"/>
                             <constraint firstItem="urK-AX-a86" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="mJl-bs-cJe"/>
                         </constraints>
                     </view>
@@ -115,7 +115,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1007" y="-15"/>
+            <point key="canvasLocation" x="-1071" y="-17"/>
         </scene>
     </scenes>
     <resources>

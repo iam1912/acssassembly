@@ -18,6 +18,7 @@ class HomeController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,6 +33,10 @@ class HomeController: UIViewController {
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(true)
         CameraManager.shared.cameraStop()
+    }
+    
+    func setupUI() {
+        vPreImage.backgroundColor = UIColor(hexString: "#D8D8D8")
     }
     
     @IBAction func cameraCaptured(_ sender: Any) {

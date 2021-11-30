@@ -28,9 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1AFEB2719D94A6E4ED4AB9E9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		1AFEB2719D94A6E4ED4AB9E9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		1F3CC35F267327E5E7D26ADD /* Pods-AssemblyManager_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AssemblyManager_Tests.release.xcconfig"; path = "Target Support Files/Pods-AssemblyManager_Tests/Pods-AssemblyManager_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		34DD768D1457FF1B21A05E86 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		34DD768D1457FF1B21A05E86 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		5D2B1541633BA9867F40180B /* Pods-AssemblyManager_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AssemblyManager_Tests.debug.xcconfig"; path = "Target Support Files/Pods-AssemblyManager_Tests/Pods-AssemblyManager_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* AssemblyManager_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssemblyManager_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,7 +44,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		A9F5E06F879297A231D0ED4B /* Pods_AssemblyManager_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AssemblyManager_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC8571C97529D0683BFE8969 /* Pods_AssemblyManager_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AssemblyManager_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BEAD2A9098325F85C0C74C13 /* AssemblyManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = AssemblyManager.podspec; path = ../AssemblyManager.podspec; sourceTree = "<group>"; };
+		BEAD2A9098325F85C0C74C13 /* AssemblyManager.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = AssemblyManager.podspec; path = ../AssemblyManager.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		DC66683E707B8C790DC62646 /* Pods-AssemblyManager_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AssemblyManager_Example.release.xcconfig"; path = "Target Support Files/Pods-AssemblyManager_Example/Pods-AssemblyManager_Example.release.xcconfig"; sourceTree = "<group>"; };
 		EC34DEBFC397E08A0F73503E /* Pods-AssemblyManager_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AssemblyManager_Example.debug.xcconfig"; path = "Target Support Files/Pods-AssemblyManager_Example/Pods-AssemblyManager_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -156,7 +156,6 @@
 				5D2B1541633BA9867F40180B /* Pods-AssemblyManager_Tests.debug.xcconfig */,
 				1F3CC35F267327E5E7D26ADD /* Pods-AssemblyManager_Tests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -227,6 +226,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);

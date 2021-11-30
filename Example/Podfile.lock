@@ -1,0 +1,16 @@
+PODS:
+  - AssemblyManager (0.1.0)
+
+DEPENDENCIES:
+  - AssemblyManager (from `../`)
+
+EXTERNAL SOURCES:
+  AssemblyManager:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  AssemblyManager: 3e8197a4c32d5a4d9bb87decaa2156641564338b
+
+PODFILE CHECKSUM: 39de504a83ce8b6ae7ce5e0f79b63d5191838efd
+
+COCOAPODS: 1.10.2

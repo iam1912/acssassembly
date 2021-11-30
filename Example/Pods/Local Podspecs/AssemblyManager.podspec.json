@@ -1,0 +1,22 @@
+{
+  "name": "AssemblyManager",
+  "version": "0.1.0",
+  "summary": "A short description of AssemblyManager.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/iam1912/AssemblyManager",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "iam1912": "1479039156@qq.com"
+  },
+  "source": {
+    "git": "https://github.com/iam1912/AssemblyManager.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source_files": "AssemblyManager/Classes/**/*"
+}

@@ -17,7 +17,7 @@ public class PhotosManager: NSObject {
     private var isAllowEditing: Bool = false
     
     //PHPhotoLibrary
-    private var imagePHShowCallback: ((UIImage) -> Void)?
+    private var imagePHObserverCallback: (() -> Void)?
     
     public override init() {
         super.init()
@@ -45,8 +45,8 @@ public class PhotosManager: NSObject {
     }
     
     // 注册PHPhotoLibrary -- PHPhotoLibrary
-    public func phRegisterPhoto(callback: @escaping (UIImage) -> Void) {
-        self.imagePHShowCallback = callback
+    public func phRegister(callback: @escaping () -> Void) {
+        self.imagePHObserverCallback = callback
         if #available(iOS 14, *) {
             PHPhotoLibrary.requestAuthorization(for: .readWrite) { status in
                 switch status {
@@ -70,42 +70,60 @@ public class PhotosManager: NSObject {
     }
     
     // 注销PHPhotoLibrary -- PHPhotoLibrary
-    public func phUnregisterPhoto() {
+    public func phUnregister() {
         PHPhotoLibrary.shared().unregisterChangeObserver(self)
     }
     
     // 获取全部图片 -- PHPhotoLibrary
-    public func phAllPhotoLibrary(callback: @escaping (PHFetchResult<PHAsset>) -> Void) {
+    public func phAllPhotos(size: CGSize, isAspect: PhotoAspect, callback: @escaping ([Photo]) -> Void) {
+        var photoAssets: [Photo] = []
         let allPhotosOptions = PHFetchOptions()
         allPhotosOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)]
         let allPhotos = PHAsset.fetchAssets(with: .image, options: allPhotosOptions)
-        callback(allPhotos)
+        allPhotos.enumerateObjects{ (object, index, stop) in
+            self.phFetchSinglePhoto(assets: object, size: size, isAspect: isAspect) { (image) in
+                let photo = Photo(image: image, identifier: object.localIdentifier, width: object.pixelWidth, height: object.pixelHeight)
+                photoAssets.append(photo)
+            }
+        }
+        callback(photoAssets)
     }
     
     // 获取firstOrlast图片 -- PHPhotoLibrary
-    public func phFirstOrLastPhotoLibrary(photoPositionType: PhotoPositionType, size: CGSize, callback: @escaping (UIImage) -> Void) {
+    public func phFetchFirstOrLastPhoto(photoPositionType: PhotoPositionType, size: CGSize, callback: @escaping (Photo) -> Void) {
         let allPhotosOptions = PHFetchOptions()
         allPhotosOptions.sortDescriptors = [NSSortDescriptor(key: "creationDate", ascending: true)]
-        var photo: PHAsset?
+        var asset: PHAsset?
         switch photoPositionType {
         case .first:
-            photo = PHAsset.fetchAssets(with: .image, options: allPhotosOptions).firstObject
+            asset = PHAsset.fetchAssets(with: .image, options: allPhotosOptions).firstObject
         case .last:
-            photo = PHAsset.fetchAssets(with: .image, options: allPhotosOptions).lastObject
+            asset = PHAsset.fetchAssets(with: .image, options: allPhotosOptions).lastObject
         }
-        if let photo = photo {
-            phFetchSingleAssets(assets: photo, size: size, callback: callback)
+        if let asset = asset {
+            phFetchSinglePhoto(assets: asset, size: size, isAspect: .fit) { (image) in
+                let photo = Photo(image: image, identifier: asset.localIdentifier, width: asset.pixelWidth, height: asset.pixelHeight)
+                callback(photo)
+            }
         }
     }
     
-    // 加载单张图片 -- PHPhotoLibrary
-    public func phFetchSingleAssets(assets: PHAsset, size: CGSize, callback: @escaping (UIImage) -> Void) {
-        let imageOption = PHImageRequestOptions()
-        imageOption.isSynchronous = true
-        PHCachingImageManager.default().requestImage(for: assets, targetSize: size, contentMode: .aspectFit, options: imageOption) { (data: UIImage?, dictionry: Dictionary?) in
-            guard let image = data else { return }
-            callback(image)
-        }
+    // 通过identifier加载图片 -- PHPhotoLibrary
+    public func phFetchSinglePhotoWithIdentifier(identifier: String, size: CGSize, isAspect: PhotoAspect, callback: @escaping (UIImage) -> Void) {
+        let identifiers: [String] = [identifier]
+        let option = PHFetchOptions()
+        let result: PHFetchResult = PHAsset.fetchAssets(withLocalIdentifiers: identifiers, options: option)
+        guard let asset = result.firstObject else { return }
+        phFetchSinglePhoto(assets: asset, size: size, isAspect: isAspect, callback: callback)
+    }
+    
+    // 保存图片 -- PHPhotoLibrary
+    public func phSavePhoto(image: UIImage, callback: @escaping (Error?) -> Void) {
+        PHPhotoLibrary.shared().performChanges({
+            _ = PHAssetChangeRequest.creationRequestForAsset(from: image)
+        }, completionHandler: {success, error in
+            callback(error)
+        })
     }
 }
 
@@ -116,6 +134,32 @@ extension PhotosManager {
             self.imagePickerSaveFailCallback?(didFinishSavingWithError)
         } else {
             self.imagePickerSaveFailCallback?(nil)
+        }
+    }
+}
+
+extension PhotosManager {
+    // 加载单张图片 -- PHPhotoLibrary
+    private func phFetchSinglePhoto(assets: PHAsset, size: CGSize, isAspect: PhotoAspect, callback: @escaping (UIImage) -> Void) {
+        let imageOption = PHImageRequestOptions()
+        var contentMode: PHImageContentMode = .default
+        switch isAspect {
+        case .none:
+            contentMode = .default
+        case .fill:
+            contentMode = .aspectFill
+        case .fit:
+            contentMode = .aspectFit
+        }
+        if isAspect == .fill {
+            imageOption.resizeMode = .exact
+            imageOption.normalizedCropRect = .zero
+        }
+        imageOption.isSynchronous = true
+        imageOption.deliveryMode = .highQualityFormat
+        PHCachingImageManager.default().requestImage(for: assets, targetSize: size, contentMode: contentMode, options: imageOption) { (data: UIImage?, dictionry: Dictionary?) in
+            guard let image = data else { return }
+            callback(image)
         }
     }
 }
@@ -136,5 +180,6 @@ extension PhotosManager: UIImagePickerControllerDelegate, UINavigationController
 
 extension PhotosManager: PHPhotoLibraryChangeObserver {
     public func photoLibraryDidChange(_ changeInstance: PHChange) {
+        self.imagePHObserverCallback?()
     }
 }

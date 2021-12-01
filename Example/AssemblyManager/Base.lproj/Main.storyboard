@@ -80,9 +80,16 @@
                                         <rect key="frame" x="0.0" y="70" width="375" height="478"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1y-vA-cx9">
+                                        <rect key="frame" x="30" y="565" width="60" height="60"/>
+                                        <connections>
+                                            <action selector="homeToDetail:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CqW-1s-1gA"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="B1y-vA-cx9" firstAttribute="bottom" secondItem="2gt-K3-URR" secondAttribute="bottom" id="5ZO-Pt-t4X"/>
                                     <constraint firstItem="JsE-UT-WGp" firstAttribute="leading" secondItem="urK-AX-a86" secondAttribute="leading" id="A9W-7w-iOK"/>
                                     <constraint firstItem="2gt-K3-URR" firstAttribute="leading" secondItem="urK-AX-a86" secondAttribute="leading" constant="30" id="LJR-up-7dh"/>
                                     <constraint firstItem="sPZ-YN-3kL" firstAttribute="leading" secondItem="urK-AX-a86" secondAttribute="leading" id="Mxf-id-nAJ"/>
@@ -90,11 +97,14 @@
                                     <constraint firstItem="sPZ-YN-3kL" firstAttribute="top" secondItem="urK-AX-a86" secondAttribute="top" id="U6L-Ke-Ilj"/>
                                     <constraint firstItem="6mA-mg-EgD" firstAttribute="top" secondItem="JsE-UT-WGp" secondAttribute="bottom" constant="5" id="V7H-wg-qqj"/>
                                     <constraint firstItem="6mA-mg-EgD" firstAttribute="centerX" secondItem="urK-AX-a86" secondAttribute="centerX" id="XBV-Y2-6Fy"/>
+                                    <constraint firstItem="B1y-vA-cx9" firstAttribute="top" secondItem="2gt-K3-URR" secondAttribute="top" id="Z5F-aP-peo"/>
+                                    <constraint firstItem="B1y-vA-cx9" firstAttribute="leading" secondItem="2gt-K3-URR" secondAttribute="leading" id="aWu-Tl-gB8"/>
                                     <constraint firstAttribute="trailing" secondItem="CyJ-1Y-Rzd" secondAttribute="trailing" constant="30" id="eHH-8B-wgK"/>
                                     <constraint firstItem="2gt-K3-URR" firstAttribute="centerY" secondItem="6mA-mg-EgD" secondAttribute="centerY" id="fjd-9k-Zt3"/>
                                     <constraint firstAttribute="trailing" secondItem="JsE-UT-WGp" secondAttribute="trailing" id="iT1-4l-2Lk"/>
                                     <constraint firstAttribute="bottom" secondItem="6mA-mg-EgD" secondAttribute="bottom" constant="30" id="j6e-Om-Mrh"/>
                                     <constraint firstItem="CyJ-1Y-Rzd" firstAttribute="centerY" secondItem="6mA-mg-EgD" secondAttribute="centerY" id="mWW-FI-SOy"/>
+                                    <constraint firstItem="B1y-vA-cx9" firstAttribute="trailing" secondItem="2gt-K3-URR" secondAttribute="trailing" id="tQQ-Ma-w42"/>
                                     <constraint firstAttribute="trailing" secondItem="sPZ-YN-3kL" secondAttribute="trailing" id="wR0-LP-kbV"/>
                                 </constraints>
                             </view>
@@ -111,11 +121,20 @@
                         <outlet property="vFlashBtn" destination="Xst-Ns-TPq" id="CsT-vc-OrW"/>
                         <outlet property="vPreImage" destination="2gt-K3-URR" id="h6t-qa-TZ5"/>
                         <outlet property="vPreview" destination="JsE-UT-WGp" id="hOA-bJ-f1d"/>
+                        <segue destination="Bj2-cs-lxm" kind="presentation" identifier="HomeToPhotoDetail" id="wit-Pb-hme"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1071" y="-17"/>
+            <point key="canvasLocation" x="-1090" y="-27"/>
+        </scene>
+        <!--PhotoDetailController-->
+        <scene sceneID="qG2-Qp-Z4a">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Photo" referencedIdentifier="PhotoDetailController" id="Bj2-cs-lxm" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Zh-sa-mCz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-330" y="37"/>
         </scene>
     </scenes>
     <resources>

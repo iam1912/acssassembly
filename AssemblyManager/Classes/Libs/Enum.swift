@@ -18,7 +18,13 @@ public enum FlashMode {
     case off
 }
 
-public enum PhotoPositionType: Int {
+public enum PhotoPositionType {
     case first
     case last
+}
+
+public enum PhotoAspect {
+    case fill
+    case fit
+    case none
 }

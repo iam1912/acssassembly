@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		08DC84521B5A910A52DCDA3FA1B30549 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB7E49D9073DD21F93335ED1B2916AD /* Extension.swift */; };
+		188E27152757AC8300AE7EC9 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E27142757AC8300AE7EC9 /* Photo.swift */; };
+		188E271A2757B93100AE7EC9 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E27192757B93100AE7EC9 /* AudioManager.swift */; };
 		5705B00A7BB0259B5A3614A29F84C333 /* AssemblyManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 293B65B3708DC5E470228A4F0063AE2E /* AssemblyManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A00A765D355EFA116FF74EDEF451A9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
 		6272C5FDC2803D27923442F060DE03BA /* Pods-AssemblyManager_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0526D45529A264DF1BD7D2F0CC0E32 /* Pods-AssemblyManager_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -33,6 +35,8 @@
 /* Begin PBXFileReference section */
 		0EE47A6FFF2241857EAB27FFDCA23AEA /* Pods-AssemblyManager_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AssemblyManager_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		167D1E056E623C74C3D1FCFC8C60AE43 /* Pods-AssemblyManager_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AssemblyManager_Example.modulemap"; sourceTree = "<group>"; };
+		188E27142757AC8300AE7EC9 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		188E27192757B93100AE7EC9 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
 		293B65B3708DC5E470228A4F0063AE2E /* AssemblyManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AssemblyManager-umbrella.h"; sourceTree = "<group>"; };
 		301AB0CFDD036F71E336313191A169C7 /* PhotosManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PhotosManager.swift; sourceTree = "<group>"; };
 		59FE8FB5091E5F6D354A06FE2CC09D46 /* AssemblyManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = AssemblyManager.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
@@ -88,6 +92,24 @@
 			);
 			name = CameraManager;
 			path = AssemblyManager/Classes/CameraManager;
+			sourceTree = "<group>";
+		};
+		188E27132757AC4600AE7EC9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				188E27142757AC8300AE7EC9 /* Photo.swift */,
+			);
+			name = Models;
+			path = AssemblyManager/Classes/Models;
+			sourceTree = "<group>";
+		};
+		188E27182757B91400AE7EC9 /* AudioManager */ = {
+			isa = PBXGroup;
+			children = (
+				188E27192757B93100AE7EC9 /* AudioManager.swift */,
+			);
+			name = AudioManager;
+			path = AssemblyManager/Classes/AudioManager;
 			sourceTree = "<group>";
 		};
 		1D9F4C706550D2FD197328DB2A0598DE /* Pods-AssemblyManager_Example */ = {
@@ -146,8 +168,10 @@
 			isa = PBXGroup;
 			children = (
 				6FEC1E353CDC6C09ED79582C774AD107 /* AssemblyManager.swift */,
+				188E27182757B91400AE7EC9 /* AudioManager */,
 				099B2B63D4B4F1F5B776FBD3DBD57D8D /* CameraManager */,
 				6C24912CCEF8AAF33336967B018A7D23 /* PhotosManager */,
+				188E27132757AC4600AE7EC9 /* Models */,
 				8C5D356D15E44CAE9AA0E8AF57DADB78 /* Libs */,
 				67FB948C3951EB2081460FCB4CFE1526 /* Pod */,
 				D645E0384B2644372EDC3E27C19A2DC5 /* Support Files */,
@@ -326,7 +350,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				188E27152757AC8300AE7EC9 /* Photo.swift in Sources */,
 				AC38B0CC080DB2B8C4563039C3E0E0C3 /* AssemblyManager.swift in Sources */,
+				188E271A2757B93100AE7EC9 /* AudioManager.swift in Sources */,
 				75F19DC5193D184472553FC69CBFEFB3 /* AssemblyManager-dummy.m in Sources */,
 				667B70CE7E4E664C2115F35A37BEDDE1 /* CameraManager.swift in Sources */,
 				DBF733857EDEFD5AEA47E5BE1FD9D382 /* Enum.swift in Sources */,

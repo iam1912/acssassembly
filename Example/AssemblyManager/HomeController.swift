@@ -15,14 +15,15 @@ class HomeController: UIViewController {
     @IBOutlet weak var vFlashBtn: UIButton!
     
     var flashMode: FlashMode = .off
+    var photo = Photo()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        PhotosManager.shared.phRegister() {
+            self.setImageForAlbum()
+        }
         setupUI()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+        setImageForAlbum()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -35,16 +36,38 @@ class HomeController: UIViewController {
         CameraManager.shared.cameraStop()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "HomeToPhotoDetail" {
+            let controller = segue.destination as? PhotoDetailController
+            guard let photo = sender as? Photo else { return }
+            controller?.photo = photo
+        }
+    }
+    
     func setupUI() {
         vPreImage.backgroundColor = UIColor(hexString: "#D8D8D8")
     }
     
+    func setImageForAlbum() {
+        DispatchQueue.main.async {
+            PhotosManager.shared.phFetchFirstOrLastPhoto(photoPositionType: .last, size: self.vPreImage.bounds.size) { (photo) in
+                    self.photo = photo
+                    self.vPreImage.image = photo.image
+            }
+        }
+    }
+    
     @IBAction func cameraCaptured(_ sender: Any) {
         CameraManager.shared.cameraCaptured() { [weak self] (image, error) in
-            guard let self = self else { return }
+            guard self != nil else { return }
             if let _ = error { return }
             guard let image = image else { return }
-            self.vPreImage.image = image
+            PhotosManager.shared.phSavePhoto(image: image) { (error) in
+                if error != nil {
+                    H.error("保存失败")
+                } else {
+                }
+            }
         }
     }
     
@@ -62,6 +85,10 @@ class HomeController: UIViewController {
             self.flashMode = .off
             vFlashBtn.setImage(UIImage(named: "ico_flash_off"), for: .normal)
         }
+    }
+    
+    @IBAction func homeToDetail(_ sender: Any) {
+        self.performSegue(withIdentifier: "HomeToPhotoDetail", sender: photo)
     }
 }
 

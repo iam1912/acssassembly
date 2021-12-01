@@ -13,5 +13,19 @@ class H: NSObject {
         let alert = UIAlertView(title: "Error", message: message, delegate: nil, cancelButtonTitle: "cancel")
         alert.show()
     }
+    
+    class func success(_ message: String) {
+        let alert = UIAlertView(title: "Success", message: message, delegate: nil, cancelButtonTitle: "cancel")
+        alert.show()
+    }
+    
+    class func winWidth() -> CGFloat {
+        return UIScreen.main.bounds.width
+    }
+    
+    class func winHeight() -> CGFloat {
+        return UIScreen.main.bounds.height
+    }
+
 }
 

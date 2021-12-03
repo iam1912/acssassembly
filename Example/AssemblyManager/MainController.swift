@@ -24,6 +24,11 @@ class MainController: UITabBarController {
         photoNav.tabBarItem.title = "相册"
         vcs.append(photoNav)
         
+        let audioStoryboard = UIStoryboard(name: "Audio", bundle: nil)
+        let audioNav = audioStoryboard.instantiateViewController(withIdentifier: "AudioController")
+        audioNav.tabBarItem.title = "音频"
+        vcs.append(audioNav)
+        
         self.viewControllers = vcs
     }
 }

@@ -28,12 +28,12 @@ class HomeController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
-        CameraManager.shared.cameraOpen(view: self.vPreview)
+//        CameraManager.shared.cameraOpen(view: self.vPreview)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(true)
-        CameraManager.shared.cameraStop()
+//        CameraManager.shared.cameraStop()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

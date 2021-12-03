@@ -7,6 +7,7 @@
 
 import Foundation
 
+//Camera
 public enum PositionType: Int {
     case front
     case back
@@ -23,8 +24,20 @@ public enum PhotoPositionType {
     case last
 }
 
+//Photo
 public enum PhotoAspect {
     case fill
     case fit
     case none
+}
+
+//Audio
+public enum AudioPlayType {
+    case front
+    case next
+}
+
+public enum AudioFileType {
+    case local
+    case remote
 }

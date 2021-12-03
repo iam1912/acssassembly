@@ -7,6 +7,52 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		180A7A12275A613600F3E0C1 /* SongListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180A7A11275A613600F3E0C1 /* SongListView.swift */; };
+		180A7A14275A614000F3E0C1 /* SongListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A13275A614000F3E0C1 /* SongListView.xib */; };
+		180A7A17275A615700F3E0C1 /* AudioSongCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 180A7A15275A615700F3E0C1 /* AudioSongCell.swift */; };
+		180A7A18275A615700F3E0C1 /* AudioSongCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A16275A615700F3E0C1 /* AudioSongCell.xib */; };
+		180A7A59275A7BF600F3E0C1 /* Bonnie & Clyde.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A31275A7BE000F3E0C1 /* Bonnie & Clyde.mp3 */; };
+		180A7A5A275A7BF600F3E0C1 /* Senorita.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A32275A7BE100F3E0C1 /* Senorita.mp3 */; };
+		180A7A5B275A7BF600F3E0C1 /* LATATA (English Ver.).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A33275A7BE100F3E0C1 /* LATATA (English Ver.).mp3 */; };
+		180A7A5C275A7BF600F3E0C1 /* Uh-Oh.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A34275A7BE200F3E0C1 /* Uh-Oh.mp3 */; };
+		180A7A5D275A7BF600F3E0C1 /* Shallow (Cover).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A35275A7BE200F3E0C1 /* Shallow (Cover).mp3 */; };
+		180A7A5E275A7BF600F3E0C1 /* Oh my god (English Ver,).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A36275A7BE300F3E0C1 /* Oh my god (English Ver,).mp3 */; };
+		180A7A5F275A7BF600F3E0C1 /* Missing You.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A37275A7BE300F3E0C1 /* Missing You.mp3 */; };
+		180A7A60275A7BF600F3E0C1 /* HWAA(火花) (Chinese Ver.).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A38275A7BE400F3E0C1 /* HWAA(火花) (Chinese Ver.).mp3 */; };
+		180A7A61275A7BF600F3E0C1 /* 너는 나의 숨이였다 - (你是我的呼吸).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A39275A7BE400F3E0C1 /* 너는 나의 숨이였다 - (你是我的呼吸).mp3 */; };
+		180A7A62275A7BF600F3E0C1 /* 바람이 불어오는 곳.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A3A275A7BE500F3E0C1 /* 바람이 불어오는 곳.mp3 */; };
+		180A7A63275A7BF600F3E0C1 /* 주세요 - (Give Me Your).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A3B275A7BE600F3E0C1 /* 주세요 - (Give Me Your).mp3 */; };
+		180A7A64275A7BF600F3E0C1 /* 한 (一) - (HANN).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A3C275A7BE600F3E0C1 /* 한 (一) - (HANN).mp3 */; };
+		180A7A65275A7BF600F3E0C1 /* 싫다고 말해 - (Put It Straight).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A3D275A7BE700F3E0C1 /* 싫다고 말해 - (Put It Straight).mp3 */; };
+		180A7A66275A7BF600F3E0C1 /* Oh my god.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A3E275A7BE800F3E0C1 /* Oh my god.mp3 */; };
+		180A7A67275A7BF600F3E0C1 /* HWAA (English Ver.).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A3F275A7BE900F3E0C1 /* HWAA (English Ver.).mp3 */; };
+		180A7A68275A7BF600F3E0C1 /* Tung-Tung(Empty).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A40275A7BEA00F3E0C1 /* Tung-Tung(Empty).mp3 */; };
+		180A7A69275A7BF600F3E0C1 /* DUMDi DUMDi (Japanese ver.).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A41275A7BEB00F3E0C1 /* DUMDi DUMDi (Japanese ver.).mp3 */; };
+		180A7A6A275A7BF600F3E0C1 /* For You.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A42275A7BEB00F3E0C1 /* For You.mp3 */; };
+		180A7A6B275A7BF600F3E0C1 /* Maybe.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A43275A7BEB00F3E0C1 /* Maybe.mp3 */; };
+		180A7A6C275A7BF600F3E0C1 /* 들어줘요 - (Hear me).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A44275A7BEC00F3E0C1 /* 들어줘요 - (Hear me).mp3 */; };
+		180A7A6D275A7BF600F3E0C1 /* 화(火花) - HWAA.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A45275A7BEC00F3E0C1 /* 화(火花) - HWAA.mp3 */; };
+		180A7A6E275A7BF600F3E0C1 /* 알고 싶어 - (想要知晓).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A46275A7BED00F3E0C1 /* 알고 싶어 - (想要知晓).mp3 */; };
+		180A7A6F275A7BF600F3E0C1 /* LION.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A47275A7BED00F3E0C1 /* LION.mp3 */; };
+		180A7A70275A7BF600F3E0C1 /* Gravity(Live Ver.).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A48275A7BEE00F3E0C1 /* Gravity(Live Ver.).mp3 */; };
+		180A7A71275A7BF600F3E0C1 /* DON'T TEXT ME.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A49275A7BEE00F3E0C1 /* DON'T TEXT ME.mp3 */; };
+		180A7A72275A7BF600F3E0C1 /* Someone Like You.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A4A275A7BEF00F3E0C1 /* Someone Like You.mp3 */; };
+		180A7A73275A7BF600F3E0C1 /* Why Do You Love Me (Acoustic) (Cover).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A4B275A7BEF00F3E0C1 /* Why Do You Love Me (Acoustic) (Cover).mp3 */; };
+		180A7A74275A7BF600F3E0C1 /* Instagram.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A4C275A7BF000F3E0C1 /* Instagram.mp3 */; };
+		180A7A75275A7BF600F3E0C1 /* Blow Your Mind.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A4D275A7BF100F3E0C1 /* Blow Your Mind.mp3 */; };
+		180A7A76275A7BF600F3E0C1 /* Scared To Be Lonely.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A4E275A7BF100F3E0C1 /* Scared To Be Lonely.mp3 */; };
+		180A7A77275A7BF600F3E0C1 /* What‘s Your Name.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A4F275A7BF200F3E0C1 /* What‘s Your Name.mp3 */; };
+		180A7A78275A7BF600F3E0C1 /* MAZE.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A50275A7BF300F3E0C1 /* MAZE.mp3 */; };
+		180A7A79275A7BF600F3E0C1 /* 사랑해 - 爱.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A51275A7BF300F3E0C1 /* 사랑해 - 爱.mp3 */; };
+		180A7A7A275A7BF600F3E0C1 /* 한(寒) - HANN(Alone in winter).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A52275A7BF400F3E0C1 /* 한(寒) - HANN(Alone in winter).mp3 */; };
+		180A7A7B275A7BF600F3E0C1 /* LATATA.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A53275A7BF400F3E0C1 /* LATATA.mp3 */; };
+		180A7A7C275A7BF600F3E0C1 /* Where is love.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A54275A7BF400F3E0C1 /* Where is love.mp3 */; };
+		180A7A7D275A7BF600F3E0C1 /* Giant.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A55275A7BF500F3E0C1 /* Giant.mp3 */; };
+		180A7A7E275A7BF600F3E0C1 /* 널 사랑하지 않아.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A56275A7BF500F3E0C1 /* 널 사랑하지 않아.mp3 */; };
+		180A7A7F275A7BF600F3E0C1 /* DAHLIA.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A57275A7BF600F3E0C1 /* DAHLIA.mp3 */; };
+		1885CEF5275A7EFE0036EE86 /* 달라-(美元).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1885CEF4275A7EFE0036EE86 /* 달라-(美元).mp3 */; };
+		1885CEF7275A80F80036EE86 /* LOST.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1885CEF6275A80F80036EE86 /* LOST.mp3 */; };
+		1885CEF9275A84730036EE86 /* MOON.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1885CEF8275A84730036EE86 /* MOON.mp3 */; };
 		188E26CC27561E9800AE7EC9 /* SectionInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E26CB27561E9800AE7EC9 /* SectionInterface.swift */; };
 		188E26CE27561EAE00AE7EC9 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E26CD27561EAE00AE7EC9 /* Extension.swift */; };
 		188E26D027561ECE00AE7EC9 /* H.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E26CF27561ECE00AE7EC9 /* H.swift */; };
@@ -20,9 +66,6 @@
 		188E27172757B3AA00AE7EC9 /* UserDefaultUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E27162757B3AA00AE7EC9 /* UserDefaultUtils.swift */; };
 		188E271E2758BEEC00AE7EC9 /* AudioController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E271D2758BEEC00AE7EC9 /* AudioController.swift */; };
 		188E27202758BEFC00AE7EC9 /* Audio.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188E271F2758BEFC00AE7EC9 /* Audio.storyboard */; };
-		188E272B2758EFFF00AE7EC9 /* lost.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 188E27282758EFFE00AE7EC9 /* lost.mp3 */; };
-		188E272C2758EFFF00AE7EC9 /* daliha.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 188E27292758EFFF00AE7EC9 /* daliha.mp3 */; };
-		188E272D2758EFFF00AE7EC9 /* moon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 188E272A2758EFFF00AE7EC9 /* moon.mp3 */; };
 		188E2731275902ED00AE7EC9 /* ico_burn.png in Resources */ = {isa = PBXBuildFile; fileRef = 188E2730275902ED00AE7EC9 /* ico_burn.png */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACD81AFB9204008FA782 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* HomeController.swift */; };
@@ -33,6 +76,52 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		180A7A11275A613600F3E0C1 /* SongListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongListView.swift; sourceTree = "<group>"; };
+		180A7A13275A614000F3E0C1 /* SongListView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongListView.xib; sourceTree = "<group>"; };
+		180A7A15275A615700F3E0C1 /* AudioSongCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioSongCell.swift; sourceTree = "<group>"; };
+		180A7A16275A615700F3E0C1 /* AudioSongCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AudioSongCell.xib; sourceTree = "<group>"; };
+		180A7A31275A7BE000F3E0C1 /* Bonnie & Clyde.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Bonnie & Clyde.mp3"; sourceTree = "<group>"; };
+		180A7A32275A7BE100F3E0C1 /* Senorita.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Senorita.mp3; sourceTree = "<group>"; };
+		180A7A33275A7BE100F3E0C1 /* LATATA (English Ver.).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "LATATA (English Ver.).mp3"; sourceTree = "<group>"; };
+		180A7A34275A7BE200F3E0C1 /* Uh-Oh.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Uh-Oh.mp3"; sourceTree = "<group>"; };
+		180A7A35275A7BE200F3E0C1 /* Shallow (Cover).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Shallow (Cover).mp3"; sourceTree = "<group>"; };
+		180A7A36275A7BE300F3E0C1 /* Oh my god (English Ver,).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Oh my god (English Ver,).mp3"; sourceTree = "<group>"; };
+		180A7A37275A7BE300F3E0C1 /* Missing You.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Missing You.mp3"; sourceTree = "<group>"; };
+		180A7A38275A7BE400F3E0C1 /* HWAA(火花) (Chinese Ver.).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "HWAA(火花) (Chinese Ver.).mp3"; sourceTree = "<group>"; };
+		180A7A39275A7BE400F3E0C1 /* 너는 나의 숨이였다 - (你是我的呼吸).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "너는 나의 숨이였다 - (你是我的呼吸).mp3"; sourceTree = "<group>"; };
+		180A7A3A275A7BE500F3E0C1 /* 바람이 불어오는 곳.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "바람이 불어오는 곳.mp3"; sourceTree = "<group>"; };
+		180A7A3B275A7BE600F3E0C1 /* 주세요 - (Give Me Your).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "주세요 - (Give Me Your).mp3"; sourceTree = "<group>"; };
+		180A7A3C275A7BE600F3E0C1 /* 한 (一) - (HANN).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "한 (一) - (HANN).mp3"; sourceTree = "<group>"; };
+		180A7A3D275A7BE700F3E0C1 /* 싫다고 말해 - (Put It Straight).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "싫다고 말해 - (Put It Straight).mp3"; sourceTree = "<group>"; };
+		180A7A3E275A7BE800F3E0C1 /* Oh my god.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Oh my god.mp3"; sourceTree = "<group>"; };
+		180A7A3F275A7BE900F3E0C1 /* HWAA (English Ver.).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "HWAA (English Ver.).mp3"; sourceTree = "<group>"; };
+		180A7A40275A7BEA00F3E0C1 /* Tung-Tung(Empty).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Tung-Tung(Empty).mp3"; sourceTree = "<group>"; };
+		180A7A41275A7BEB00F3E0C1 /* DUMDi DUMDi (Japanese ver.).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "DUMDi DUMDi (Japanese ver.).mp3"; sourceTree = "<group>"; };
+		180A7A42275A7BEB00F3E0C1 /* For You.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "For You.mp3"; sourceTree = "<group>"; };
+		180A7A43275A7BEB00F3E0C1 /* Maybe.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Maybe.mp3; sourceTree = "<group>"; };
+		180A7A44275A7BEC00F3E0C1 /* 들어줘요 - (Hear me).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "들어줘요 - (Hear me).mp3"; sourceTree = "<group>"; };
+		180A7A45275A7BEC00F3E0C1 /* 화(火花) - HWAA.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "화(火花) - HWAA.mp3"; sourceTree = "<group>"; };
+		180A7A46275A7BED00F3E0C1 /* 알고 싶어 - (想要知晓).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "알고 싶어 - (想要知晓).mp3"; sourceTree = "<group>"; };
+		180A7A47275A7BED00F3E0C1 /* LION.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = LION.mp3; sourceTree = "<group>"; };
+		180A7A48275A7BEE00F3E0C1 /* Gravity(Live Ver.).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Gravity(Live Ver.).mp3"; sourceTree = "<group>"; };
+		180A7A49275A7BEE00F3E0C1 /* DON'T TEXT ME.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "DON'T TEXT ME.mp3"; sourceTree = "<group>"; };
+		180A7A4A275A7BEF00F3E0C1 /* Someone Like You.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Someone Like You.mp3"; sourceTree = "<group>"; };
+		180A7A4B275A7BEF00F3E0C1 /* Why Do You Love Me (Acoustic) (Cover).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Why Do You Love Me (Acoustic) (Cover).mp3"; sourceTree = "<group>"; };
+		180A7A4C275A7BF000F3E0C1 /* Instagram.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Instagram.mp3; sourceTree = "<group>"; };
+		180A7A4D275A7BF100F3E0C1 /* Blow Your Mind.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Blow Your Mind.mp3"; sourceTree = "<group>"; };
+		180A7A4E275A7BF100F3E0C1 /* Scared To Be Lonely.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Scared To Be Lonely.mp3"; sourceTree = "<group>"; };
+		180A7A4F275A7BF200F3E0C1 /* What‘s Your Name.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "What‘s Your Name.mp3"; sourceTree = "<group>"; };
+		180A7A50275A7BF300F3E0C1 /* MAZE.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MAZE.mp3; sourceTree = "<group>"; };
+		180A7A51275A7BF300F3E0C1 /* 사랑해 - 爱.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "사랑해 - 爱.mp3"; sourceTree = "<group>"; };
+		180A7A52275A7BF400F3E0C1 /* 한(寒) - HANN(Alone in winter).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "한(寒) - HANN(Alone in winter).mp3"; sourceTree = "<group>"; };
+		180A7A53275A7BF400F3E0C1 /* LATATA.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = LATATA.mp3; sourceTree = "<group>"; };
+		180A7A54275A7BF400F3E0C1 /* Where is love.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Where is love.mp3"; sourceTree = "<group>"; };
+		180A7A55275A7BF500F3E0C1 /* Giant.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Giant.mp3; sourceTree = "<group>"; };
+		180A7A56275A7BF500F3E0C1 /* 널 사랑하지 않아.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "널 사랑하지 않아.mp3"; sourceTree = "<group>"; };
+		180A7A57275A7BF600F3E0C1 /* DAHLIA.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = DAHLIA.mp3; sourceTree = "<group>"; };
+		1885CEF4275A7EFE0036EE86 /* 달라-(美元).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "달라-(美元).mp3"; sourceTree = "<group>"; };
+		1885CEF6275A80F80036EE86 /* LOST.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = LOST.mp3; sourceTree = "<group>"; };
+		1885CEF8275A84730036EE86 /* MOON.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MOON.mp3; sourceTree = "<group>"; };
 		188E26CB27561E9800AE7EC9 /* SectionInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionInterface.swift; sourceTree = "<group>"; };
 		188E26CD27561EAE00AE7EC9 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		188E26CF27561ECE00AE7EC9 /* H.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H.swift; sourceTree = "<group>"; };
@@ -46,9 +135,6 @@
 		188E27162757B3AA00AE7EC9 /* UserDefaultUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultUtils.swift; sourceTree = "<group>"; };
 		188E271D2758BEEC00AE7EC9 /* AudioController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioController.swift; sourceTree = "<group>"; };
 		188E271F2758BEFC00AE7EC9 /* Audio.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Audio.storyboard; sourceTree = "<group>"; };
-		188E27282758EFFE00AE7EC9 /* lost.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lost.mp3; sourceTree = "<group>"; };
-		188E27292758EFFF00AE7EC9 /* daliha.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = daliha.mp3; sourceTree = "<group>"; };
-		188E272A2758EFFF00AE7EC9 /* moon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = moon.mp3; sourceTree = "<group>"; };
 		188E2730275902ED00AE7EC9 /* ico_burn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ico_burn.png; sourceTree = "<group>"; };
 		1AFEB2719D94A6E4ED4AB9E9 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		1F3CC35F267327E5E7D26ADD /* Pods-AssemblyManager_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AssemblyManager_Tests.release.xcconfig"; path = "Target Support Files/Pods-AssemblyManager_Tests/Pods-AssemblyManager_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -170,6 +256,10 @@
 			isa = PBXGroup;
 			children = (
 				188E271F2758BEFC00AE7EC9 /* Audio.storyboard */,
+				180A7A11275A613600F3E0C1 /* SongListView.swift */,
+				180A7A13275A614000F3E0C1 /* SongListView.xib */,
+				180A7A15275A615700F3E0C1 /* AudioSongCell.swift */,
+				180A7A16275A615700F3E0C1 /* AudioSongCell.xib */,
 			);
 			name = Audio;
 			sourceTree = "<group>";
@@ -177,10 +267,49 @@
 		188E27212758BF0300AE7EC9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1885CEF8275A84730036EE86 /* MOON.mp3 */,
+				1885CEF6275A80F80036EE86 /* LOST.mp3 */,
+				1885CEF4275A7EFE0036EE86 /* 달라-(美元).mp3 */,
+				180A7A4D275A7BF100F3E0C1 /* Blow Your Mind.mp3 */,
+				180A7A31275A7BE000F3E0C1 /* Bonnie & Clyde.mp3 */,
+				180A7A57275A7BF600F3E0C1 /* DAHLIA.mp3 */,
+				180A7A49275A7BEE00F3E0C1 /* DON'T TEXT ME.mp3 */,
+				180A7A41275A7BEB00F3E0C1 /* DUMDi DUMDi (Japanese ver.).mp3 */,
+				180A7A42275A7BEB00F3E0C1 /* For You.mp3 */,
+				180A7A55275A7BF500F3E0C1 /* Giant.mp3 */,
+				180A7A48275A7BEE00F3E0C1 /* Gravity(Live Ver.).mp3 */,
+				180A7A3F275A7BE900F3E0C1 /* HWAA (English Ver.).mp3 */,
+				180A7A38275A7BE400F3E0C1 /* HWAA(火花) (Chinese Ver.).mp3 */,
+				180A7A4C275A7BF000F3E0C1 /* Instagram.mp3 */,
+				180A7A33275A7BE100F3E0C1 /* LATATA (English Ver.).mp3 */,
+				180A7A53275A7BF400F3E0C1 /* LATATA.mp3 */,
+				180A7A47275A7BED00F3E0C1 /* LION.mp3 */,
+				180A7A43275A7BEB00F3E0C1 /* Maybe.mp3 */,
+				180A7A50275A7BF300F3E0C1 /* MAZE.mp3 */,
+				180A7A37275A7BE300F3E0C1 /* Missing You.mp3 */,
+				180A7A36275A7BE300F3E0C1 /* Oh my god (English Ver,).mp3 */,
+				180A7A3E275A7BE800F3E0C1 /* Oh my god.mp3 */,
+				180A7A4E275A7BF100F3E0C1 /* Scared To Be Lonely.mp3 */,
+				180A7A32275A7BE100F3E0C1 /* Senorita.mp3 */,
+				180A7A35275A7BE200F3E0C1 /* Shallow (Cover).mp3 */,
+				180A7A4A275A7BEF00F3E0C1 /* Someone Like You.mp3 */,
+				180A7A40275A7BEA00F3E0C1 /* Tung-Tung(Empty).mp3 */,
+				180A7A34275A7BE200F3E0C1 /* Uh-Oh.mp3 */,
+				180A7A4F275A7BF200F3E0C1 /* What‘s Your Name.mp3 */,
+				180A7A54275A7BF400F3E0C1 /* Where is love.mp3 */,
+				180A7A4B275A7BEF00F3E0C1 /* Why Do You Love Me (Acoustic) (Cover).mp3 */,
+				180A7A39275A7BE400F3E0C1 /* 너는 나의 숨이였다 - (你是我的呼吸).mp3 */,
+				180A7A56275A7BF500F3E0C1 /* 널 사랑하지 않아.mp3 */,
+				180A7A44275A7BEC00F3E0C1 /* 들어줘요 - (Hear me).mp3 */,
+				180A7A3A275A7BE500F3E0C1 /* 바람이 불어오는 곳.mp3 */,
+				180A7A51275A7BF300F3E0C1 /* 사랑해 - 爱.mp3 */,
+				180A7A3D275A7BE700F3E0C1 /* 싫다고 말해 - (Put It Straight).mp3 */,
+				180A7A46275A7BED00F3E0C1 /* 알고 싶어 - (想要知晓).mp3 */,
+				180A7A3B275A7BE600F3E0C1 /* 주세요 - (Give Me Your).mp3 */,
+				180A7A3C275A7BE600F3E0C1 /* 한 (一) - (HANN).mp3 */,
+				180A7A52275A7BF400F3E0C1 /* 한(寒) - HANN(Alone in winter).mp3 */,
+				180A7A45275A7BEC00F3E0C1 /* 화(火花) - HWAA.mp3 */,
 				188E2730275902ED00AE7EC9 /* ico_burn.png */,
-				188E27292758EFFF00AE7EC9 /* daliha.mp3 */,
-				188E27282758EFFE00AE7EC9 /* lost.mp3 */,
-				188E272A2758EFFF00AE7EC9 /* moon.mp3 */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -339,16 +468,57 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				180A7A63275A7BF600F3E0C1 /* 주세요 - (Give Me Your).mp3 in Resources */,
+				180A7A77275A7BF600F3E0C1 /* What‘s Your Name.mp3 in Resources */,
+				1885CEF7275A80F80036EE86 /* LOST.mp3 in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
+				180A7A65275A7BF600F3E0C1 /* 싫다고 말해 - (Put It Straight).mp3 in Resources */,
+				180A7A5C275A7BF600F3E0C1 /* Uh-Oh.mp3 in Resources */,
+				180A7A7C275A7BF600F3E0C1 /* Where is love.mp3 in Resources */,
+				180A7A67275A7BF600F3E0C1 /* HWAA (English Ver.).mp3 in Resources */,
 				188E271027574B8C00AE7EC9 /* PhotoItemCell.xib in Resources */,
+				180A7A70275A7BF600F3E0C1 /* Gravity(Live Ver.).mp3 in Resources */,
+				180A7A73275A7BF600F3E0C1 /* Why Do You Love Me (Acoustic) (Cover).mp3 in Resources */,
+				180A7A6C275A7BF600F3E0C1 /* 들어줘요 - (Hear me).mp3 in Resources */,
+				180A7A7E275A7BF600F3E0C1 /* 널 사랑하지 않아.mp3 in Resources */,
+				180A7A7A275A7BF600F3E0C1 /* 한(寒) - HANN(Alone in winter).mp3 in Resources */,
+				180A7A7D275A7BF600F3E0C1 /* Giant.mp3 in Resources */,
+				180A7A78275A7BF600F3E0C1 /* MAZE.mp3 in Resources */,
+				180A7A5D275A7BF600F3E0C1 /* Shallow (Cover).mp3 in Resources */,
+				180A7A6D275A7BF600F3E0C1 /* 화(火花) - HWAA.mp3 in Resources */,
+				1885CEF5275A7EFE0036EE86 /* 달라-(美元).mp3 in Resources */,
+				180A7A5F275A7BF600F3E0C1 /* Missing You.mp3 in Resources */,
+				180A7A7B275A7BF600F3E0C1 /* LATATA.mp3 in Resources */,
 				188E26E0275661F700AE7EC9 /* Photo.storyboard in Resources */,
-				188E272C2758EFFF00AE7EC9 /* daliha.mp3 in Resources */,
-				188E272B2758EFFF00AE7EC9 /* lost.mp3 in Resources */,
+				180A7A64275A7BF600F3E0C1 /* 한 (一) - (HANN).mp3 in Resources */,
+				180A7A60275A7BF600F3E0C1 /* HWAA(火花) (Chinese Ver.).mp3 in Resources */,
+				180A7A68275A7BF600F3E0C1 /* Tung-Tung(Empty).mp3 in Resources */,
+				180A7A69275A7BF600F3E0C1 /* DUMDi DUMDi (Japanese ver.).mp3 in Resources */,
+				180A7A62275A7BF600F3E0C1 /* 바람이 불어오는 곳.mp3 in Resources */,
+				180A7A76275A7BF600F3E0C1 /* Scared To Be Lonely.mp3 in Resources */,
 				188E27202758BEFC00AE7EC9 /* Audio.storyboard in Resources */,
+				180A7A7F275A7BF600F3E0C1 /* DAHLIA.mp3 in Resources */,
+				180A7A61275A7BF600F3E0C1 /* 너는 나의 숨이였다 - (你是我的呼吸).mp3 in Resources */,
+				180A7A5A275A7BF600F3E0C1 /* Senorita.mp3 in Resources */,
+				180A7A6B275A7BF600F3E0C1 /* Maybe.mp3 in Resources */,
+				180A7A66275A7BF600F3E0C1 /* Oh my god.mp3 in Resources */,
 				188E2731275902ED00AE7EC9 /* ico_burn.png in Resources */,
+				180A7A72275A7BF600F3E0C1 /* Someone Like You.mp3 in Resources */,
+				180A7A5E275A7BF600F3E0C1 /* Oh my god (English Ver,).mp3 in Resources */,
+				180A7A18275A615700F3E0C1 /* AudioSongCell.xib in Resources */,
+				180A7A6F275A7BF600F3E0C1 /* LION.mp3 in Resources */,
+				180A7A79275A7BF600F3E0C1 /* 사랑해 - 爱.mp3 in Resources */,
+				180A7A71275A7BF600F3E0C1 /* DON'T TEXT ME.mp3 in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
+				180A7A74275A7BF600F3E0C1 /* Instagram.mp3 in Resources */,
+				180A7A75275A7BF600F3E0C1 /* Blow Your Mind.mp3 in Resources */,
+				180A7A6A275A7BF600F3E0C1 /* For You.mp3 in Resources */,
+				180A7A5B275A7BF600F3E0C1 /* LATATA (English Ver.).mp3 in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
-				188E272D2758EFFF00AE7EC9 /* moon.mp3 in Resources */,
+				180A7A59275A7BF600F3E0C1 /* Bonnie & Clyde.mp3 in Resources */,
+				1885CEF9275A84730036EE86 /* MOON.mp3 in Resources */,
+				180A7A6E275A7BF600F3E0C1 /* 알고 싶어 - (想要知晓).mp3 in Resources */,
+				180A7A14275A614000F3E0C1 /* SongListView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,7 +577,9 @@
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				188E27172757B3AA00AE7EC9 /* UserDefaultUtils.swift in Sources */,
 				188E26CC27561E9800AE7EC9 /* SectionInterface.swift in Sources */,
+				180A7A12275A613600F3E0C1 /* SongListView.swift in Sources */,
 				188E26DD275661AA00AE7EC9 /* PhotoController.swift in Sources */,
+				180A7A17275A615700F3E0C1 /* AudioSongCell.swift in Sources */,
 				188E26D027561ECE00AE7EC9 /* H.swift in Sources */,
 				188E270F27574B8C00AE7EC9 /* PhotoItemCell.swift in Sources */,
 				188E27122757613100AE7EC9 /* PhotoDetailController.swift in Sources */,

@@ -38,7 +38,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sPZ-YN-3kL">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                                        <rect key="frame" x="0.0" y="40" width="375" height="60"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xst-Ns-TPq">
                                                 <rect key="frame" x="30" y="10" width="54" height="54"/>
@@ -77,7 +77,7 @@
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JsE-UT-WGp">
-                                        <rect key="frame" x="0.0" y="70" width="375" height="478"/>
+                                        <rect key="frame" x="0.0" y="115" width="375" height="423"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1y-vA-cx9">
@@ -87,15 +87,15 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="B1y-vA-cx9" firstAttribute="bottom" secondItem="2gt-K3-URR" secondAttribute="bottom" id="5ZO-Pt-t4X"/>
                                     <constraint firstItem="JsE-UT-WGp" firstAttribute="leading" secondItem="urK-AX-a86" secondAttribute="leading" id="A9W-7w-iOK"/>
                                     <constraint firstItem="2gt-K3-URR" firstAttribute="leading" secondItem="urK-AX-a86" secondAttribute="leading" constant="30" id="LJR-up-7dh"/>
                                     <constraint firstItem="sPZ-YN-3kL" firstAttribute="leading" secondItem="urK-AX-a86" secondAttribute="leading" id="Mxf-id-nAJ"/>
-                                    <constraint firstItem="JsE-UT-WGp" firstAttribute="top" secondItem="sPZ-YN-3kL" secondAttribute="bottom" constant="10" id="Oii-AY-KMN"/>
-                                    <constraint firstItem="sPZ-YN-3kL" firstAttribute="top" secondItem="urK-AX-a86" secondAttribute="top" id="U6L-Ke-Ilj"/>
-                                    <constraint firstItem="6mA-mg-EgD" firstAttribute="top" secondItem="JsE-UT-WGp" secondAttribute="bottom" constant="5" id="V7H-wg-qqj"/>
+                                    <constraint firstItem="JsE-UT-WGp" firstAttribute="top" secondItem="sPZ-YN-3kL" secondAttribute="bottom" constant="15" id="Oii-AY-KMN"/>
+                                    <constraint firstItem="sPZ-YN-3kL" firstAttribute="top" secondItem="urK-AX-a86" secondAttribute="top" constant="40" id="U6L-Ke-Ilj"/>
+                                    <constraint firstItem="6mA-mg-EgD" firstAttribute="top" secondItem="JsE-UT-WGp" secondAttribute="bottom" constant="15" id="V7H-wg-qqj"/>
                                     <constraint firstItem="6mA-mg-EgD" firstAttribute="centerX" secondItem="urK-AX-a86" secondAttribute="centerX" id="XBV-Y2-6Fy"/>
                                     <constraint firstItem="B1y-vA-cx9" firstAttribute="top" secondItem="2gt-K3-URR" secondAttribute="top" id="Z5F-aP-peo"/>
                                     <constraint firstItem="B1y-vA-cx9" firstAttribute="leading" secondItem="2gt-K3-URR" secondAttribute="leading" id="aWu-Tl-gB8"/>
@@ -109,12 +109,12 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="urK-AX-a86" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="7Qf-gE-1wd"/>
                             <constraint firstAttribute="trailing" secondItem="urK-AX-a86" secondAttribute="trailing" id="C0W-Jo-YeO"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="urK-AX-a86" secondAttribute="bottom" id="TjE-XB-iS5"/>
-                            <constraint firstItem="urK-AX-a86" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="mJl-bs-cJe"/>
+                            <constraint firstItem="urK-AX-a86" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="mJl-bs-cJe"/>
                         </constraints>
                     </view>
                     <connections>

@@ -11,7 +11,9 @@ import UIKit
 class MainController: UITabBarController {
 
     override func viewDidLoad() {
-        super.viewDidLoad()        
+        super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = false
+        self.tabBar.barTintColor = UIColor(hex: 0x000000, alpha: 0.5)
         var vcs :[UIViewController] = []
         
         let homeStoryboard = UIStoryboard(name: "Main", bundle: nil)

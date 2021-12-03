@@ -32,7 +32,7 @@ public enum PhotoAspect {
 }
 
 //Audio
-public enum AudioPlayType {
+public enum AudioPlayOrder {
     case front
     case next
 }
@@ -40,4 +40,10 @@ public enum AudioPlayType {
 public enum AudioFileType {
     case local
     case remote
+}
+
+
+public enum AudioPlayType {
+    case loop
+    case order
 }

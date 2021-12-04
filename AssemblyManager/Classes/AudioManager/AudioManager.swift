@@ -19,6 +19,7 @@ public class AudioManager: NSObject {
     private var audioFileType: AudioFileType = .local
     private var audioPlayType: AudioPlayType = .order
     private var nsTimer: Timer?
+    private let changeKey = "AVSystemController_SystemVolumeDidChangeNotification"
     
     public override init() {
         super.init()
@@ -35,14 +36,7 @@ public class AudioManager: NSObject {
     }
     
     //初始化播放stores
-    public func initAudioPlay(stores: [String], type: AudioFileType, callback: @escaping (Int) -> Void, observerCallback: @escaping () -> Void) {
-        nsTimer?.invalidate()
-        nsTimer = nil
-        nsTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
-            self.audioPlayObserverCallback?()
-        }
-        self.audioPlayFinishCallback = callback
-        self.audioPlayObserverCallback = observerCallback
+    public func audioInitStore(stores: [String], type: AudioFileType, callback: @escaping (Int) -> Void, observerCallback: @escaping () -> Void) {
         if stores.count == 0 { return }
         stores.forEach {
             switch type {
@@ -57,18 +51,27 @@ public class AudioManager: NSObject {
                 }
             }
         }
-        do {
-            if let data = NSData(contentsOf: self.audioStores[0]) {
-                audioPlayer = try AVAudioPlayer(data: data as Data)
-            }
-            audioCurrentIdentifier = 0
-            audioPlayer.prepareToPlay()
-            audioPlayer.delegate = self
-            audioPlayer.volume = AVAudioSession.sharedInstance().outputVolume
-            self.audioPlayObserverCallback?()
-            self.audioPlayType(type: self.audioPlayType)
-            self.audioPlayFinishCallback?(self.audioCurrentIdentifier)
-        } catch {
+        self.audioPlayFinishCallback = callback
+        self.audioPlayObserverCallback = observerCallback
+        self.play(identifier: 0, isAuto: false)
+    }
+    
+    //initTimer
+    public func audioStarTimer() {
+        AVAudioSession.sharedInstance().addObserver(self, forKeyPath: "outputVolume", options: .new, context: nil)
+//        NotificationCenter.default.addObserver(self, selector: #selector(volumeChanged), name: NSNotification.Name(rawValue: changeKey), object: nil)
+        self.initNsTimer()
+    }
+    
+    //removeTimer
+    public func audioStopTimer() {
+        AVAudioSession.sharedInstance().removeObserver(self, forKeyPath: "outputVolume")
+        self.stopNsTimer()
+    }
+    
+    public override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "outputVolume" {
+            self.audioPlayer.volume = AVAudioSession.sharedInstance().outputVolume
         }
     }
     
@@ -79,49 +82,46 @@ public class AudioManager: NSObject {
         }
     }
     
+    //停止播放
+    public func audioPause() {
+        if audioPlayer.isPlaying {
+            audioPlayer.pause()
+        }
+    }
+    
+    //播放下一首
+    public func audioPlayNext() {
+        self.playNextOrFront(type: .next)
+    }
+    
+    //播放上一首
+    public func audioPlayFront() {
+        self.playNextOrFront(type: .front)
+    }
+    
     //播放指定音乐
     public func audioPlaySpecifically(identifier: Int) {
-        self.audioCurrentIdentifier = identifier
-        self.audioPlayNextOrFront(identifier: identifier)
+        self.play(identifier: identifier, isAuto: true)
     }
     
     //播放指定时间的音乐
     public func audioPlaySpecificallyTime(time: Double) {
-        self.audioPlayer.play(atTime: TimeInterval(time))
-        if !self.audioPlayer.isPlaying {
-            self.audioPause()
+        let isPlaying = self.audioPlayer.isPlaying
+        self.audioPause()
+        self.audioPlayer.currentTime = time * self.audioPlayer.duration
+        if isPlaying {
+            self.audioPlay()
         }
     }
     
     //播放方式
     public func audioSetPlayType(type: AudioPlayType) {
-        self.audioPlayType = type
-        audioPlayType(type: type)
+        playLoops(type: type)
     }
     
-    private func audioPlayType(type: AudioPlayType) {
-        switch type {
-        case .loop:
-            self.audioPlayer.numberOfLoops = -1
-        case .order:
-            self.audioPlayer.numberOfLoops = 0
-        }
-    }
-    
-    //停止播放
-    public func audioPause() {
-        audioPlayer.pause()
-        nsTimer?.invalidate()
-    }
-    
-    //播放下一首
-    public func audioPlayNext() {
-        self.audioPlayNextOrFront(type: .next)
-    }
-    
-    //播放上一首
-    public func audioPlayFront() {
-        self.audioPlayNextOrFront(type: .front)
+    //
+    public func audioSetVolume(volume: Float) {
+        self.audioPlayer.volume = volume
     }
     
     //播放进度条
@@ -149,48 +149,80 @@ public class AudioManager: NSObject {
     
     //播放音量
     public func audioAolume() -> Float {
-        audioPlayer.volume = AVAudioSession.sharedInstance().outputVolume
         return audioPlayer.volume
     }
 }
 
 extension AudioManager {
-    private func audioPlayNextOrFront(type: AudioPlayOrder) {
+    private func playNextOrFront(type: AudioPlayOrder) {
         switch type {
         case .front:
             self.audioCurrentIdentifier -= 1
             if self.audioCurrentIdentifier >= 0 && self.audioStores.count > 0 {
-                self.audioPlayNextOrFront(identifier: self.audioCurrentIdentifier)
+                self.play(identifier: self.audioCurrentIdentifier, isAuto: true)
             } else {
                 self.audioPause()
             }
         case .next:
             self.audioCurrentIdentifier += 1
             if self.audioCurrentIdentifier >= 0 && self.audioStores.count - 1 >= 0 {
-                self.audioPlayNextOrFront(identifier: self.audioCurrentIdentifier)
+                self.play(identifier: self.audioCurrentIdentifier, isAuto: true)
             } else {
                 self.audioPause()
             }
         }
     }
     
-    private func audioPlayNextOrFront(identifier: Int) {
+    private func play(identifier: Int, isAuto: Bool) {
         do {
             if let data = NSData(contentsOf: self.audioStores[identifier]) {
                 audioPlayer = try AVAudioPlayer(data: data as Data)
+                audioPlayer.delegate = self
                 audioPlayer.volume = AVAudioSession.sharedInstance().outputVolume
-                self.audioPlayType(type: self.audioPlayType)
             }
-            self.audioPlayer.play()
-            self.audioPlayFinishCallback?(self.audioCurrentIdentifier)
+            self.audioPlayFinishCallback?(identifier)
+            self.playLoops(type: self.audioPlayType)
+            self.audioCurrentIdentifier = identifier
+            if isAuto {
+                self.audioPlayer.play()
+            } else {
+                self.audioPlayObserverCallback?()
+            }
         } catch {
         }
     }
+    
+    private func playLoops(type: AudioPlayType) {
+        self.audioPlayType = type
+        if audioPlayer.isPlaying {
+            switch type {
+            case .loop:
+                self.audioPlayer.numberOfLoops = -1
+            case .order:
+                self.audioPlayer.numberOfLoops = 0
+            }
+        }
+    }
+    
+    private func initNsTimer() {
+        nsTimer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true) { _ in
+            self.audioPlayObserverCallback?()
+        }
+    }
+    
+    private func stopNsTimer() {
+        nsTimer?.invalidate()
+        nsTimer = nil
+    }
+    
+//    @objc func volumeChanged() {
+//        let volume = AVAudioSession.sharedInstance().outputVolume
+//        self.audioPlayer.volume = volume
+//    }
 }
 
 extension AudioManager: AVAudioPlayerDelegate {
     public func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
-        self.audioPlayNextOrFront(type: .next)
-        self.audioPlayFinishCallback?(self.audioCurrentIdentifier)
+        self.playNextOrFront(type: .next)
     }
 }

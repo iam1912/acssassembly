@@ -55,7 +55,7 @@ class SongListView: UIView {
     }
     
     func close() {
-        UIView.animate(withDuration: 0.2, animations: {
+        UIView.animate(withDuration: 0.3, animations: {
             self.alpha = 0
         }) { _ in
             self.removeFromSuperview()
@@ -68,7 +68,7 @@ class SongListView: UIView {
         contentView.setData(stores: stores, names: names)
         contentView.delegate = delegate
         win.addSubview(contentView)
-        UIView.animate(withDuration: 0.3, delay: 0, options: .curveEaseIn, animations: { () in
+        UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseIn, animations: { () in
             contentView.frame.origin.y = -70
         })
     }

@@ -29,17 +29,18 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zJa-t2-Gmm">
-                                                <rect key="frame" x="72" y="72" width="270" height="4"/>
-                                                <color key="progressTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <color key="trackTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            </progressView>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="gm7-MA-nNi">
+                                                <rect key="frame" x="70" y="62" width="274" height="31"/>
+                                                <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="maximumTrackTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="thumbTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </slider>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="vZk-8Q-DQ1" firstAttribute="centerY" secondItem="q40-yZ-gAN" secondAttribute="centerY" id="1E7-Rf-1zF"/>
                                             <constraint firstAttribute="height" constant="80" id="8wV-K6-2wt"/>
-                                            <constraint firstItem="zJa-t2-Gmm" firstAttribute="top" secondItem="vZk-8Q-DQ1" secondAttribute="bottom" constant="20" id="lEP-Qn-oqt"/>
+                                            <constraint firstItem="gm7-MA-nNi" firstAttribute="top" secondItem="vZk-8Q-DQ1" secondAttribute="bottom" constant="10" id="VjA-SY-eNp"/>
                                             <constraint firstItem="vZk-8Q-DQ1" firstAttribute="centerX" secondItem="q40-yZ-gAN" secondAttribute="centerX" id="lXH-5b-yhZ"/>
                                         </constraints>
                                     </view>
@@ -49,16 +50,8 @@
                                             <constraint firstAttribute="height" constant="200" id="i5t-ZP-vOB"/>
                                         </constraints>
                                     </imageView>
-                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pyK-5b-Nmc">
-                                        <rect key="frame" x="72" y="447" width="270" height="5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="5" id="yiy-Je-QAI"/>
-                                        </constraints>
-                                        <color key="progressTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="trackTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </progressView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tvk-Ap-5m0">
-                                        <rect key="frame" x="352" y="420" width="42" height="59"/>
+                                        <rect key="frame" x="352" y="420" width="42" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="42" id="0j6-mG-pEX"/>
                                         </constraints>
@@ -67,7 +60,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sAy-Hr-d2g">
-                                        <rect key="frame" x="20" y="437.5" width="42" height="24"/>
+                                        <rect key="frame" x="20" y="420" width="42" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="42" id="ufs-8y-Vx0"/>
                                         </constraints>
@@ -76,7 +69,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VJs-m1-vUr">
-                                        <rect key="frame" x="177" y="482" width="60" height="60"/>
+                                        <rect key="frame" x="177" y="484.5" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="8xi-fS-9F2"/>
                                             <constraint firstAttribute="width" constant="60" id="JLB-R0-L1k"/>
@@ -90,7 +83,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Sf-WE-ClV">
-                                        <rect key="frame" x="97" y="482" width="60" height="60"/>
+                                        <rect key="frame" x="97" y="484.5" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="60" id="MXF-tD-xf5"/>
                                             <constraint firstAttribute="height" constant="60" id="cUd-Ok-PZ2"/>
@@ -104,7 +97,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmI-ih-J6z">
-                                        <rect key="frame" x="257" y="482" width="60" height="60"/>
+                                        <rect key="frame" x="257" y="484.5" width="60" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="OgB-VV-7Ho"/>
                                             <constraint firstAttribute="width" constant="60" id="whu-z5-o2j"/>
@@ -118,7 +111,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q8e-jM-9dq">
-                                        <rect key="frame" x="30" y="495.5" width="30" height="33"/>
+                                        <rect key="frame" x="30" y="498" width="30" height="33"/>
                                         <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
                                         <state key="normal" title="循环">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -128,7 +121,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rHg-ie-UcR">
-                                        <rect key="frame" x="354" y="495.5" width="30" height="33"/>
+                                        <rect key="frame" x="354" y="498" width="30" height="33"/>
                                         <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="15"/>
                                         <state key="normal" title="歌单">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -137,31 +130,39 @@
                                             <action selector="songList:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="69H-sd-gAk"/>
                                         </connections>
                                     </button>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1.5" translatesAutoresizingMaskIntoConstraints="NO" id="jAm-2A-RA8">
+                                        <rect key="frame" x="70" y="429.5" width="274" height="6"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="5" id="zEc-7Z-yGg"/>
+                                        </constraints>
+                                        <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="maximumTrackTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="thumbTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </slider>
                                 </subviews>
                                 <color key="backgroundColor" red="0.58527622861091544" green="0.58527622861091544" blue="0.58527622861091544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="tvk-Ap-5m0" firstAttribute="top" secondItem="lbz-6r-FfL" secondAttribute="bottom" constant="50" id="0bo-eV-ozl"/>
+                                    <constraint firstItem="gm7-MA-nNi" firstAttribute="trailing" secondItem="jAm-2A-RA8" secondAttribute="trailing" id="33T-LC-gjD"/>
                                     <constraint firstItem="lmI-ih-J6z" firstAttribute="leading" secondItem="VJs-m1-vUr" secondAttribute="trailing" constant="20" id="4aq-K0-Rus"/>
                                     <constraint firstItem="lmI-ih-J6z" firstAttribute="centerY" secondItem="VJs-m1-vUr" secondAttribute="centerY" id="5mZ-U9-1zR"/>
-                                    <constraint firstItem="tvk-Ap-5m0" firstAttribute="leading" secondItem="pyK-5b-Nmc" secondAttribute="trailing" constant="10" id="BbU-bx-Hm4"/>
+                                    <constraint firstItem="jAm-2A-RA8" firstAttribute="leading" secondItem="sAy-Hr-d2g" secondAttribute="trailing" constant="10" id="8rx-QH-IyU"/>
                                     <constraint firstItem="Q8e-jM-9dq" firstAttribute="leading" secondItem="93r-fz-cB8" secondAttribute="leading" constant="30" id="FU5-Lm-ghk"/>
                                     <constraint firstItem="Q8e-jM-9dq" firstAttribute="centerY" secondItem="VJs-m1-vUr" secondAttribute="centerY" id="HNu-a2-FAU"/>
-                                    <constraint firstItem="pyK-5b-Nmc" firstAttribute="centerY" secondItem="tvk-Ap-5m0" secondAttribute="centerY" id="IAD-iD-RTN"/>
-                                    <constraint firstItem="pyK-5b-Nmc" firstAttribute="leading" secondItem="sAy-Hr-d2g" secondAttribute="trailing" constant="10" id="IGL-Uu-5wK"/>
                                     <constraint firstItem="sAy-Hr-d2g" firstAttribute="leading" secondItem="93r-fz-cB8" secondAttribute="leading" constant="20" id="Kj9-gj-Xfc"/>
                                     <constraint firstItem="VJs-m1-vUr" firstAttribute="centerX" secondItem="93r-fz-cB8" secondAttribute="centerX" id="M96-o0-NLi"/>
                                     <constraint firstAttribute="trailing" secondItem="lbz-6r-FfL" secondAttribute="trailing" constant="80" id="Mex-f0-cyF"/>
-                                    <constraint firstItem="pyK-5b-Nmc" firstAttribute="top" secondItem="lbz-6r-FfL" secondAttribute="bottom" constant="77" id="N2W-3K-gL2"/>
-                                    <constraint firstItem="VJs-m1-vUr" firstAttribute="top" secondItem="pyK-5b-Nmc" secondAttribute="bottom" constant="30" id="O4t-xP-Sjn"/>
                                     <constraint firstItem="q40-yZ-gAN" firstAttribute="top" secondItem="93r-fz-cB8" secondAttribute="top" constant="40" id="QWU-SH-HzS"/>
+                                    <constraint firstItem="gm7-MA-nNi" firstAttribute="leading" secondItem="jAm-2A-RA8" secondAttribute="leading" id="RwP-7E-Zdl"/>
                                     <constraint firstItem="lbz-6r-FfL" firstAttribute="leading" secondItem="93r-fz-cB8" secondAttribute="leading" constant="80" id="TvG-1v-6mw"/>
                                     <constraint firstAttribute="trailing" secondItem="tvk-Ap-5m0" secondAttribute="trailing" constant="20" id="W4F-Vq-zFp"/>
-                                    <constraint firstItem="zJa-t2-Gmm" firstAttribute="leading" secondItem="pyK-5b-Nmc" secondAttribute="leading" id="XSB-cH-DrD"/>
                                     <constraint firstAttribute="trailing" secondItem="rHg-ie-UcR" secondAttribute="trailing" constant="30" id="YZR-Pr-u3n"/>
                                     <constraint firstItem="2Sf-WE-ClV" firstAttribute="centerY" secondItem="VJs-m1-vUr" secondAttribute="centerY" id="Yoq-fw-J5l"/>
                                     <constraint firstItem="VJs-m1-vUr" firstAttribute="leading" secondItem="2Sf-WE-ClV" secondAttribute="trailing" constant="20" id="YqT-Db-tAF"/>
+                                    <constraint firstItem="tvk-Ap-5m0" firstAttribute="leading" secondItem="jAm-2A-RA8" secondAttribute="trailing" constant="10" id="Z9E-LD-ifE"/>
+                                    <constraint firstItem="jAm-2A-RA8" firstAttribute="centerY" secondItem="tvk-Ap-5m0" secondAttribute="centerY" id="ZYY-K0-hQM"/>
                                     <constraint firstItem="sAy-Hr-d2g" firstAttribute="centerY" secondItem="tvk-Ap-5m0" secondAttribute="centerY" id="bVD-0L-2mL"/>
-                                    <constraint firstItem="zJa-t2-Gmm" firstAttribute="trailing" secondItem="pyK-5b-Nmc" secondAttribute="trailing" id="c85-qL-Jcg"/>
+                                    <constraint firstItem="VJs-m1-vUr" firstAttribute="top" secondItem="jAm-2A-RA8" secondAttribute="bottom" constant="50" id="kEG-i5-GlZ"/>
                                     <constraint firstItem="rHg-ie-UcR" firstAttribute="centerY" secondItem="VJs-m1-vUr" secondAttribute="centerY" id="m38-yB-Oyc"/>
                                     <constraint firstItem="q40-yZ-gAN" firstAttribute="leading" secondItem="93r-fz-cB8" secondAttribute="leading" id="red-HZ-zei"/>
                                     <constraint firstItem="lbz-6r-FfL" firstAttribute="top" secondItem="q40-yZ-gAN" secondAttribute="bottom" constant="50" id="vqR-c1-fj8"/>
@@ -183,10 +184,10 @@
                         <outlet property="vCover" destination="lbz-6r-FfL" id="P60-n5-xbm"/>
                         <outlet property="vCurrentTime" destination="sAy-Hr-d2g" id="knD-1g-iNe"/>
                         <outlet property="vPlayOrPause" destination="VJs-m1-vUr" id="J4g-qC-ees"/>
-                        <outlet property="vPlayProcess" destination="pyK-5b-Nmc" id="e0C-GF-wAe"/>
+                        <outlet property="vPlaySlider" destination="jAm-2A-RA8" id="0yO-ce-3Ci"/>
                         <outlet property="vSongName" destination="vZk-8Q-DQ1" id="mTg-5i-Q4l"/>
                         <outlet property="vTotalTime" destination="tvk-Ap-5m0" id="VSr-4u-SVi"/>
-                        <outlet property="vVolumeProcess" destination="zJa-t2-Gmm" id="azt-WW-xQp"/>
+                        <outlet property="vVolumeSlider" destination="gm7-MA-nNi" id="lHK-ba-8SB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

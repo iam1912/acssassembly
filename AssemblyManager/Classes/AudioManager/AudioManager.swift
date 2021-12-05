@@ -94,6 +94,7 @@ public class AudioManager: NSObject {
     public func audioPause() {
         if audioPlayer.isPlaying {
             audioPlayer.pause()
+            audioLockScreenDisplayCallback?(self.audioCurrentIdentifier)
         }
     }
     
@@ -143,14 +144,14 @@ public class AudioManager: NSObject {
     
     //播放总时间
     public func audioDuration(places: Int) -> Double {
-        let time = Double(audioPlayer.duration / 60)
+        let time = Double(audioPlayer.duration / 60.0)
         let divisor = pow(10.0, Double(places))
         return (time * divisor).rounded() / divisor
     }
     
     //播放的当前时间
     public func audioCurrentTime(places: Int) -> Double {
-        let time = Double(audioPlayer.currentTime / 60)
+        let time = Double(audioPlayer.currentTime / 60.0)
         let divisor = pow(10.0, Double(places))
         return (time * divisor).rounded() / divisor
     }

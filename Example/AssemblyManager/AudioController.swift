@@ -120,12 +120,12 @@ extension AudioController {
         } lockScreenCallback: { (i) in
             var info = Dictionary<String, Any>()
             info[MPMediaItemPropertyTitle] = self.names[i]
-            info[MPMediaItemPropertyArtist] = "(G)I-DEL"
+            info[MPMediaItemPropertyArtist] = "(G)I-DLE"
             info[MPMediaItemPropertyAlbumTitle] = "I Burn"
-            info[MPMediaItemPropertyAlbumArtist] = "(G)I-DEL"
+            info[MPMediaItemPropertyAlbumArtist] = "(G)I-DLE"
             info[MPMediaItemPropertyArtwork] = MPMediaItemArtwork(image: UIImage(named: "ico_burn")!)
-            info[MPMediaItemPropertyPlaybackDuration] = AudioManager.shared.audioDuration(places: 2) * 60
-            info[MPNowPlayingInfoPropertyElapsedPlaybackTime] = AudioManager.shared.audioCurrentTime(places: 2) * 60
+            info[MPMediaItemPropertyPlaybackDuration] = AudioManager.shared.audioDuration(places: 2) * 60.0
+            info[MPNowPlayingInfoPropertyElapsedPlaybackTime] = AudioManager.shared.audioCurrentTime(places: 2) * 60.0
             MPNowPlayingInfoCenter.default().nowPlayingInfo = info
         }
     }

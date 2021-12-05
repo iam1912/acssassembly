@@ -8,6 +8,7 @@
 
 import UIKit
 import AssemblyManager
+import MediaPlayer
 
 class AudioController: UIViewController {
     @IBOutlet weak var vBackWrap: UIView!
@@ -31,14 +32,8 @@ class AudioController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        vBackWrap.backgroundColor = UIColor(hexString: "#D2D2D2")
-        vPlaySlider.addTarget(self, action: #selector(progressSliderChanged(_:)), for: .valueChanged)
-        self.vPlaySlider.maximumValue = 1
-        self.vPlaySlider.minimumValue = 0
-        self.vCover.image = UIImage(named: "ico_burn")
-        self.vVolumeSlider.maximumValue = 1
-        self.vVolumeSlider.minimumValue = 0
-        vVolumeSlider.addTarget(self, action: #selector(volumeSliderChanged(_:)), for: .valueChanged)
+        audioInitCallback()
+        setupUIAndTarget()
         audioInit()
     }
 
@@ -50,6 +45,45 @@ class AudioController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         AudioManager.shared.audioStopTimer()
+    }
+    
+    override func remoteControlReceived(with event: UIEvent?) {
+        guard let event = event?.subtype else { return }
+        switch event {
+        case .remoteControlPlay:
+            AudioManager.shared.audioPlay()
+        case .remoteControlPause:
+            AudioManager.shared.audioPause()
+        case .remoteControlNextTrack:
+            AudioManager.shared.audioPlayNext()
+        case .remoteControlPreviousTrack:
+            AudioManager.shared.audioPlayFront()
+        case .remoteControlStop:
+            break
+        case .remoteControlTogglePlayPause:
+            break
+        case .remoteControlBeginSeekingBackward:
+            break
+        case .remoteControlEndSeekingBackward:
+            break
+        case .remoteControlBeginSeekingForward:
+            break
+        case .remoteControlEndSeekingForward:
+            break
+        default:
+            break
+        }
+    }
+    
+    func setupUIAndTarget() {
+        vBackWrap.backgroundColor = UIColor(hexString: "#D2D2D2")
+        vPlaySlider.addTarget(self, action: #selector(progressSliderChanged(_:)), for: .valueChanged)
+        vVolumeSlider.addTarget(self, action: #selector(volumeSliderChanged(_:)), for: .valueChanged)
+        vPlaySlider.maximumValue = 1
+        vPlaySlider.minimumValue = 0
+        vCover.image = UIImage(named: "ico_burn")
+        vVolumeSlider.maximumValue = 1
+        vVolumeSlider.minimumValue = 0
     }
     
     @IBAction func playFront(_ sender: Any) {
@@ -75,15 +109,28 @@ class AudioController: UIViewController {
 }
 
 extension AudioController {
-    func audioInit() {
-        AudioManager.shared.audioInitStore(stores: self.stores, type: .local) { (i) in
+    func audioInitCallback() {
+        AudioManager.shared.audioInitCallback() { (i) in
             self.vSongName.text = self.names[i]
             self.vTotalTime.text = "\(AudioManager.shared.audioDuration(places: 2))"
         } observerCallback: {
             self.vPlaySlider.setValue(Float(AudioManager.shared.audioProcess()), animated: true)
             self.vCurrentTime.text = "\(AudioManager.shared.audioCurrentTime(places: 2))"
             self.vVolumeSlider.setValue(AudioManager.shared.audioAolume(), animated: true)
+        } lockScreenCallback: { (i) in
+            var info = Dictionary<String, Any>()
+            info[MPMediaItemPropertyTitle] = self.names[i]
+            info[MPMediaItemPropertyArtist] = "(G)I-DEL"
+            info[MPMediaItemPropertyAlbumTitle] = "I Burn"
+            info[MPMediaItemPropertyAlbumArtist] = "(G)I-DEL"
+            info[MPMediaItemPropertyArtwork] = MPMediaItemArtwork(image: UIImage(named: "ico_burn")!)
+            info[MPMediaItemPropertyPlaybackDuration] = AudioManager.shared.audioDuration(places: 2) * 60
+            info[MPNowPlayingInfoPropertyElapsedPlaybackTime] = AudioManager.shared.audioCurrentTime(places: 2) * 60
+            MPNowPlayingInfoCenter.default().nowPlayingInfo = info
         }
+    }
+    func audioInit() {
+        AudioManager.shared.audioInitStore(stores: self.stores, type: .local)
     }
     
     func play() {

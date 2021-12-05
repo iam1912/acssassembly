@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import MediaPlayer
 
 public class AudioManager: NSObject {
     public static let shared = AudioManager()
@@ -14,6 +15,7 @@ public class AudioManager: NSObject {
     private var audioPlayer: AVAudioPlayer = AVAudioPlayer()
     private var audioPlayFinishCallback: ((Int) -> Void)?
     private var audioPlayObserverCallback: (() -> Void)?
+    private var audioLockScreenDisplayCallback: ((Int) -> Void)?
     private var audioStores: [URL] = []
     private var audioCurrentIdentifier: Int = 0
     private var audioFileType: AudioFileType = .local
@@ -33,10 +35,18 @@ public class AudioManager: NSObject {
             try audioSession.setActive(true, options: AVAudioSession.SetActiveOptions())
         } catch {
         }
+        UIApplication.shared.beginReceivingRemoteControlEvents()
+    }
+    
+    //初始化callback，必须在audioInitStore先初始化callback
+    public func audioInitCallback(finishCallback: @escaping (Int) -> Void, observerCallback: @escaping () -> Void, lockScreenCallback: @escaping (Int) -> Void) {
+        self.audioPlayFinishCallback = finishCallback
+        self.audioPlayObserverCallback = observerCallback
+        self.audioLockScreenDisplayCallback = lockScreenCallback
     }
     
     //初始化播放stores
-    public func audioInitStore(stores: [String], type: AudioFileType, callback: @escaping (Int) -> Void, observerCallback: @escaping () -> Void) {
+    public func audioInitStore(stores: [String], type: AudioFileType) {
         if stores.count == 0 { return }
         stores.forEach {
             switch type {
@@ -51,8 +61,6 @@ public class AudioManager: NSObject {
                 }
             }
         }
-        self.audioPlayFinishCallback = callback
-        self.audioPlayObserverCallback = observerCallback
         self.play(identifier: 0, isAuto: false)
     }
     
@@ -119,7 +127,7 @@ public class AudioManager: NSObject {
         playLoops(type: type)
     }
     
-    //
+    //播放音量
     public func audioSetVolume(volume: Float) {
         self.audioPlayer.volume = volume
     }
@@ -157,18 +165,16 @@ extension AudioManager {
     private func playNextOrFront(type: AudioPlayOrder) {
         switch type {
         case .front:
-            self.audioCurrentIdentifier -= 1
-            if self.audioCurrentIdentifier >= 0 && self.audioStores.count > 0 {
-                self.play(identifier: self.audioCurrentIdentifier, isAuto: true)
+            if self.audioCurrentIdentifier == 0 {
+                self.play(identifier: self.audioStores.count - 1, isAuto: true)
             } else {
-                self.audioPause()
+                self.play(identifier: self.audioCurrentIdentifier - 1, isAuto: true)
             }
         case .next:
-            self.audioCurrentIdentifier += 1
-            if self.audioCurrentIdentifier >= 0 && self.audioStores.count - 1 >= 0 {
-                self.play(identifier: self.audioCurrentIdentifier, isAuto: true)
+            if self.audioCurrentIdentifier == self.audioStores.count - 1 && self.audioStores.count >= 1 {
+                self.play(identifier: 0, isAuto: true)
             } else {
-                self.audioPause()
+                self.play(identifier: self.audioCurrentIdentifier + 1, isAuto: true)
             }
         }
     }
@@ -180,9 +186,10 @@ extension AudioManager {
                 audioPlayer.delegate = self
                 audioPlayer.volume = AVAudioSession.sharedInstance().outputVolume
             }
-            self.audioPlayFinishCallback?(identifier)
-            self.playLoops(type: self.audioPlayType)
             self.audioCurrentIdentifier = identifier
+            self.playLoops(type: audioPlayType)
+            self.audioPlayFinishCallback?(identifier)
+            self.audioLockScreenDisplayCallback?(identifier)
             if isAuto {
                 self.audioPlayer.play()
             } else {

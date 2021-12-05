@@ -441,6 +441,7 @@
 						CreatedOnToolsVersion = 6.3.1;
 						DevelopmentTeam = G5SBC694P7;
 						LastSwiftMigration = 0900;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -715,6 +716,8 @@
 			baseConfigurationReference = EC34DEBFC397E08A0F73503E /* Pods-AssemblyManager_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G5SBC694P7;
 				INFOPLIST_FILE = AssemblyManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -722,6 +725,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};
@@ -732,6 +736,8 @@
 			baseConfigurationReference = DC66683E707B8C790DC62646 /* Pods-AssemblyManager_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G5SBC694P7;
 				INFOPLIST_FILE = AssemblyManager/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -739,6 +745,7 @@
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
 			};

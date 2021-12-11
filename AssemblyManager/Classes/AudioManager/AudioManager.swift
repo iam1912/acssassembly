@@ -21,7 +21,6 @@ public class AudioManager: NSObject {
     private var audioFileType: AudioFileType = .local
     private var audioPlayType: AudioPlayType = .order
     private var nsTimer: Timer?
-    private let changeKey = "AVSystemController_SystemVolumeDidChangeNotification"
     
     public override init() {
         super.init()
@@ -32,9 +31,12 @@ public class AudioManager: NSObject {
         let audioSession = AVAudioSession.sharedInstance()
         do {
             try audioSession.setCategory(.playback)
-            try audioSession.setActive(true, options: AVAudioSession.SetActiveOptions())
+            try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
+            try audioSession.overrideOutputAudioPort(.speaker)
         } catch {
         }
+        audioHandleInterruption()
+        audioHandleRouteChange()
         UIApplication.shared.beginReceivingRemoteControlEvents()
     }
     
@@ -67,7 +69,6 @@ public class AudioManager: NSObject {
     //initTimer
     public func audioStarTimer() {
         AVAudioSession.sharedInstance().addObserver(self, forKeyPath: "outputVolume", options: .new, context: nil)
-//        NotificationCenter.default.addObserver(self, selector: #selector(volumeChanged), name: NSNotification.Name(rawValue: changeKey), object: nil)
         self.initNsTimer()
     }
     
@@ -160,6 +161,16 @@ public class AudioManager: NSObject {
     public func audioAolume() -> Float {
         return audioPlayer.volume
     }
+    
+    //处理电话设备的中断
+    private func audioHandleInterruption() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handleInterruption(_:)), name: AVAudioSession.interruptionNotification, object: AVAudioSession.sharedInstance())
+    }
+    
+    //处理耳机中断问题
+    private func audioHandleRouteChange() {
+        NotificationCenter.default.addObserver(self, selector: #selector(HandleRouteChange(_:)), name: AVAudioSession.routeChangeNotification, object: AVAudioSession.sharedInstance())
+    }
 }
 
 extension AudioManager {
@@ -223,10 +234,41 @@ extension AudioManager {
         nsTimer = nil
     }
     
-//    @objc func volumeChanged() {
-//        let volume = AVAudioSession.sharedInstance().outputVolume
-//        self.audioPlayer.volume = volume
-//    }
+    @objc private func handleInterruption(_ notification: Notification) {
+        guard let info = notification.userInfo,
+              let typeValue = info[AVAudioSessionInterruptionTypeKey] as? UInt,
+              let type = AVAudioSession.InterruptionType(rawValue: typeValue) else {
+                return
+        }
+        if type == .began {
+            self.audioPause()
+        } else if type == .ended {
+            guard let optionsValue = info[AVAudioSessionInterruptionOptionKey] as? UInt else { return }
+            let options = AVAudioSession.InterruptionOptions(rawValue: optionsValue)
+            if options.contains(.shouldResume) {
+                self.audioPlay()
+            }
+        }
+    }
+    
+    @objc private func HandleRouteChange(_ notification: Notification) {
+        guard let info = notification.userInfo,
+              let typeValue = info[AVAudioSessionInterruptionTypeKey] as? UInt,
+              let type = AVAudioSession.RouteChangeReason(rawValue: typeValue) else {
+                    return
+        }
+        if type == .newDeviceAvailable {
+            return
+        } else if type == .oldDeviceUnavailable {
+            guard let route = info[AVAudioSessionRouteChangePreviousRouteKey] as? AVAudioSessionRouteDescription else { return }
+            let outputType = route.outputs[0].portType
+            if outputType == .headphones {
+                if self.audioPlayer.isPlaying {
+                    self.audioPlay()
+                }
+            }
+        }
+    }
 }
 
 extension AudioManager: AVAudioPlayerDelegate {

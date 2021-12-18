@@ -47,3 +47,9 @@ public enum AudioPlayType {
     case loop
     case order
 }
+
+//Media
+public enum MediaFileType {
+    case local
+    case remote
+}

@@ -50,6 +50,12 @@
 		180A7A7D275A7BF600F3E0C1 /* Giant.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A55275A7BF500F3E0C1 /* Giant.mp3 */; };
 		180A7A7E275A7BF600F3E0C1 /* 널 사랑하지 않아.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A56275A7BF500F3E0C1 /* 널 사랑하지 않아.mp3 */; };
 		180A7A7F275A7BF600F3E0C1 /* DAHLIA.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 180A7A57275A7BF600F3E0C1 /* DAHLIA.mp3 */; };
+		18839E0E27677EBB005C889B /* MediaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18839E0D27677EBB005C889B /* MediaController.swift */; };
+		18839E1127677ED0005C889B /* Media.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18839E1027677ED0005C889B /* Media.storyboard */; };
+		18839E13276780D7005C889B /* the windy rising.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 18839E12276780D7005C889B /* the windy rising.mp4 */; };
+		18839E15276DBEDF005C889B /* MediaPlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18839E14276DBEDF005C889B /* MediaPlayController.swift */; };
+		18839E17276DCA74005C889B /* PortraitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18839E16276DCA74005C889B /* PortraitController.swift */; };
+		18839E19276DCB33005C889B /* LandScapeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18839E18276DCB33005C889B /* LandScapeController.swift */; };
 		1885CEF5275A7EFE0036EE86 /* 달라-(美元).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1885CEF4275A7EFE0036EE86 /* 달라-(美元).mp3 */; };
 		1885CEF7275A80F80036EE86 /* LOST.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1885CEF6275A80F80036EE86 /* LOST.mp3 */; };
 		1885CEF9275A84730036EE86 /* MOON.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1885CEF8275A84730036EE86 /* MOON.mp3 */; };
@@ -119,6 +125,12 @@
 		180A7A55275A7BF500F3E0C1 /* Giant.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Giant.mp3; sourceTree = "<group>"; };
 		180A7A56275A7BF500F3E0C1 /* 널 사랑하지 않아.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "널 사랑하지 않아.mp3"; sourceTree = "<group>"; };
 		180A7A57275A7BF600F3E0C1 /* DAHLIA.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = DAHLIA.mp3; sourceTree = "<group>"; };
+		18839E0D27677EBB005C889B /* MediaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaController.swift; sourceTree = "<group>"; };
+		18839E1027677ED0005C889B /* Media.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Media.storyboard; sourceTree = "<group>"; };
+		18839E12276780D7005C889B /* the windy rising.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "the windy rising.mp4"; sourceTree = "<group>"; };
+		18839E14276DBEDF005C889B /* MediaPlayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayController.swift; sourceTree = "<group>"; };
+		18839E16276DCA74005C889B /* PortraitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortraitController.swift; sourceTree = "<group>"; };
+		18839E18276DCB33005C889B /* LandScapeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandScapeController.swift; sourceTree = "<group>"; };
 		1885CEF4275A7EFE0036EE86 /* 달라-(美元).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "달라-(美元).mp3"; sourceTree = "<group>"; };
 		1885CEF6275A80F80036EE86 /* LOST.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = LOST.mp3; sourceTree = "<group>"; };
 		1885CEF8275A84730036EE86 /* MOON.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MOON.mp3; sourceTree = "<group>"; };
@@ -168,14 +180,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18839E0C27677EA1005C889B /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				18839E0D27677EBB005C889B /* MediaController.swift */,
+				18839E14276DBEDF005C889B /* MediaPlayController.swift */,
+			);
+			name = Media;
+			sourceTree = "<group>";
+		};
+		18839E0F27677EC3005C889B /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				18839E1027677ED0005C889B /* Media.storyboard */,
+			);
+			name = Media;
+			sourceTree = "<group>";
+		};
 		188E26C627561E6300AE7EC9 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				18839E0C27677EA1005C889B /* Media */,
 				188E271B2758BA2D00AE7EC9 /* Audio */,
 				188E26D7275654F600AE7EC9 /* Photo */,
 				188E26CA27561E7F00AE7EC9 /* Home */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				188E26D327561F2B00AE7EC9 /* MainController.swift */,
+				18839E16276DCA74005C889B /* PortraitController.swift */,
+				18839E18276DCB33005C889B /* LandScapeController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -190,6 +222,7 @@
 		188E26C827561E6D00AE7EC9 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				18839E0F27677EC3005C889B /* Media */,
 				188E271C2758BA3400AE7EC9 /* Audio */,
 				188E26DE275661B100AE7EC9 /* Photo */,
 				188E26D127561EF200AE7EC9 /* Home */,
@@ -267,6 +300,7 @@
 		188E27212758BF0300AE7EC9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				18839E12276780D7005C889B /* the windy rising.mp4 */,
 				1885CEF8275A84730036EE86 /* MOON.mp3 */,
 				1885CEF6275A80F80036EE86 /* LOST.mp3 */,
 				1885CEF4275A7EFE0036EE86 /* 달라-(美元).mp3 */,
@@ -499,6 +533,7 @@
 				180A7A76275A7BF600F3E0C1 /* Scared To Be Lonely.mp3 in Resources */,
 				188E27202758BEFC00AE7EC9 /* Audio.storyboard in Resources */,
 				180A7A7F275A7BF600F3E0C1 /* DAHLIA.mp3 in Resources */,
+				18839E13276780D7005C889B /* the windy rising.mp4 in Resources */,
 				180A7A61275A7BF600F3E0C1 /* 너는 나의 숨이였다 - (你是我的呼吸).mp3 in Resources */,
 				180A7A5A275A7BF600F3E0C1 /* Senorita.mp3 in Resources */,
 				180A7A6B275A7BF600F3E0C1 /* Maybe.mp3 in Resources */,
@@ -512,6 +547,7 @@
 				180A7A71275A7BF600F3E0C1 /* DON'T TEXT ME.mp3 in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				180A7A74275A7BF600F3E0C1 /* Instagram.mp3 in Resources */,
+				18839E1127677ED0005C889B /* Media.storyboard in Resources */,
 				180A7A75275A7BF600F3E0C1 /* Blow Your Mind.mp3 in Resources */,
 				180A7A6A275A7BF600F3E0C1 /* For You.mp3 in Resources */,
 				180A7A5B275A7BF600F3E0C1 /* LATATA (English Ver.).mp3 in Resources */,
@@ -574,6 +610,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				188E270C275749D100AE7EC9 /* PhotoItemController.swift in Sources */,
+				18839E17276DCA74005C889B /* PortraitController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* HomeController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 				188E27172757B3AA00AE7EC9 /* UserDefaultUtils.swift in Sources */,
@@ -582,10 +619,13 @@
 				188E26DD275661AA00AE7EC9 /* PhotoController.swift in Sources */,
 				180A7A17275A615700F3E0C1 /* AudioSongCell.swift in Sources */,
 				188E26D027561ECE00AE7EC9 /* H.swift in Sources */,
+				18839E0E27677EBB005C889B /* MediaController.swift in Sources */,
 				188E270F27574B8C00AE7EC9 /* PhotoItemCell.swift in Sources */,
 				188E27122757613100AE7EC9 /* PhotoDetailController.swift in Sources */,
 				188E26D427561F2B00AE7EC9 /* MainController.swift in Sources */,
 				188E271E2758BEEC00AE7EC9 /* AudioController.swift in Sources */,
+				18839E19276DCB33005C889B /* LandScapeController.swift in Sources */,
+				18839E15276DBEDF005C889B /* MediaPlayController.swift in Sources */,
 				188E26CE27561EAE00AE7EC9 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

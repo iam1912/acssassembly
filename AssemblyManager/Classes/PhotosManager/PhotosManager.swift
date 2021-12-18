@@ -23,6 +23,42 @@ public class PhotosManager: NSObject {
         super.init()
     }
     
+    //UIImagePickerController
+    @objc private func handlePickerError(image: UIImage, didFinishSavingWithError: NSError?,contextInfo: AnyObject) {
+        if didFinishSavingWithError != nil {
+            self.imagePickerSaveFailCallback?(didFinishSavingWithError)
+        } else {
+            self.imagePickerSaveFailCallback?(nil)
+        }
+    }
+    
+    // 加载单张图片 -- PHPhotoLibrary
+    private func phFetchSinglePhoto(assets: PHAsset, size: CGSize, isAspect: PhotoAspect, callback: @escaping (UIImage) -> Void) {
+        let imageOption = PHImageRequestOptions()
+        var contentMode: PHImageContentMode = .default
+        switch isAspect {
+        case .none:
+            contentMode = .default
+        case .fill:
+            contentMode = .aspectFill
+        case .fit:
+            contentMode = .aspectFit
+        }
+        if isAspect == .fill {
+            imageOption.resizeMode = .exact
+            imageOption.normalizedCropRect = .zero
+        }
+        imageOption.isSynchronous = true
+        imageOption.deliveryMode = .highQualityFormat
+        PHCachingImageManager.default().requestImage(for: assets, targetSize: size, contentMode: contentMode, options: imageOption) { (data: UIImage?, dictionry: Dictionary?) in
+            guard let image = data else { return }
+            callback(image)
+        }
+    }
+}
+
+// MARK: -- UIImagePickerController
+extension PhotosManager {
     //上传图片 -- UIImagePickerController
     public func pickerShowPhoto(controller: UIViewController, isAllowEditing: Bool, callback: @escaping (UIImage) -> Void) {
         self.imagePickerCallback = callback
@@ -43,7 +79,10 @@ public class PhotosManager: NSObject {
         self.imagePickerSaveFailCallback = callback
         UIImageWriteToSavedPhotosAlbum(image, self, #selector(handlePickerError(image:didFinishSavingWithError:contextInfo:)), nil)
     }
-    
+}
+
+// MARK: -- PHPhotoLibrary
+extension PhotosManager {
     // 注册PHPhotoLibrary -- PHPhotoLibrary
     public func phRegister(callback: @escaping () -> Void) {
         self.imagePHObserverCallback = callback
@@ -124,43 +163,6 @@ public class PhotosManager: NSObject {
         }, completionHandler: {success, error in
             callback(error)
         })
-    }
-}
-
-extension PhotosManager {
-    //UIImagePickerController
-    @objc private func handlePickerError(image: UIImage, didFinishSavingWithError: NSError?,contextInfo: AnyObject) {
-        if didFinishSavingWithError != nil {
-            self.imagePickerSaveFailCallback?(didFinishSavingWithError)
-        } else {
-            self.imagePickerSaveFailCallback?(nil)
-        }
-    }
-}
-
-extension PhotosManager {
-    // 加载单张图片 -- PHPhotoLibrary
-    private func phFetchSinglePhoto(assets: PHAsset, size: CGSize, isAspect: PhotoAspect, callback: @escaping (UIImage) -> Void) {
-        let imageOption = PHImageRequestOptions()
-        var contentMode: PHImageContentMode = .default
-        switch isAspect {
-        case .none:
-            contentMode = .default
-        case .fill:
-            contentMode = .aspectFill
-        case .fit:
-            contentMode = .aspectFit
-        }
-        if isAspect == .fill {
-            imageOption.resizeMode = .exact
-            imageOption.normalizedCropRect = .zero
-        }
-        imageOption.isSynchronous = true
-        imageOption.deliveryMode = .highQualityFormat
-        PHCachingImageManager.default().requestImage(for: assets, targetSize: size, contentMode: contentMode, options: imageOption) { (data: UIImage?, dictionry: Dictionary?) in
-            guard let image = data else { return }
-            callback(image)
-        }
     }
 }
 

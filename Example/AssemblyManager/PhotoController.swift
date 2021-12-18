@@ -9,7 +9,8 @@
 import UIKit
 import AssemblyManager
 
-class PhotoController: UIViewController {
+class PhotoController: PortraitController {
+    
     @IBOutlet weak var vPreviewImage: UIImageView!
     
     override func viewDidLoad() {

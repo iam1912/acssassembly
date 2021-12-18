@@ -26,154 +26,6 @@ public class AudioManager: NSObject {
         super.init()
     }
     
-    //设置后台播放
-    public func setupAudioPlayBack() {
-        let audioSession = AVAudioSession.sharedInstance()
-        do {
-            try audioSession.setCategory(.playback)
-            try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
-            try audioSession.overrideOutputAudioPort(.speaker)
-        } catch {
-        }
-        audioHandleInterruption()
-        audioHandleRouteChange()
-        UIApplication.shared.beginReceivingRemoteControlEvents()
-    }
-    
-    //初始化callback，必须在audioInitStore先初始化callback
-    public func audioInitCallback(finishCallback: @escaping (Int) -> Void, observerCallback: @escaping () -> Void, lockScreenCallback: @escaping (Int) -> Void) {
-        self.audioPlayFinishCallback = finishCallback
-        self.audioPlayObserverCallback = observerCallback
-        self.audioLockScreenDisplayCallback = lockScreenCallback
-    }
-    
-    //初始化播放stores
-    public func audioInitStore(stores: [String], type: AudioFileType) {
-        if stores.count == 0 { return }
-        stores.forEach {
-            switch type {
-            case .local:
-                if let path = Bundle.main.path(forResource: $0, ofType: "mp3") {
-                    let url = URL(fileURLWithPath: path)
-                    self.audioStores.append(url)
-                }
-            case .remote:
-                if let url = URL(string: $0) {
-                    self.audioStores.append(url)
-                }
-            }
-        }
-        self.play(identifier: 0, isAuto: false)
-    }
-    
-    //initTimer
-    public func audioStarTimer() {
-        AVAudioSession.sharedInstance().addObserver(self, forKeyPath: "outputVolume", options: .new, context: nil)
-        self.initNsTimer()
-    }
-    
-    //removeTimer
-    public func audioStopTimer() {
-        AVAudioSession.sharedInstance().removeObserver(self, forKeyPath: "outputVolume")
-        self.stopNsTimer()
-    }
-    
-    public override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
-        if keyPath == "outputVolume" {
-            self.audioPlayer.volume = AVAudioSession.sharedInstance().outputVolume
-        }
-    }
-    
-    //播放音乐
-    public func audioPlay() {
-        if audioPlayer.duration > 0 {
-            audioPlayer.play()
-        }
-    }
-    
-    //停止播放
-    public func audioPause() {
-        if audioPlayer.isPlaying {
-            audioPlayer.pause()
-            audioLockScreenDisplayCallback?(self.audioCurrentIdentifier)
-        }
-    }
-    
-    //播放下一首
-    public func audioPlayNext() {
-        self.playNextOrFront(type: .next)
-    }
-    
-    //播放上一首
-    public func audioPlayFront() {
-        self.playNextOrFront(type: .front)
-    }
-    
-    //播放指定音乐
-    public func audioPlaySpecifically(identifier: Int) {
-        self.play(identifier: identifier, isAuto: true)
-    }
-    
-    //播放指定时间的音乐
-    public func audioPlaySpecificallyTime(time: Double) {
-        let isPlaying = self.audioPlayer.isPlaying
-        self.audioPause()
-        self.audioPlayer.currentTime = time * self.audioPlayer.duration
-        if isPlaying {
-            self.audioPlay()
-        }
-    }
-    
-    //播放方式
-    public func audioSetPlayType(type: AudioPlayType) {
-        playLoops(type: type)
-    }
-    
-    //播放音量
-    public func audioSetVolume(volume: Float) {
-        self.audioPlayer.volume = volume
-    }
-    
-    //播放进度条
-    public func audioProcess() -> Float {
-        let process = Float(audioPlayer.currentTime / audioPlayer.duration)
-        if process.isNaN {
-            return 0
-        }
-        return process
-    }
-    
-    //播放总时间
-    public func audioDuration(places: Int) -> Double {
-        let time = Double(audioPlayer.duration / 60.0)
-        let divisor = pow(10.0, Double(places))
-        return (time * divisor).rounded() / divisor
-    }
-    
-    //播放的当前时间
-    public func audioCurrentTime(places: Int) -> Double {
-        let time = Double(audioPlayer.currentTime / 60.0)
-        let divisor = pow(10.0, Double(places))
-        return (time * divisor).rounded() / divisor
-    }
-    
-    //播放音量
-    public func audioAolume() -> Float {
-        return audioPlayer.volume
-    }
-    
-    //处理电话设备的中断
-    private func audioHandleInterruption() {
-        NotificationCenter.default.addObserver(self, selector: #selector(handleInterruption(_:)), name: AVAudioSession.interruptionNotification, object: AVAudioSession.sharedInstance())
-    }
-    
-    //处理耳机中断问题
-    private func audioHandleRouteChange() {
-        NotificationCenter.default.addObserver(self, selector: #selector(HandleRouteChange(_:)), name: AVAudioSession.routeChangeNotification, object: AVAudioSession.sharedInstance())
-    }
-}
-
-extension AudioManager {
     private func playNextOrFront(type: AudioPlayOrder) {
         switch type {
         case .front:
@@ -268,6 +120,158 @@ extension AudioManager {
                 }
             }
         }
+    }
+    
+    //处理电话设备的中断
+    private func audioHandleInterruption() {
+        NotificationCenter.default.addObserver(self, selector: #selector(handleInterruption(_:)), name: AVAudioSession.interruptionNotification, object: AVAudioSession.sharedInstance())
+    }
+    
+    //处理耳机中断问题
+    private func audioHandleRouteChange() {
+        NotificationCenter.default.addObserver(self, selector: #selector(HandleRouteChange(_:)), name: AVAudioSession.routeChangeNotification, object: AVAudioSession.sharedInstance())
+    }
+    
+    public override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if keyPath == "outputVolume" {
+            self.audioPlayer.volume = AVAudioSession.sharedInstance().outputVolume
+        }
+    }
+}
+
+// MARK: -- Play
+extension AudioManager {
+    //播放音乐
+    public func audioPlay() {
+        if audioPlayer.duration > 0 {
+            audioPlayer.play()
+        }
+    }
+    
+    //停止播放
+    public func audioPause() {
+        if audioPlayer.isPlaying {
+            audioPlayer.pause()
+            audioLockScreenDisplayCallback?(self.audioCurrentIdentifier)
+        }
+    }
+    
+    //播放下一首
+    public func audioPlayNext() {
+        self.playNextOrFront(type: .next)
+    }
+    
+    //播放上一首
+    public func audioPlayFront() {
+        self.playNextOrFront(type: .front)
+    }
+    
+    //播放指定音乐
+    public func audioPlaySpecifically(identifier: Int) {
+        self.play(identifier: identifier, isAuto: true)
+    }
+    
+    //播放指定时间的音乐
+    public func audioPlaySpecificallyTime(time: Double) {
+        let isPlaying = self.audioPlayer.isPlaying
+        self.audioPause()
+        self.audioPlayer.currentTime = time * self.audioPlayer.duration
+        if isPlaying {
+            self.audioPlay()
+        }
+    }
+    
+    //播放方式
+    public func audioSetPlayType(type: AudioPlayType) {
+        playLoops(type: type)
+    }
+    
+    //播放音量
+    public func audioSetVolume(volume: Float) {
+        self.audioPlayer.volume = volume
+    }
+    
+    //播放进度条
+    public func audioProcess() -> Float {
+        let process = Float(audioPlayer.currentTime / audioPlayer.duration)
+        if process.isNaN {
+            return 0
+        }
+        return process
+    }
+    
+    //播放总时间
+    public func audioDuration(places: Int) -> Double {
+        let time = Double(audioPlayer.duration / 60.0)
+        let divisor = pow(10.0, Double(places))
+        return (time * divisor).rounded() / divisor
+    }
+    
+    //播放的当前时间
+    public func audioCurrentTime(places: Int) -> Double {
+        let time = Double(audioPlayer.currentTime / 60.0)
+        let divisor = pow(10.0, Double(places))
+        return (time * divisor).rounded() / divisor
+    }
+    
+    //播放音量
+    public func audioAolume() -> Float {
+        return audioPlayer.volume
+    }
+}
+
+// MARK: -- BasicPlayConfig
+extension AudioManager {
+    //设置后台播放
+    public func setupAudioPlayBack() {
+        let audioSession = AVAudioSession.sharedInstance()
+        do {
+            try audioSession.setCategory(.playback)
+            try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
+            try audioSession.overrideOutputAudioPort(.speaker)
+        } catch {
+        }
+        audioHandleInterruption()
+        audioHandleRouteChange()
+        UIApplication.shared.beginReceivingRemoteControlEvents()
+    }
+    
+    //初始化callback，必须在audioInitStore先初始化callback
+    public func audioInitCallback(finishCallback: @escaping (Int) -> Void, observerCallback: @escaping () -> Void, lockScreenCallback: @escaping (Int) -> Void) {
+        self.audioPlayFinishCallback = finishCallback
+        self.audioPlayObserverCallback = observerCallback
+        self.audioLockScreenDisplayCallback = lockScreenCallback
+    }
+    
+    //初始化播放stores
+    public func audioInitStore(stores: [String], type: AudioFileType) {
+        if stores.count == 0 { return }
+        stores.forEach {
+            switch type {
+            case .local:
+                if let path = Bundle.main.path(forResource: $0, ofType: "mp3") {
+                    let url = URL(fileURLWithPath: path)
+                    self.audioStores.append(url)
+                }
+            case .remote:
+                if let url = URL(string: $0) {
+                    self.audioStores.append(url)
+                }
+            }
+        }
+        self.play(identifier: 0, isAuto: false)
+    }
+    
+    //initTimer
+    public func audioStarTimer() {
+        AVAudioSession.sharedInstance().addObserver(self, forKeyPath: "outputVolume", options: .new, context: nil)
+        self.initNsTimer()
+    }
+    
+    //removeTimer
+    public func audioStopTimer() {
+        AVAudioSession.sharedInstance().removeObserver(self, forKeyPath: "outputVolume")
+        self.stopNsTimer()
     }
 }
 

@@ -9,7 +9,7 @@
 import UIKit
 import AssemblyManager
 
-class PhotoItemController: UIViewController {
+class PhotoItemController: PortraitController {
     @IBOutlet weak var vCollection: UICollectionView!
     
     var photos: [Photo] = []

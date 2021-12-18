@@ -26,55 +26,6 @@ public class CameraManager: NSObject {
         super.init()
     }
     
-    public class func setup() {
-    }
-
-    // 打开摄像头
-    public func cameraOpen(view: UIView) {
-        self.session = AVCaptureSession()
-        self.vPreview = AVCaptureVideoPreviewLayer(session: self.session)
-        guard let preview = self.vPreview else { return }
-        preview.videoGravity = .resizeAspectFill
-        preview.frame = view.bounds
-        view.layer.addSublayer(preview)
-        self.requestPermission()
-    }
-    
-    // 切换摄像头
-    public func cameraSwitch() {
-        self.cameraSwitch(positionType: self.positionType == .front ? .back : .front)
-    }
-    
-    // 开始拍照
-    public func cameraCaptured(callback: ((UIImage?, Error?) -> Void)? = nil) {
-        guard let photoOutput = self.photoDeviceOutput else { return }
-        self.imageCallback = callback
-        let settings = AVCapturePhotoSettings()
-        switch self.flashModeEnable {
-        case .off:
-            settings.flashMode = .off
-        case .on:
-            settings.flashMode = .on
-        case .auto:
-            settings.flashMode = .auto
-        }
-        photoOutput.capturePhoto(with: settings, delegate: self)
-    }
-    
-    // 关闭拍照
-    public func cameraStop() {
-        self.positionType = .back
-        self.flashModeEnable = .off
-        self.session.stopRunning()
-    }
-    
-    // 开关闪光灯
-    public func cameraFlash(flashMode: FlashMode) {
-        self.flashModeEnable = flashMode
-    }
-}
-
-extension CameraManager {
     private func findInputDevice(positionType: PositionType) -> AVCaptureDevice? {
         let cameraSession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera, .builtInWideAngleCamera], mediaType: AVMediaType.video, position: .unspecified)
         let allCameraDevice = cameraSession.devices.compactMap { $0 }
@@ -158,6 +109,53 @@ extension CameraManager {
             session.addInput(self.rearPhotoDeviceInput!)
         }
         session.commitConfiguration()
+    }
+}
+
+// MARK: -- camera
+extension CameraManager {
+    // 打开摄像头
+    public func cameraOpen(view: UIView) {
+        self.session = AVCaptureSession()
+        self.vPreview = AVCaptureVideoPreviewLayer(session: self.session)
+        guard let preview = self.vPreview else { return }
+        preview.videoGravity = .resizeAspectFill
+        preview.frame = view.bounds
+        view.layer.addSublayer(preview)
+        self.requestPermission()
+    }
+    
+    // 切换摄像头
+    public func cameraSwitch() {
+        self.cameraSwitch(positionType: self.positionType == .front ? .back : .front)
+    }
+    
+    // 开始拍照
+    public func cameraCaptured(callback: ((UIImage?, Error?) -> Void)? = nil) {
+        guard let photoOutput = self.photoDeviceOutput else { return }
+        self.imageCallback = callback
+        let settings = AVCapturePhotoSettings()
+        switch self.flashModeEnable {
+        case .off:
+            settings.flashMode = .off
+        case .on:
+            settings.flashMode = .on
+        case .auto:
+            settings.flashMode = .auto
+        }
+        photoOutput.capturePhoto(with: settings, delegate: self)
+    }
+    
+    // 关闭拍照
+    public func cameraStop() {
+        self.positionType = .back
+        self.flashModeEnable = .off
+        self.session.stopRunning()
+    }
+    
+    // 开关闪光灯
+    public func cameraFlash(flashMode: FlashMode) {
+        self.flashModeEnable = flashMode
     }
 }
 

@@ -10,7 +10,7 @@ import UIKit
 import AssemblyManager
 import MediaPlayer
 
-class AudioController: UIViewController {
+class AudioController: PortraitController {
     @IBOutlet weak var vBackWrap: UIView!
     @IBOutlet weak var vSongName: UILabel!
     @IBOutlet weak var vCover: UIImageView!
@@ -49,29 +49,14 @@ class AudioController: UIViewController {
     
     override func remoteControlReceived(with event: UIEvent?) {
         guard let event = event?.subtype else { return }
-        switch event {
-        case .remoteControlPlay:
+        if event == .remoteControlPlay {
             AudioManager.shared.audioPlay()
-        case .remoteControlPause:
+        } else if event == .remoteControlPause {
             AudioManager.shared.audioPause()
-        case .remoteControlNextTrack:
+        } else if event == .remoteControlNextTrack {
             AudioManager.shared.audioPlayNext()
-        case .remoteControlPreviousTrack:
+        } else if event == .remoteControlPreviousTrack {
             AudioManager.shared.audioPlayFront()
-        case .remoteControlStop:
-            break
-        case .remoteControlTogglePlayPause:
-            break
-        case .remoteControlBeginSeekingBackward:
-            break
-        case .remoteControlEndSeekingBackward:
-            break
-        case .remoteControlBeginSeekingForward:
-            break
-        case .remoteControlEndSeekingForward:
-            break
-        default:
-            break
         }
     }
     

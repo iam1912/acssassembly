@@ -9,7 +9,7 @@
 import UIKit
 
 class MainController: UITabBarController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = false
@@ -31,6 +31,19 @@ class MainController: UITabBarController {
         audioNav.tabBarItem.title = "音频"
         vcs.append(audioNav)
         
+        let mediaStoryboard = UIStoryboard(name: "Media", bundle: nil)
+        let mediaNav = mediaStoryboard.instantiateViewController(withIdentifier: "MediaController")
+        mediaNav.tabBarItem.title = "视频"
+        vcs.append(mediaNav)
+        
         self.viewControllers = vcs
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return self.selectedViewController?.supportedInterfaceOrientations ?? .portrait
+    }
+
+    override var shouldAutorotate: Bool {
+        return self.selectedViewController?.shouldAutorotate ?? false
     }
 }

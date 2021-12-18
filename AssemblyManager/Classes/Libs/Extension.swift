@@ -82,3 +82,9 @@ extension UIImage {
 }
 
 
+extension NotificationCenter {
+    public func reinstall(observer: NSObject, name: Notification.Name, selector: Selector) {
+        NotificationCenter.default.removeObserver(observer, name: name, object: nil)
+        NotificationCenter.default.addObserver(observer, selector: selector, name: name, object: nil)
+    }
+}

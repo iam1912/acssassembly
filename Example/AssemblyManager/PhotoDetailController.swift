@@ -9,7 +9,7 @@
 import UIKit
 import AssemblyManager
 
-class PhotoDetailController: UIViewController {
+class PhotoDetailController: PortraitController {
     @IBOutlet weak var vPreImage: UIImageView!
     
     var photo = Photo()

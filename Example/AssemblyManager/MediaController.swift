@@ -11,18 +11,52 @@ import AssemblyManager
 
 class MediaController: PortraitController {
     @IBOutlet weak var vPreview: UIView!
+    @IBOutlet weak var vTitle: UILabel!
+    @IBOutlet weak var vTotalTime: UILabel!
+    @IBOutlet weak var vCurrentTime: UILabel!
+    @IBOutlet weak var cPreViewHeight: NSLayoutConstraint!
+    
+    var stores: [String] = []
+    var names: [String] = []
+    var orientations: UIInterfaceOrientationMask = .portrait
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        MediaManager.shared.mediaPlaySingle(view: vPreview, video: "the windy rising", type: .local)
+        self.setupMediaPlay()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        MediaManager.shared.mediaPlayHalfScreen(view: vPreview)
+        MediaManager.shared.mediaPlayHalfOrFullScreen(view: self.vPreview, screenType: .half) {
+        }
     }
     
-    @IBAction func playMedia(_ sender: Any) {
+    @IBAction func mediaPlay(_ sender: Any) {
         MediaManager.shared.mediaPlay()
+    }
+    
+    @IBAction func mediaPlayFullScreen(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Media", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "MediaPlayController") as! MediaPlayController
+        vc.modalPresentationStyle = .fullScreen
+        vc.modalTransitionStyle = .coverVertical
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    @IBAction func back(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func setupMediaPlay() {
+        MediaManager.shared.mediaInitCallback() { i in
+            self.vTitle.text = self.names[i]
+            self.vTotalTime.text = MediaManager.shared.mediaDuration()
+            self.vCurrentTime.text = MediaManager.shared.mediaCurrentTime()
+        } mediaSinglePlayEndTimeCallback: {
+        }
+        MediaManager.shared.addPeriodicTimeObserverCallback {
+            self.vCurrentTime.text = MediaManager.shared.mediaCurrentTime()
+        }
+        MediaManager.shared.mediaInitStores(view: vPreview, stores: stores, type: .local)
     }
 }

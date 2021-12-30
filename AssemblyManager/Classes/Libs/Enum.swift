@@ -53,3 +53,8 @@ public enum MediaFileType {
     case local
     case remote
 }
+
+public enum MediaScreen {
+    case half
+    case full
+}

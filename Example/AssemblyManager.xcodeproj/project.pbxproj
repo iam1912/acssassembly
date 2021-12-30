@@ -56,6 +56,11 @@
 		18839E15276DBEDF005C889B /* MediaPlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18839E14276DBEDF005C889B /* MediaPlayController.swift */; };
 		18839E17276DCA74005C889B /* PortraitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18839E16276DCA74005C889B /* PortraitController.swift */; };
 		18839E19276DCB33005C889B /* LandScapeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18839E18276DCB33005C889B /* LandScapeController.swift */; };
+		18839E1B276E1C0A005C889B /* MediaListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18839E1A276E1C0A005C889B /* MediaListController.swift */; };
+		18839E20276EF754005C889B /* Five Hundred Miles.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 18839E1C276EF748005C889B /* Five Hundred Miles.mp4 */; };
+		18839E21276EF754005C889B /* My Heart Will Go On.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 18839E1D276EF74D005C889B /* My Heart Will Go On.mp4 */; };
+		18839E22276EF754005C889B /* Shape Of My Heart.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 18839E1E276EF751005C889B /* Shape Of My Heart.mp4 */; };
+		18839E23276EF754005C889B /* Lover miss.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 18839E1F276EF754005C889B /* Lover miss.mp4 */; };
 		1885CEF5275A7EFE0036EE86 /* 달라-(美元).mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1885CEF4275A7EFE0036EE86 /* 달라-(美元).mp3 */; };
 		1885CEF7275A80F80036EE86 /* LOST.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1885CEF6275A80F80036EE86 /* LOST.mp3 */; };
 		1885CEF9275A84730036EE86 /* MOON.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1885CEF8275A84730036EE86 /* MOON.mp3 */; };
@@ -131,6 +136,11 @@
 		18839E14276DBEDF005C889B /* MediaPlayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaPlayController.swift; sourceTree = "<group>"; };
 		18839E16276DCA74005C889B /* PortraitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortraitController.swift; sourceTree = "<group>"; };
 		18839E18276DCB33005C889B /* LandScapeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandScapeController.swift; sourceTree = "<group>"; };
+		18839E1A276E1C0A005C889B /* MediaListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaListController.swift; sourceTree = "<group>"; };
+		18839E1C276EF748005C889B /* Five Hundred Miles.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Five Hundred Miles.mp4"; sourceTree = "<group>"; };
+		18839E1D276EF74D005C889B /* My Heart Will Go On.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "My Heart Will Go On.mp4"; sourceTree = "<group>"; };
+		18839E1E276EF751005C889B /* Shape Of My Heart.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Shape Of My Heart.mp4"; sourceTree = "<group>"; };
+		18839E1F276EF754005C889B /* Lover miss.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lover miss.mp4"; sourceTree = "<group>"; };
 		1885CEF4275A7EFE0036EE86 /* 달라-(美元).mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "달라-(美元).mp3"; sourceTree = "<group>"; };
 		1885CEF6275A80F80036EE86 /* LOST.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = LOST.mp3; sourceTree = "<group>"; };
 		1885CEF8275A84730036EE86 /* MOON.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MOON.mp3; sourceTree = "<group>"; };
@@ -185,6 +195,7 @@
 			children = (
 				18839E0D27677EBB005C889B /* MediaController.swift */,
 				18839E14276DBEDF005C889B /* MediaPlayController.swift */,
+				18839E1A276E1C0A005C889B /* MediaListController.swift */,
 			);
 			name = Media;
 			sourceTree = "<group>";
@@ -300,6 +311,10 @@
 		188E27212758BF0300AE7EC9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				18839E1C276EF748005C889B /* Five Hundred Miles.mp4 */,
+				18839E1F276EF754005C889B /* Lover miss.mp4 */,
+				18839E1D276EF74D005C889B /* My Heart Will Go On.mp4 */,
+				18839E1E276EF751005C889B /* Shape Of My Heart.mp4 */,
 				18839E12276780D7005C889B /* the windy rising.mp4 */,
 				1885CEF8275A84730036EE86 /* MOON.mp3 */,
 				1885CEF6275A80F80036EE86 /* LOST.mp3 */,
@@ -529,14 +544,18 @@
 				180A7A60275A7BF600F3E0C1 /* HWAA(火花) (Chinese Ver.).mp3 in Resources */,
 				180A7A68275A7BF600F3E0C1 /* Tung-Tung(Empty).mp3 in Resources */,
 				180A7A69275A7BF600F3E0C1 /* DUMDi DUMDi (Japanese ver.).mp3 in Resources */,
+				18839E21276EF754005C889B /* My Heart Will Go On.mp4 in Resources */,
 				180A7A62275A7BF600F3E0C1 /* 바람이 불어오는 곳.mp3 in Resources */,
 				180A7A76275A7BF600F3E0C1 /* Scared To Be Lonely.mp3 in Resources */,
 				188E27202758BEFC00AE7EC9 /* Audio.storyboard in Resources */,
+				18839E20276EF754005C889B /* Five Hundred Miles.mp4 in Resources */,
+				18839E23276EF754005C889B /* Lover miss.mp4 in Resources */,
 				180A7A7F275A7BF600F3E0C1 /* DAHLIA.mp3 in Resources */,
 				18839E13276780D7005C889B /* the windy rising.mp4 in Resources */,
 				180A7A61275A7BF600F3E0C1 /* 너는 나의 숨이였다 - (你是我的呼吸).mp3 in Resources */,
 				180A7A5A275A7BF600F3E0C1 /* Senorita.mp3 in Resources */,
 				180A7A6B275A7BF600F3E0C1 /* Maybe.mp3 in Resources */,
+				18839E22276EF754005C889B /* Shape Of My Heart.mp4 in Resources */,
 				180A7A66275A7BF600F3E0C1 /* Oh my god.mp3 in Resources */,
 				188E2731275902ED00AE7EC9 /* ico_burn.png in Resources */,
 				180A7A72275A7BF600F3E0C1 /* Someone Like You.mp3 in Resources */,
@@ -613,6 +632,7 @@
 				18839E17276DCA74005C889B /* PortraitController.swift in Sources */,
 				607FACD81AFB9204008FA782 /* HomeController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
+				18839E1B276E1C0A005C889B /* MediaListController.swift in Sources */,
 				188E27172757B3AA00AE7EC9 /* UserDefaultUtils.swift in Sources */,
 				188E26CC27561E9800AE7EC9 /* SectionInterface.swift in Sources */,
 				180A7A12275A613600F3E0C1 /* SongListView.swift in Sources */,

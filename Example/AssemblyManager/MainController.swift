@@ -18,22 +18,22 @@ class MainController: UITabBarController {
         
         let homeStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let homeNav = homeStoryboard.instantiateViewController(withIdentifier: "HomeController")
-        homeNav.tabBarItem.title = "拍照"
+        homeNav.tabBarItem.title = "Camera"
         vcs.append(homeNav)
         
         let photoStoryboard = UIStoryboard(name: "Photo", bundle: nil)
         let photoNav = photoStoryboard.instantiateViewController(withIdentifier: "PhotoController")
-        photoNav.tabBarItem.title = "相册"
+        photoNav.tabBarItem.title = "Photo"
         vcs.append(photoNav)
         
         let audioStoryboard = UIStoryboard(name: "Audio", bundle: nil)
         let audioNav = audioStoryboard.instantiateViewController(withIdentifier: "AudioController")
-        audioNav.tabBarItem.title = "音频"
+        audioNav.tabBarItem.title = "Music"
         vcs.append(audioNav)
         
         let mediaStoryboard = UIStoryboard(name: "Media", bundle: nil)
-        let mediaNav = mediaStoryboard.instantiateViewController(withIdentifier: "MediaController")
-        mediaNav.tabBarItem.title = "视频"
+        let mediaNav = mediaStoryboard.instantiateViewController(withIdentifier: "MediaListController")
+        mediaNav.tabBarItem.title = "Video"
         vcs.append(mediaNav)
         
         self.viewControllers = vcs

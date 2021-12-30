@@ -166,13 +166,33 @@ extension AudioManager {
         self.playNextOrFront(type: .front)
     }
     
-    //播放指定音乐
-    public func audioPlaySpecifically(identifier: Int) {
+    //播放列表中的指定音乐
+    public func audioPlaySpecifyForList(identifier: Int) {
         self.play(identifier: identifier, isAuto: true)
     }
     
+    //播放随机音乐
+    public func audioPlayRandom(identifier: String, type: AudioFileType, callback: @escaping (Int) -> Void) {
+        var playURL: URL?
+        if type == .local {
+            if let path = Bundle.main.path(forResource: identifier, ofType: "mp3") {
+                playURL = URL(fileURLWithPath: path)
+            }
+        } else if type == .remote {
+            playURL = URL(string: identifier)
+        }
+        if let url = playURL {
+            if !self.audioStores.contains(url) {
+                self.audioCurrentIdentifier += 1
+                self.audioStores.insert(url, at: self.audioCurrentIdentifier)
+                callback(self.audioCurrentIdentifier)
+                self.play(identifier: self.audioCurrentIdentifier, isAuto: true)
+            }
+        }
+    }
+    
     //播放指定时间的音乐
-    public func audioPlaySpecificallyTime(time: Double) {
+    public func audioPlaySpecifyTime(time: Double) {
         let isPlaying = self.audioPlayer.isPlaying
         self.audioPause()
         self.audioPlayer.currentTime = time * self.audioPlayer.duration
@@ -218,6 +238,11 @@ extension AudioManager {
     public func audioAolume() -> Float {
         return audioPlayer.volume
     }
+    
+    //播放状态
+    public func audioPlayStatus() -> Bool {
+        return audioPlayer.isPlaying
+    }
 }
 
 // MARK: -- BasicPlayConfig
@@ -231,8 +256,8 @@ extension AudioManager {
             try audioSession.overrideOutputAudioPort(.speaker)
         } catch {
         }
-        audioHandleInterruption()
-        audioHandleRouteChange()
+        self.audioHandleInterruption()
+        self.audioHandleRouteChange()
         UIApplication.shared.beginReceivingRemoteControlEvents()
     }
     
@@ -244,7 +269,7 @@ extension AudioManager {
     }
     
     //初始化播放stores
-    public func audioInitStore(stores: [String], type: AudioFileType) {
+    public func audioInitStore(stores: [String], type: AudioFileType, identifier: Int = 0) {
         if stores.count == 0 { return }
         stores.forEach {
             switch type {

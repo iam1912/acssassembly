@@ -139,6 +139,15 @@
                                         <color key="maximumTrackTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="thumbTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </slider>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fy5-tF-uIM">
+                                        <rect key="frame" x="30" y="576" width="230" height="30"/>
+                                        <state key="normal" title="너는 나의 숨이였다 - (你是我的呼吸)">
+                                            <color key="titleColor" systemColor="systemBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="playRandom:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VhF-LB-av0"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.58527622861091544" green="0.58527622861091544" blue="0.58527622861091544" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -154,6 +163,7 @@
                                     <constraint firstAttribute="trailing" secondItem="lbz-6r-FfL" secondAttribute="trailing" constant="80" id="Mex-f0-cyF"/>
                                     <constraint firstItem="q40-yZ-gAN" firstAttribute="top" secondItem="93r-fz-cB8" secondAttribute="top" constant="40" id="QWU-SH-HzS"/>
                                     <constraint firstItem="gm7-MA-nNi" firstAttribute="leading" secondItem="jAm-2A-RA8" secondAttribute="leading" id="RwP-7E-Zdl"/>
+                                    <constraint firstItem="fy5-tF-uIM" firstAttribute="leading" secondItem="Q8e-jM-9dq" secondAttribute="leading" id="Sdl-Ju-mbC"/>
                                     <constraint firstItem="lbz-6r-FfL" firstAttribute="leading" secondItem="93r-fz-cB8" secondAttribute="leading" constant="80" id="TvG-1v-6mw"/>
                                     <constraint firstAttribute="trailing" secondItem="tvk-Ap-5m0" secondAttribute="trailing" constant="20" id="W4F-Vq-zFp"/>
                                     <constraint firstAttribute="trailing" secondItem="rHg-ie-UcR" secondAttribute="trailing" constant="30" id="YZR-Pr-u3n"/>
@@ -166,6 +176,7 @@
                                     <constraint firstItem="rHg-ie-UcR" firstAttribute="centerY" secondItem="VJs-m1-vUr" secondAttribute="centerY" id="m38-yB-Oyc"/>
                                     <constraint firstItem="q40-yZ-gAN" firstAttribute="leading" secondItem="93r-fz-cB8" secondAttribute="leading" id="red-HZ-zei"/>
                                     <constraint firstItem="lbz-6r-FfL" firstAttribute="top" secondItem="q40-yZ-gAN" secondAttribute="bottom" constant="50" id="vqR-c1-fj8"/>
+                                    <constraint firstItem="fy5-tF-uIM" firstAttribute="top" secondItem="Q8e-jM-9dq" secondAttribute="bottom" constant="45" id="xlq-9l-XEq"/>
                                     <constraint firstAttribute="trailing" secondItem="q40-yZ-gAN" secondAttribute="trailing" id="yVc-Bt-qh1"/>
                                 </constraints>
                             </view>

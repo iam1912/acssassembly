@@ -14,7 +14,12 @@ class MediaPlayController: LandScapeController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        MediaManager.shared.mediaPlayFullScreen(view: vPreview)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        MediaManager.shared.mediaPlayHalfOrFullScreen(view: self.vPreview, screenType: .full) {
+        }
     }
     
     @IBAction func back() {

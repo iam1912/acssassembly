@@ -7,6 +7,70 @@
 
 import UIKit
 
+extension UIColor {
+    convenience init(hexString: String) {
+        let hex = hexString.trimmingCharacters(in: CharacterSet.alphanumerics.inverted)
+        var int = UInt32()
+        Scanner(string: hex).scanHexInt32(&int)
+        let a, r, g, b: UInt32
+        switch hex.count {
+        case 3: // RGB (12-bit)
+            (a, r, g, b) = (255, (int >> 8) * 17, (int >> 4 & 0xF) * 17, (int & 0xF) * 17)
+        case 6: // RGB (24-bit)
+            (a, r, g, b) = (255, int >> 16, int >> 8 & 0xFF, int & 0xFF)
+        case 8: // ARGB (32-bit)
+            (a, r, g, b) = (int >> 24, int >> 16 & 0xFF, int >> 8 & 0xFF, int & 0xFF)
+        default:
+            (a, r, g, b) = (255, 0, 0, 0)
+        }
+        self.init(red: CGFloat(r) / 255, green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: CGFloat(a) / 255)
+    }
+
+    convenience init(hex: Int, alpha: CGFloat = 1.0) {
+        let red   = CGFloat((hex & 0xFF0000) >> 16) / 255.0
+        let green = CGFloat((hex & 0xFF00) >> 8) / 255.0
+        let blue  = CGFloat((hex & 0xFF)) / 255.0
+        self.init(red: red, green: green, blue: blue, alpha: alpha)
+    }
+}
+
+extension UIView {
+    func setRoundingCorners(borderColor: UIColor,
+                            borderWidth: CGFloat = 1.0,
+                            raddi: CGFloat = 4.0,
+                            corners: UIRectCorner = [.topLeft, .bottomRight],
+                            isDotted: Bool = false) {
+        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: raddi, height: raddi))
+        // 圆角
+        let maskLayer = CAShapeLayer()
+        maskLayer.frame = bounds
+        maskLayer.path = path.cgPath
+        self.layer.mask = maskLayer
+        
+        // 边框
+        let borderLayer = CAShapeLayer()
+        borderLayer.frame = bounds
+        borderLayer.path = path.cgPath
+        borderLayer.lineWidth = borderWidth
+        borderLayer.fillColor = UIColor.clear.cgColor
+        borderLayer.strokeColor = borderColor.cgColor
+        if isDotted {
+            borderLayer.lineDashPattern = [NSNumber(value: 4), NSNumber(value: 2)]
+        }
+        self.layer.addSublayer(borderLayer)
+    }
+    
+    func setGradientLayer(_ startColor: UIColor, endColor: UIColor, startPoint: CGPoint, endPoint: CGPoint) {
+        let gradientlayer = CAGradientLayer()
+        gradientlayer.frame = self.bounds
+        gradientlayer.colors = [startColor.cgColor, endColor.cgColor]
+        gradientlayer.startPoint = startPoint
+        gradientlayer.endPoint = endPoint
+        self.layer.masksToBounds = true
+        self.layer.insertSublayer(gradientlayer, at: 0)
+    }
+}
+
 extension UIImage {
     func cgImageCorrectedOrientation() -> CGImage? {
         guard imageOrientation != .up else {

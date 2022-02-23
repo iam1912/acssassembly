@@ -7,24 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		08DC84521B5A910A52DCDA3FA1B30549 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDB7E49D9073DD21F93335ED1B2916AD /* Extension.swift */; };
-		18839E0B27673C3F005C889B /* MediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18839E0A27673C3F005C889B /* MediaManager.swift */; };
-		188E27152757AC8300AE7EC9 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E27142757AC8300AE7EC9 /* Photo.swift */; };
-		188E271A2757B93100AE7EC9 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188E27192757B93100AE7EC9 /* AudioManager.swift */; };
-		5705B00A7BB0259B5A3614A29F84C333 /* AssemblyManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 293B65B3708DC5E470228A4F0063AE2E /* AssemblyManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		5A00A765D355EFA116FF74EDEF451A9D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		6272C5FDC2803D27923442F060DE03BA /* Pods-AssemblyManager_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0526D45529A264DF1BD7D2F0CC0E32 /* Pods-AssemblyManager_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		667B70CE7E4E664C2115F35A37BEDDE1 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A5A8D4299599BB05D1937C03804B5B /* CameraManager.swift */; };
-		67F44E5F05CF65022EF56E8913208780 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		75F19DC5193D184472553FC69CBFEFB3 /* AssemblyManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D2A6ED89058DFC9A5B24019804B117A2 /* AssemblyManager-dummy.m */; };
-		A72B1657E7E66A33A0256C480F0A92E3 /* Pods-AssemblyManager_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 706C26B180EC321F63EF2CB0DC6BE2C2 /* Pods-AssemblyManager_Example-dummy.m */; };
-		AC38B0CC080DB2B8C4563039C3E0E0C3 /* AssemblyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FEC1E353CDC6C09ED79582C774AD107 /* AssemblyManager.swift */; };
-		DBF733857EDEFD5AEA47E5BE1FD9D382 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BCB00A7840652277EB0945F3A35F12 /* Enum.swift */; };
-		E8A5DB1D175C157227D9CD8FA463F158 /* PhotosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301AB0CFDD036F71E336313191A169C7 /* PhotosManager.swift */; };
+		038B7DC7A51F5D250FEE179BDC531483 /* Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC56B33078437F957D5846A1DB51DB5 /* Enum.swift */; };
+		20799DE684A0C9221E676ABE442A7B5E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		3CFAD3CF84815AE25E9B55E1E0A5A855 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 770AFE77727AA9289122B7FBE718D4D2 /* Extension.swift */; };
+		43A9749902788C3F836A46969991A51C /* AssemblyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E4F256952A44EB6280A4B087779729 /* AssemblyManager.swift */; };
+		5454C8666AB8B585D948503761598EDC /* PhotosManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3816262EE001BD49E8E4C619F306099 /* PhotosManager.swift */; };
+		55491BC0F21F971224C1D0AE126554B5 /* Pods-AssemblyManager_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB0526D45529A264DF1BD7D2F0CC0E32 /* Pods-AssemblyManager_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		633D9774D30DAF9D56095C2121C0FBD2 /* AssemblyManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B72BEEFCF8563DF574108AF57E58B446 /* AssemblyManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65FDCC9F2817D2524E1FA8E4783B8D38 /* AssemblyManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FDAB02942197C437759C5EF5623D534E /* AssemblyManager-dummy.m */; };
+		77F93473AAA5E26EE659163048BA82B1 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2BAFAF1A81591811EC84144215421D4 /* Photo.swift */; };
+		873BBD5727A6830D004D6F27 /* H.swift in Sources */ = {isa = PBXBuildFile; fileRef = 873BBD5627A6830D004D6F27 /* H.swift */; };
+		901C642957EA580E3BE5221E862D9287 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		BB27219822E2988F60A22A7E71F5257C /* MediaManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FC5E6086BCA95F7852A13E58864070 /* MediaManager.swift */; };
+		C2FF3CB959E27C332173CF67982BEF31 /* Pods-AssemblyManager_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 706C26B180EC321F63EF2CB0DC6BE2C2 /* Pods-AssemblyManager_Example-dummy.m */; };
+		D290383824B59DC197B6C6BB691384E8 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F344ACC5A5CAFF24336278FAB80EFB84 /* AudioManager.swift */; };
+		D7AD70267F7AE99EEB10697C3F41B42B /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CC33A608D1069D135519451BAB03D1 /* CameraManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		C418DA2BE2BFC21F2183AA908E7B7A2F /* PBXContainerItemProxy */ = {
+		C5BF95B3757BB24DCFE8600A07D0BAEE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -34,93 +35,66 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0515772544AF73D8A2E026D03FC861E0 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		08FC5E6086BCA95F7852A13E58864070 /* MediaManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MediaManager.swift; sourceTree = "<group>"; };
 		0EE47A6FFF2241857EAB27FFDCA23AEA /* Pods-AssemblyManager_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AssemblyManager_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		167D1E056E623C74C3D1FCFC8C60AE43 /* Pods-AssemblyManager_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AssemblyManager_Example.modulemap"; sourceTree = "<group>"; };
-		18839E0A27673C3F005C889B /* MediaManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaManager.swift; sourceTree = "<group>"; };
-		188E27142757AC8300AE7EC9 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
-		188E27192757B93100AE7EC9 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
-		293B65B3708DC5E470228A4F0063AE2E /* AssemblyManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AssemblyManager-umbrella.h"; sourceTree = "<group>"; };
-		301AB0CFDD036F71E336313191A169C7 /* PhotosManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PhotosManager.swift; sourceTree = "<group>"; };
-		59FE8FB5091E5F6D354A06FE2CC09D46 /* AssemblyManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = AssemblyManager.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		6FEC1E353CDC6C09ED79582C774AD107 /* AssemblyManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssemblyManager.swift; path = AssemblyManager/Classes/AssemblyManager.swift; sourceTree = "<group>"; };
+		18E4F256952A44EB6280A4B087779729 /* AssemblyManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssemblyManager.swift; path = AssemblyManager/Classes/AssemblyManager.swift; sourceTree = "<group>"; };
+		1DA6EB4AAA3BC89AC5AC7BDF19556A9E /* AssemblyManager-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AssemblyManager-Info.plist"; sourceTree = "<group>"; };
+		4EAF3EEA66DE825A0B7DFE6C4EDA101A /* AssemblyManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AssemblyManager.debug.xcconfig; sourceTree = "<group>"; };
 		706C26B180EC321F63EF2CB0DC6BE2C2 /* Pods-AssemblyManager_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AssemblyManager_Example-dummy.m"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		73D56CA070CBED7954274A232C56A17B /* Pods-AssemblyManager_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AssemblyManager_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		770AFE77727AA9289122B7FBE718D4D2 /* Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		7EAD0062522E9A370027A3883DE6A604 /* AssemblyManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AssemblyManager.modulemap; sourceTree = "<group>"; };
 		8539E1A9AEE7E356FE236F400A7D56E8 /* Pods-AssemblyManager_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AssemblyManager_Example.release.xcconfig"; sourceTree = "<group>"; };
-		8715ED27FE63AC36DAF812F19DA0C9CA /* AssemblyManager-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AssemblyManager-Info.plist"; sourceTree = "<group>"; };
-		8E655A34836F980CCF37AFFE1AD86BF6 /* AssemblyManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AssemblyManager.release.xcconfig; sourceTree = "<group>"; };
-		90A5A8D4299599BB05D1937C03804B5B /* CameraManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		873BBD5627A6830D004D6F27 /* H.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = H.swift; sourceTree = "<group>"; };
+		874CE90BD74A63B371E78EFD18E417DA /* AssemblyManager.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = AssemblyManager.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9EF078082AE1CAFD2BBABADADBD32A47 /* AssemblyManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AssemblyManager.debug.xcconfig; sourceTree = "<group>"; };
+		9F5C4D30FA61B914073E6B1C8AF3600F /* AssemblyManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AssemblyManager-prefix.pch"; sourceTree = "<group>"; };
+		ABC56B33078437F957D5846A1DB51DB5 /* Enum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		AC10FF1753A272100701EA9675338C8E /* Pods-AssemblyManager_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AssemblyManager_Example-Info.plist"; sourceTree = "<group>"; };
-		AF7C5AB255F774DD5F920419A92D1605 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		B366493A55D6108CBE32EB6A5E1FDDC2 /* AssemblyManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AssemblyManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B88916622644457067CA286DDAB09254 /* AssemblyManager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AssemblyManager-prefix.pch"; sourceTree = "<group>"; };
+		B366493A55D6108CBE32EB6A5E1FDDC2 /* AssemblyManager */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AssemblyManager; path = AssemblyManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B72BEEFCF8563DF574108AF57E58B446 /* AssemblyManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AssemblyManager-umbrella.h"; sourceTree = "<group>"; };
+		C0CEA2812368E3058F650459D52E9F60 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		C3816262EE001BD49E8E4C619F306099 /* PhotosManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = PhotosManager.swift; sourceTree = "<group>"; };
+		C838EFD08C51339238EE115E85A2E18E /* AssemblyManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AssemblyManager.release.xcconfig; sourceTree = "<group>"; };
 		CB0526D45529A264DF1BD7D2F0CC0E32 /* Pods-AssemblyManager_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AssemblyManager_Example-umbrella.h"; sourceTree = "<group>"; };
 		D29F86EDC461E2F292BBBCD937EFBC01 /* Pods-AssemblyManager_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AssemblyManager_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		D2A6ED89058DFC9A5B24019804B117A2 /* AssemblyManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AssemblyManager-dummy.m"; sourceTree = "<group>"; };
-		D4282F972912A0F3F48BC851965CE6A4 /* AssemblyManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AssemblyManager.modulemap; sourceTree = "<group>"; };
-		D4BCB00A7840652277EB0945F3A35F12 /* Enum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Enum.swift; sourceTree = "<group>"; };
 		DF575F0594AAC40A1AC9BA84E4DA74AE /* Pods-AssemblyManager_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AssemblyManager_Example-frameworks.sh"; sourceTree = "<group>"; };
-		EDB7E49D9073DD21F93335ED1B2916AD /* Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		EF9F8D0CDA0C2D4A3298B7F48C2CA9ED /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		FDDA43A53FE54CB65F4BD3DDC7A956BF /* Pods_AssemblyManager_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AssemblyManager_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E2BAFAF1A81591811EC84144215421D4 /* Photo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		F1CC33A608D1069D135519451BAB03D1 /* CameraManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		F344ACC5A5CAFF24336278FAB80EFB84 /* AudioManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		FDAB02942197C437759C5EF5623D534E /* AssemblyManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AssemblyManager-dummy.m"; sourceTree = "<group>"; };
+		FDDA43A53FE54CB65F4BD3DDC7A956BF /* Pods-AssemblyManager_Example */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-AssemblyManager_Example"; path = Pods_AssemblyManager_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		8F02155DFB11ED3366BDD6717C7337BF /* Frameworks */ = {
+		E00B4D4F3EC49F5A7D92FB8900FE1F5F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A00A765D355EFA116FF74EDEF451A9D /* Foundation.framework in Frameworks */,
+				901C642957EA580E3BE5221E862D9287 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A1411B2888D7ADB28D7D2BBF763A4D6A /* Frameworks */ = {
+		F42006F96C5D9A961EB2CA2A65AE0DCA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				67F44E5F05CF65022EF56E8913208780 /* Foundation.framework in Frameworks */,
+				20799DE684A0C9221E676ABE442A7B5E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		099B2B63D4B4F1F5B776FBD3DBD57D8D /* CameraManager */ = {
+		103EF738BAC2A7A4AA1E3C1CE6E393F5 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				90A5A8D4299599BB05D1937C03804B5B /* CameraManager.swift */,
+				AABFAB6BFF48877B9E88B2C4187231EC /* AssemblyManager */,
 			);
-			name = CameraManager;
-			path = AssemblyManager/Classes/CameraManager;
-			sourceTree = "<group>";
-		};
-		18839E0927673C1C005C889B /* MediaManager */ = {
-			isa = PBXGroup;
-			children = (
-				18839E0A27673C3F005C889B /* MediaManager.swift */,
-			);
-			name = MediaManager;
-			path = AssemblyManager/Classes/MediaManager;
-			sourceTree = "<group>";
-		};
-		188E27132757AC4600AE7EC9 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				188E27142757AC8300AE7EC9 /* Photo.swift */,
-			);
-			name = Models;
-			path = AssemblyManager/Classes/Models;
-			sourceTree = "<group>";
-		};
-		188E27182757B91400AE7EC9 /* AudioManager */ = {
-			isa = PBXGroup;
-			children = (
-				188E27192757B93100AE7EC9 /* AudioManager.swift */,
-			);
-			name = AudioManager;
-			path = AssemblyManager/Classes/AudioManager;
+			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 		1D9F4C706550D2FD197328DB2A0598DE /* Pods-AssemblyManager_Example */ = {
@@ -140,6 +114,53 @@
 			path = "Target Support Files/Pods-AssemblyManager_Example";
 			sourceTree = "<group>";
 		};
+		1DD4C624070A749602829A2AB4EDB517 /* MediaManager */ = {
+			isa = PBXGroup;
+			children = (
+				08FC5E6086BCA95F7852A13E58864070 /* MediaManager.swift */,
+			);
+			name = MediaManager;
+			path = AssemblyManager/Classes/MediaManager;
+			sourceTree = "<group>";
+		};
+		28D75D9A8B22679C901BE5F765A74409 /* AudioManager */ = {
+			isa = PBXGroup;
+			children = (
+				F344ACC5A5CAFF24336278FAB80EFB84 /* AudioManager.swift */,
+			);
+			name = AudioManager;
+			path = AssemblyManager/Classes/AudioManager;
+			sourceTree = "<group>";
+		};
+		2E068B2A17313DE2BD258CFDAE8FF0C7 /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				ABC56B33078437F957D5846A1DB51DB5 /* Enum.swift */,
+				770AFE77727AA9289122B7FBE718D4D2 /* Extension.swift */,
+				873BBD5627A6830D004D6F27 /* H.swift */,
+			);
+			name = Libs;
+			path = AssemblyManager/Classes/Libs;
+			sourceTree = "<group>";
+		};
+		33C74E24CD82CF69864CFE1942007A10 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E2BAFAF1A81591811EC84144215421D4 /* Photo.swift */,
+			);
+			name = Models;
+			path = AssemblyManager/Classes/Models;
+			sourceTree = "<group>";
+		};
+		3677A4CD9256035CCFC80CB977F20E4D /* PhotosManager */ = {
+			isa = PBXGroup;
+			children = (
+				C3816262EE001BD49E8E4C619F306099 /* PhotosManager.swift */,
+			);
+			name = PhotosManager;
+			path = AssemblyManager/Classes/PhotosManager;
+			sourceTree = "<group>";
+		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,67 +169,55 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		67FB948C3951EB2081460FCB4CFE1526 /* Pod */ = {
+		6426C43DEAF421D7CC83A2BD74FCDA19 /* CameraManager */ = {
 			isa = PBXGroup;
 			children = (
-				59FE8FB5091E5F6D354A06FE2CC09D46 /* AssemblyManager.podspec */,
-				EF9F8D0CDA0C2D4A3298B7F48C2CA9ED /* LICENSE */,
-				AF7C5AB255F774DD5F920419A92D1605 /* README.md */,
+				F1CC33A608D1069D135519451BAB03D1 /* CameraManager.swift */,
+			);
+			name = CameraManager;
+			path = AssemblyManager/Classes/CameraManager;
+			sourceTree = "<group>";
+		};
+		7891E170217DAD357981C4B8ACA19076 /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				874CE90BD74A63B371E78EFD18E417DA /* AssemblyManager.podspec */,
+				0515772544AF73D8A2E026D03FC861E0 /* LICENSE */,
+				C0CEA2812368E3058F650459D52E9F60 /* README.md */,
 			);
 			name = Pod;
 			sourceTree = "<group>";
 		};
-		6C24912CCEF8AAF33336967B018A7D23 /* PhotosManager */ = {
+		9EACA3CC47703905F15083578301682E /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				301AB0CFDD036F71E336313191A169C7 /* PhotosManager.swift */,
+				7EAD0062522E9A370027A3883DE6A604 /* AssemblyManager.modulemap */,
+				FDAB02942197C437759C5EF5623D534E /* AssemblyManager-dummy.m */,
+				1DA6EB4AAA3BC89AC5AC7BDF19556A9E /* AssemblyManager-Info.plist */,
+				9F5C4D30FA61B914073E6B1C8AF3600F /* AssemblyManager-prefix.pch */,
+				B72BEEFCF8563DF574108AF57E58B446 /* AssemblyManager-umbrella.h */,
+				4EAF3EEA66DE825A0B7DFE6C4EDA101A /* AssemblyManager.debug.xcconfig */,
+				C838EFD08C51339238EE115E85A2E18E /* AssemblyManager.release.xcconfig */,
 			);
-			name = PhotosManager;
-			path = AssemblyManager/Classes/PhotosManager;
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/AssemblyManager";
 			sourceTree = "<group>";
 		};
-		831D904432F1F7B6CF059FA406FF0C2D /* Development Pods */ = {
+		AABFAB6BFF48877B9E88B2C4187231EC /* AssemblyManager */ = {
 			isa = PBXGroup;
 			children = (
-				8A3DD303ED8B75EC67825E43877A2363 /* AssemblyManager */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		8A3DD303ED8B75EC67825E43877A2363 /* AssemblyManager */ = {
-			isa = PBXGroup;
-			children = (
-				6FEC1E353CDC6C09ED79582C774AD107 /* AssemblyManager.swift */,
-				188E27182757B91400AE7EC9 /* AudioManager */,
-				099B2B63D4B4F1F5B776FBD3DBD57D8D /* CameraManager */,
-				6C24912CCEF8AAF33336967B018A7D23 /* PhotosManager */,
-				18839E0927673C1C005C889B /* MediaManager */,
-				188E27132757AC4600AE7EC9 /* Models */,
-				8C5D356D15E44CAE9AA0E8AF57DADB78 /* Libs */,
-				67FB948C3951EB2081460FCB4CFE1526 /* Pod */,
-				D645E0384B2644372EDC3E27C19A2DC5 /* Support Files */,
+				18E4F256952A44EB6280A4B087779729 /* AssemblyManager.swift */,
+				28D75D9A8B22679C901BE5F765A74409 /* AudioManager */,
+				6426C43DEAF421D7CC83A2BD74FCDA19 /* CameraManager */,
+				2E068B2A17313DE2BD258CFDAE8FF0C7 /* Libs */,
+				1DD4C624070A749602829A2AB4EDB517 /* MediaManager */,
+				33C74E24CD82CF69864CFE1942007A10 /* Models */,
+				3677A4CD9256035CCFC80CB977F20E4D /* PhotosManager */,
+				7891E170217DAD357981C4B8ACA19076 /* Pod */,
+				9EACA3CC47703905F15083578301682E /* Support Files */,
 			);
 			name = AssemblyManager;
 			path = ../..;
-			sourceTree = "<group>";
-		};
-		8C5D356D15E44CAE9AA0E8AF57DADB78 /* Libs */ = {
-			isa = PBXGroup;
-			children = (
-				D4BCB00A7840652277EB0945F3A35F12 /* Enum.swift */,
-				EDB7E49D9073DD21F93335ED1B2916AD /* Extension.swift */,
-			);
-			name = Libs;
-			path = AssemblyManager/Classes/Libs;
-			sourceTree = "<group>";
-		};
-		A7C9F77084CC6E617DD1BA12DBA87332 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B366493A55D6108CBE32EB6A5E1FDDC2 /* AssemblyManager.framework */,
-				FDDA43A53FE54CB65F4BD3DDC7A956BF /* Pods_AssemblyManager_Example.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		AC144A730E3D9F448E4649845EE3D97E /* Targets Support Files */ = {
@@ -223,9 +232,9 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				831D904432F1F7B6CF059FA406FF0C2D /* Development Pods */,
+				103EF738BAC2A7A4AA1E3C1CE6E393F5 /* Development Pods */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				A7C9F77084CC6E617DD1BA12DBA87332 /* Products */,
+				E85D1A0426E4CD29DE2A43E2973D7336 /* Products */,
 				AC144A730E3D9F448E4649845EE3D97E /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -238,37 +247,31 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D645E0384B2644372EDC3E27C19A2DC5 /* Support Files */ = {
+		E85D1A0426E4CD29DE2A43E2973D7336 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D4282F972912A0F3F48BC851965CE6A4 /* AssemblyManager.modulemap */,
-				D2A6ED89058DFC9A5B24019804B117A2 /* AssemblyManager-dummy.m */,
-				8715ED27FE63AC36DAF812F19DA0C9CA /* AssemblyManager-Info.plist */,
-				B88916622644457067CA286DDAB09254 /* AssemblyManager-prefix.pch */,
-				293B65B3708DC5E470228A4F0063AE2E /* AssemblyManager-umbrella.h */,
-				9EF078082AE1CAFD2BBABADADBD32A47 /* AssemblyManager.debug.xcconfig */,
-				8E655A34836F980CCF37AFFE1AD86BF6 /* AssemblyManager.release.xcconfig */,
+				B366493A55D6108CBE32EB6A5E1FDDC2 /* AssemblyManager */,
+				FDDA43A53FE54CB65F4BD3DDC7A956BF /* Pods-AssemblyManager_Example */,
 			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/AssemblyManager";
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		830AE495642A87C6ED540F3203ECD04C /* Headers */ = {
+		7BEC110EA505B8B3CBBAD42FC7D7854F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5705B00A7BB0259B5A3614A29F84C333 /* AssemblyManager-umbrella.h in Headers */,
+				633D9774D30DAF9D56095C2121C0FBD2 /* AssemblyManager-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8CA7A34971365DBFAE09155C703EFCEF /* Headers */ = {
+		ECE27404C4ABAB2C5B7288AD18A2E674 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6272C5FDC2803D27923442F060DE03BA /* Pods-AssemblyManager_Example-umbrella.h in Headers */,
+				55491BC0F21F971224C1D0AE126554B5 /* Pods-AssemblyManager_Example-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,12 +280,12 @@
 /* Begin PBXNativeTarget section */
 		4F52DDCF660B2450901331C439EEB7B8 /* AssemblyManager */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8E7292562CB30F28155E0630BAF63CDD /* Build configuration list for PBXNativeTarget "AssemblyManager" */;
+			buildConfigurationList = 5E1BCE3784848DAE854E1885C817281E /* Build configuration list for PBXNativeTarget "AssemblyManager" */;
 			buildPhases = (
-				830AE495642A87C6ED540F3203ECD04C /* Headers */,
-				07CE3DFF790534C979E4850EACA51FDF /* Sources */,
-				A1411B2888D7ADB28D7D2BBF763A4D6A /* Frameworks */,
-				4BEC61124DD32434E58BB9E9BC69F9F9 /* Resources */,
+				7BEC110EA505B8B3CBBAD42FC7D7854F /* Headers */,
+				CBA5562B68A0026C1CD935A8DE9904E7 /* Sources */,
+				E00B4D4F3EC49F5A7D92FB8900FE1F5F /* Frameworks */,
+				3D90A2B83B2F056FB17022F00DF1146D /* Resources */,
 			);
 			buildRules = (
 			);
@@ -290,26 +293,26 @@
 			);
 			name = AssemblyManager;
 			productName = AssemblyManager;
-			productReference = B366493A55D6108CBE32EB6A5E1FDDC2 /* AssemblyManager.framework */;
+			productReference = B366493A55D6108CBE32EB6A5E1FDDC2 /* AssemblyManager */;
 			productType = "com.apple.product-type.framework";
 		};
 		835EE1B2393AEC820D6BC78A812DFE34 /* Pods-AssemblyManager_Example */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 40CCBBD8D5C58C04202375B1E78ACF95 /* Build configuration list for PBXNativeTarget "Pods-AssemblyManager_Example" */;
+			buildConfigurationList = DE286D75AB3642029936769AD29EAFCD /* Build configuration list for PBXNativeTarget "Pods-AssemblyManager_Example" */;
 			buildPhases = (
-				8CA7A34971365DBFAE09155C703EFCEF /* Headers */,
-				1707174D942B3A5CCF8DFAFB77F8D90A /* Sources */,
-				8F02155DFB11ED3366BDD6717C7337BF /* Frameworks */,
-				0FF4D3C5208039D82FA7E7AFD88A9D11 /* Resources */,
+				ECE27404C4ABAB2C5B7288AD18A2E674 /* Headers */,
+				697540F439E46D4E3E1F864AD2D6681E /* Sources */,
+				F42006F96C5D9A961EB2CA2A65AE0DCA /* Frameworks */,
+				D61513DA65042A985530443994BBBDAC /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BD24419A09288060CCCFE23988FE5579 /* PBXTargetDependency */,
+				863D231C701AA26EACFDDB3850C62BA7 /* PBXTargetDependency */,
 			);
 			name = "Pods-AssemblyManager_Example";
-			productName = "Pods-AssemblyManager_Example";
-			productReference = FDDA43A53FE54CB65F4BD3DDC7A956BF /* Pods_AssemblyManager_Example.framework */;
+			productName = Pods_AssemblyManager_Example;
+			productReference = FDDA43A53FE54CB65F4BD3DDC7A956BF /* Pods-AssemblyManager_Example */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -326,11 +329,11 @@
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = A7C9F77084CC6E617DD1BA12DBA87332 /* Products */;
+			productRefGroup = E85D1A0426E4CD29DE2A43E2973D7336 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -341,14 +344,14 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0FF4D3C5208039D82FA7E7AFD88A9D11 /* Resources */ = {
+		3D90A2B83B2F056FB17022F00DF1146D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4BEC61124DD32434E58BB9E9BC69F9F9 /* Resources */ = {
+		D61513DA65042A985530443994BBBDAC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -358,38 +361,39 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		07CE3DFF790534C979E4850EACA51FDF /* Sources */ = {
+		697540F439E46D4E3E1F864AD2D6681E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				188E27152757AC8300AE7EC9 /* Photo.swift in Sources */,
-				AC38B0CC080DB2B8C4563039C3E0E0C3 /* AssemblyManager.swift in Sources */,
-				188E271A2757B93100AE7EC9 /* AudioManager.swift in Sources */,
-				75F19DC5193D184472553FC69CBFEFB3 /* AssemblyManager-dummy.m in Sources */,
-				18839E0B27673C3F005C889B /* MediaManager.swift in Sources */,
-				667B70CE7E4E664C2115F35A37BEDDE1 /* CameraManager.swift in Sources */,
-				DBF733857EDEFD5AEA47E5BE1FD9D382 /* Enum.swift in Sources */,
-				08DC84521B5A910A52DCDA3FA1B30549 /* Extension.swift in Sources */,
-				E8A5DB1D175C157227D9CD8FA463F158 /* PhotosManager.swift in Sources */,
+				C2FF3CB959E27C332173CF67982BEF31 /* Pods-AssemblyManager_Example-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		1707174D942B3A5CCF8DFAFB77F8D90A /* Sources */ = {
+		CBA5562B68A0026C1CD935A8DE9904E7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A72B1657E7E66A33A0256C480F0A92E3 /* Pods-AssemblyManager_Example-dummy.m in Sources */,
+				43A9749902788C3F836A46969991A51C /* AssemblyManager.swift in Sources */,
+				65FDCC9F2817D2524E1FA8E4783B8D38 /* AssemblyManager-dummy.m in Sources */,
+				D290383824B59DC197B6C6BB691384E8 /* AudioManager.swift in Sources */,
+				D7AD70267F7AE99EEB10697C3F41B42B /* CameraManager.swift in Sources */,
+				038B7DC7A51F5D250FEE179BDC531483 /* Enum.swift in Sources */,
+				3CFAD3CF84815AE25E9B55E1E0A5A855 /* Extension.swift in Sources */,
+				BB27219822E2988F60A22A7E71F5257C /* MediaManager.swift in Sources */,
+				77F93473AAA5E26EE659163048BA82B1 /* Photo.swift in Sources */,
+				873BBD5727A6830D004D6F27 /* H.swift in Sources */,
+				5454C8666AB8B585D948503761598EDC /* PhotosManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BD24419A09288060CCCFE23988FE5579 /* PBXTargetDependency */ = {
+		863D231C701AA26EACFDDB3850C62BA7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AssemblyManager;
 			target = 4F52DDCF660B2450901331C439EEB7B8 /* AssemblyManager */;
-			targetProxy = C418DA2BE2BFC21F2183AA908E7B7A2F /* PBXContainerItemProxy */;
+			targetProxy = C5BF95B3757BB24DCFE8600A07D0BAEE /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -460,7 +464,7 @@
 			};
 			name = Debug;
 		};
-		3F7C96789CD61692C1BCF07A52ABDD01 /* Debug */ = {
+		5FB532CBB578547CB0EA2C6D5F871B3B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0EE47A6FFF2241857EAB27FFDCA23AEA /* Pods-AssemblyManager_Example.debug.xcconfig */;
 			buildSettings = {
@@ -492,9 +496,9 @@
 			};
 			name = Debug;
 		};
-		6B3DF7290E33C8969F0B4C9FBA42ED6E /* Debug */ = {
+		86670EC0322E3D69CBE3ED6EDF794910 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9EF078082AE1CAFD2BBABADADBD32A47 /* AssemblyManager.debug.xcconfig */;
+			baseConfigurationReference = C838EFD08C51339238EE115E85A2E18E /* AssemblyManager.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -518,12 +522,13 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		8C9B012FA1F6548141CF0341A563975B /* Release */ = {
+		C78E87C4E646245E01E884DCA01FFAD1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8539E1A9AEE7E356FE236F400A7D56E8 /* Pods-AssemblyManager_Example.release.xcconfig */;
 			buildSettings = {
@@ -617,9 +622,9 @@
 			};
 			name = Release;
 		};
-		D974428C56B93DD79C41FC7C9BD64F47 /* Release */ = {
+		FE4F5AFCC7A56FB2B6A490EC6E56A29E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8E655A34836F980CCF37AFFE1AD86BF6 /* AssemblyManager.release.xcconfig */;
+			baseConfigurationReference = 4EAF3EEA66DE825A0B7DFE6C4EDA101A /* AssemblyManager.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -643,24 +648,14 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		40CCBBD8D5C58C04202375B1E78ACF95 /* Build configuration list for PBXNativeTarget "Pods-AssemblyManager_Example" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3F7C96789CD61692C1BCF07A52ABDD01 /* Debug */,
-				8C9B012FA1F6548141CF0341A563975B /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -670,11 +665,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8E7292562CB30F28155E0630BAF63CDD /* Build configuration list for PBXNativeTarget "AssemblyManager" */ = {
+		5E1BCE3784848DAE854E1885C817281E /* Build configuration list for PBXNativeTarget "AssemblyManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6B3DF7290E33C8969F0B4C9FBA42ED6E /* Debug */,
-				D974428C56B93DD79C41FC7C9BD64F47 /* Release */,
+				FE4F5AFCC7A56FB2B6A490EC6E56A29E /* Debug */,
+				86670EC0322E3D69CBE3ED6EDF794910 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE286D75AB3642029936769AD29EAFCD /* Build configuration list for PBXNativeTarget "Pods-AssemblyManager_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5FB532CBB578547CB0EA2C6D5F871B3B /* Debug */,
+				C78E87C4E646245E01E884DCA01FFAD1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
